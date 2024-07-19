@@ -14,33 +14,29 @@ class AuthController extends Controller
     }
     public function register(Request $request)
 {
-    // Validate the request
     $request->validate([
         'first_name' => 'required|string|max:255',
         'last_name' => 'required|string|max:255',
-        'user_name' => 'required|string|max:255|unique:users',
+        'username' => 'required|string|max:255|unique:users',
         'email' => 'required|string|email|max:255|unique:users',
         'password' => 'required|string|min:8|confirmed',
     ]);
 
-    // Create the user
+    // Create user
     $user = User::create([
         'first_name' => $request->first_name,
         'last_name' => $request->last_name,
-        'user_name' => $request->user_name,
+        'username' => $request->username,
         'email' => $request->email,
         'password' => Hash::make($request->password),
     ]);
 
-    // Create a personal access token
-    $token = $user->createToken('Personal Access Token')->plainTextToken;
+    // Additional logic for registration, e.g., sending verification email
 
-    // Redirect with success message
-    return redirect()->route('for-business')->with('success', 'Account created successfully.');
-
-    // Alternatively, return the token in JSON response
-    // return response()->json(['token' => $token], 201);
+    // Redirect or return response
+    return redirect()->route('sign-up')->with('success', 'Registration successful!');
 }
+
 
 
     public function login(Request $request)
