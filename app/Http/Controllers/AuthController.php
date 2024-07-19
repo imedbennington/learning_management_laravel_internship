@@ -10,7 +10,7 @@ class AuthController extends Controller
 
     public function showRegistrationForm()
     {
-        return view('auth.registration');
+        return view('public_users.index');
     }
     public function register(Request $request)
     {

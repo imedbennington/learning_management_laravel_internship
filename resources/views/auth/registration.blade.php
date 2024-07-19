@@ -67,10 +67,10 @@
                                 <hr/>
                             </div>
                             <div class="list-inline contacts-social text-center">
-                                <a href="javascript:;" class="list-inline-item bg-facebook text-white border-0 rounded-3"><i class="bx bxl-facebook"></i></a>
-                                <a href="javascript:;" class="list-inline-item bg-twitter text-white border-0 rounded-3"><i class="bx bxl-twitter"></i></a>
-                                <a href="javascript:;" class="list-inline-item bg-google text-white border-0 rounded-3"><i class="bx bxl-google"></i></a>
-                                <a href="javascript:;" class="list-inline-item bg-linkedin text-white border-0 rounded-3"><i class="bx bxl-linkedin"></i></a>
+                                <a href="javascript:;" class="list-inline-item bg-facebook text-white border-0 rounded-3"><i class="fab fa-facebook-f"></i></a>
+                                <a href="javascript:;" class="list-inline-item bg-twitter text-white border-0 rounded-3"><i class="fab fa-twitter"></i></a>
+                                <a href="javascript:;" class="list-inline-item bg-google text-white border-0 rounded-3"><i class="fab fa-google"></i></a>
+                                <a href="javascript:;" class="list-inline-item bg-linkedin text-white border-0 rounded-3"><i class="fab fa-linkedin-in"></i></a>
                             </div>
                         </div>
                     </div>
