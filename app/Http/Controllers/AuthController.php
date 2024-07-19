@@ -13,23 +13,35 @@ class AuthController extends Controller
         return view('public_users.index');
     }
     public function register(Request $request)
-    {
-        $request->validate([
-            'name' => 'required|string',
-            'email' => 'required|string|email|unique:users',
-            'password' => 'required|string|confirmed',
-        ]);
+{
+    // Validate the request
+    $request->validate([
+        'first_name' => 'required|string|max:255',
+        'last_name' => 'required|string|max:255',
+        'user_name' => 'required|string|max:255|unique:users',
+        'email' => 'required|string|email|max:255|unique:users',
+        'password' => 'required|string|min:8|confirmed',
+    ]);
 
-        $user = User::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'password' => Hash::make($request->password),
-        ]);
+    // Create the user
+    $user = User::create([
+        'first_name' => $request->first_name,
+        'last_name' => $request->last_name,
+        'user_name' => $request->user_name,
+        'email' => $request->email,
+        'password' => Hash::make($request->password),
+    ]);
 
-        $token = $user->createToken('Personal Access Token')->plainTextToken;
+    // Create a personal access token
+    $token = $user->createToken('Personal Access Token')->plainTextToken;
 
-        return response()->json(['token' => $token], 201);
-    }
+    // Redirect with success message
+    return redirect()->route('for-business')->with('success', 'Account created successfully.');
+
+    // Alternatively, return the token in JSON response
+    // return response()->json(['token' => $token], 201);
+}
+
 
     public function login(Request $request)
     {

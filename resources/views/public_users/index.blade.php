@@ -76,8 +76,8 @@
                             </button>
                         </div>
                         <ul class="generic-list-item d-flex flex-wrap align-items-center fs-14 border-left border-left-gray pl-3 ml-3">
-                            <li class="d-flex align-items-center pr-3 mr-3 border-right border-right-gray"><i class="la la-sign-in mr-1"></i><a href="login.html"> Login</a></li>
-                            <li class="d-flex align-items-center"><i class="la la-user mr-1"></i><a href="sign-up.html"> Register</a></li>
+                            <li class="d-flex align-items-center pr-3 mr-3 border-right border-right-gray"><i class="la la-sign-in mr-1"></i><a href="{{route('login')}}"> Login</a></li>
+                            <li class="d-flex align-items-center"><i class="la la-user mr-1"></i><a href="{{route('sign-up')}}"> Register</a></li>
                         </ul>
                     </div><!-- end header-widget -->
                 </div><!-- end col-lg-6 -->
@@ -301,14 +301,15 @@
                                                     <a href="contact.html">contact</a>
                                                 </li>
                                                 <li class="col-lg-3">
-                                                    <a href="for-business.html">for business</a>
-                                                    <a href="sign-up.html">sign-up</a>
-                                                    <a href="login.html">login</a>
-                                                    <a href="recover.html">recover</a>
-                                                    <a href="shopping-cart.html">cart</a>
-                                                    <a href="checkout.html">checkout</a>
-                                                    <a href="error.html">page 404</a>
+                                                    <a href="{{ route('for-business') }}">for business</a>
+                                                    <a href="{{ route('sign-up') }}">sign-up</a>
+                                                    <a href="{{ route('login') }}">login</a>
+                                                    <a href="{{ route('recover') }}">recover</a>
+                                                    <a href="{{ route('cart') }}">cart</a>
+                                                    <a href="{{ route('checkout') }}">checkout</a>
+                                                    <a href="{{ route('error-404') }}">page 404</a>
                                                 </li>
+
                                                 <li class="col-lg-3">
                                                     <div class="menu-banner position-relative h-100">
                                                         <div class="overlay rounded-rounded opacity-4"></div>
@@ -316,7 +317,7 @@
                                                             <h4 class="fs-20 font-weight-bold pb-3 text-white">30 days free trail for new users</h4>
                                                             <a href="sign-up.html" class="btn theme-btn theme-btn-sm theme-btn-white">Start Learning <i class="la la-arrow-right icon ml-1"></i></a>
                                                         </div>
-                                                        <img src="images/menu-banner-img.jpg" alt="menu banner image" class="w-100 h-100 rounded-rounded">
+                                                      <img src="images/menu-banner-img.jpg" alt="menu banner image" class="w-100 h-100 rounded-rounded">
                                                     </div>
                                                 </li>
                                             </ul>
