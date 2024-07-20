@@ -15,6 +15,11 @@ use App\Http\Controllers\BusinesController;
 |
 */
 //Authentication Routes
+
+Route::get('/', function () {
+    return view('public_users.sign-up');
+});
+
 Route::get('registration', [AuthController::class, 'showRegistrationForm'])->name('register');
 Route::post('register', [AuthController::class, 'register'])->name('register.submit');
 
@@ -28,23 +33,17 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-// View Routes
-Route::view('/sign-up', 'public_users.sign-up')->name('sign-up');
-Route::view('/recover', 'recover')->name('recover');
-Route::view('/cart', 'shopping-cart')->name('cart');
-Route::view('/checkout', 'checkout')->name('checkout');
-Route::view('/error-404', 'error')->name('error-404');
-
 // Social Authentication Routes
 Route::get('/register/google', [SocialAuthController::class, 'redirectToGoogle'])->name('register.google');
 Route::get('/register/facebook', [SocialAuthController::class, 'redirectToFacebook'])->name('register.facebook');
 Route::get('/register/twitter', [SocialAuthController::class, 'redirectToTwitter'])->name('register.twitter');
 Route::view('/for-business', 'for-business')->name('for-business');
 
+require __DIR__.'/publicRoutes.php';
 // Default Route
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
-});
+});*/
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    return view('public_users.dashboard');
 })->name('dashboard');

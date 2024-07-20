@@ -76,7 +76,7 @@
                             </button>
                         </div>
                         <ul class="generic-list-item d-flex flex-wrap align-items-center fs-14 border-left border-left-gray pl-3 ml-3">
-                            <li class="d-flex align-items-center pr-3 mr-3 border-right border-right-gray"><i class="la la-sign-in mr-1"></i><a href="{{route('login')}}"> Login</a></li>
+                            <li class="d-flex align-items-center pr-3 mr-3 border-right border-right-gray"><i class="la la-sign-in mr-1"></i><a href="{{route('log_in')}}"> Login</a></li>
                             <li class="d-flex align-items-center"><i class="la la-user mr-1"></i><a href="{{route('sign-up')}}"> Register</a></li>
                         </ul>
                     </div><!-- end header-widget -->
@@ -303,7 +303,7 @@
                                                 <li class="col-lg-3">
                                                     <a href="{{ route('for-business') }}">for business</a>
                                                     <a href="{{ route('sign-up') }}">sign-up</a>
-                                                    <a href="{{ route('login') }}">login</a>
+                                                    <a href="{{ route('log_in') }}">login</a>
                                                     <a href="{{ route('recover') }}">recover</a>
                                                     <a href="{{ route('cart') }}">cart</a>
                                                     <a href="{{ route('checkout') }}">checkout</a>
