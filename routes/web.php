@@ -19,7 +19,7 @@ Route::get('registration', [AuthController::class, 'showRegistrationForm'])->nam
 Route::post('register', [AuthController::class, 'register'])->name('register.submit');
 
 
-Route::get('login', [AuthController::class, 'showLoginForm'])->name('login');
+Route::get('log_in', [AuthController::class, 'showLoginForm'])->name('log_in');
 Route::post('login', [AuthController::class, 'login'])->name('login.submit');
 Route::post('logout', [AuthController::class, 'logout'])->name('logout')->middleware('auth:sanctum');
 
@@ -45,3 +45,6 @@ Route::view('/for-business', 'for-business')->name('for-business');
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');

@@ -5,12 +5,18 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 class AuthController extends Controller
 {
 
     public function showRegistrationForm()
     {
         return view('public_users.index');
+    }
+
+    public function showLoginForm()
+    {
+        return view('public_users.login');
     }
     public function register(Request $request)
 {
@@ -30,30 +36,24 @@ class AuthController extends Controller
         'email' => $request->email,
         'password' => Hash::make($request->password),
     ]);
-
-    // Additional logic for registration, e.g., sending verification email
-
     // Redirect or return response
-    return redirect()->route('sign-up')->with('success', 'Registration successful!');
+    return redirect()->route('dashboard');
 }
 
 
 
-    public function login(Request $request)
+public function login(Request $request)
     {
         $request->validate([
             'email' => 'required|string|email',
             'password' => 'required|string',
         ]);
 
-        if (!AuthController::attempt($request->only('email', 'password'))) {
-            return response()->json(['message' => 'Unauthorized'], 401);
+        if (!Auth::attempt($request->only('email', 'password'))) {
+            return back()->withErrors(['email' => 'Invalid credentials'])->withInput();
         }
 
-        $user = AuthController::user();
-        $token = $user->createToken('Personal Access Token')->plainTextToken;
-
-        return response()->json(['token' => $token], 200);
+        return redirect()->intended(route('dashboard'));
     }
 
     public function logout(Request $request)
