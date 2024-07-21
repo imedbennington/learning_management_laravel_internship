@@ -47,3 +47,22 @@ require __DIR__.'/publicRoutes.php';
 Route::get('/dashboard', function () {
     return view('public_users.dashboard');
 })->name('dashboard');
+
+
+Route::middleware(['auth:sanctum', 'role:admin'])->group(function () {
+    Route::get('/admin', function () {
+        return 'Admin Dashboard';
+    })->name('admin.dashboard');
+});
+
+Route::middleware(['auth:sanctum', 'role:instructor'])->group(function () {
+    Route::get('/instructor', function () {
+        return 'Instructor Dashboard';
+    })->name('instructor.dashboard');
+});
+
+Route::middleware(['auth:sanctum', 'role:student'])->group(function () {
+    Route::get('/student', function () {
+        return 'Student Dashboard';
+    })->name('student.dashboard');
+});
