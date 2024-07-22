@@ -41,7 +41,8 @@
 										<p class="mb-0">Please fill the below details to create your account</p>
 									</div>
 									<div class="form-body">
-										<form class="row g-3">
+										<form class="row g-3" method="POST" action="{{ route('register.admin.submit') }}">
+											@csrf
 											<div class="col-12">
 												<label for="inputUsername" class="form-label">Username</label>
 												<input type="email" class="form-control" id="inputUsername" placeholder="Jhon">

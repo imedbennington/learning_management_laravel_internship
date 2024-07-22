@@ -305,7 +305,7 @@
                                                     <a href="{{ route('sign-up') }}">sign-up</a>
                                                     <a href="{{ route('log_in') }}">login</a>
                                                     <a href="{{ route('recover') }}">recover</a>
-                                                    <a href="{{ route('cart') }}">cart</a>
+                                                    <a href="{{ route('my-cart') }}">cart</a>
                                                     <a href="{{ route('checkout') }}">checkout</a>
                                                     <a href="{{ route('error-404') }}">page 404</a>
                                                 </li>

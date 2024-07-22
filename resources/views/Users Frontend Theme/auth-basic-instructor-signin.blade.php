@@ -41,7 +41,8 @@
 										<p class="mb-0">Please log in to your account</p>
 									</div>
 									<div class="form-body">
-										<form class="row g-3">
+										<form class="row g-3"  method="POST" action="{{ route('register.instructor.submit') }}">
+											@csrf
 											<div class="col-12">
 												<label for="inputEmailAddress" class="form-label">Email</label>
 												<input type="email" class="form-control" id="inputEmailAddress" placeholder="jhon@example.com">

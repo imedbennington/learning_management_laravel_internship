@@ -17,11 +17,11 @@ use App\Http\Controllers\BusinesController;
 //Authentication Routes
 
 Route::get('/', function () {
-    return view('public_users.sign-up');
+    return view('public_users.index');
 });
 
 Route::get('registration', [AuthController::class, 'showRegistrationForm'])->name('register');
-Route::post('register', [AuthController::class, 'register'])->name('register.submit');
+Route::post('register', [AuthController::class, 'registerStudent'])->name('register.submit');
 
 
 Route::get('log_in', [AuthController::class, 'showLoginForm'])->name('log_in');
@@ -47,6 +47,20 @@ require __DIR__.'/publicRoutes.php';
 Route::get('/dashboard', function () {
     return view('public_users.dashboard');
 })->name('dashboard');
+
+
+Route::get('register/student', [AuthController::class, 'showStudentRegistrationForm'])->name('register.student');
+Route::get('register/instructor', [AuthController::class, 'showInstructorRegistrationForm'])->name('register.instructor');
+Route::get('register/admin', [AuthController::class, 'showAdminRegistrationForm'])->name('register.admin');
+
+Route::post('register/student', [AuthController::class, 'registerStudent'])->name('register.student.submit');
+Route::post('register/instructor', [AuthController::class, 'registerInstructor'])->name('register.instructor.submit');
+Route::post('register/admin', [AuthController::class, 'registerAdmin'])->name('register.admin.submit');
+
+Route::get('login', [AuthController::class, 'showLoginForm'])->name('login');
+Route::post('login', [AuthController::class, 'login'])->name('login.submit');
+Route::post('logout', [AuthController::class, 'logout'])->middleware('auth:sanctum')->name('logout.submit');
+
 
 
 Route::middleware(['auth:sanctum', 'role:admin'])->group(function () {
