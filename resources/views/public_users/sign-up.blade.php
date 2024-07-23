@@ -689,7 +689,7 @@
     <div class="input-box">
         <label class="label-text">Username</label>
         <div class="form-group">
-            <input class="form-control form--control" type="text" name="username" placeholder="Username" required>
+            <input class="form-control form--control" type="text" name="user_name" placeholder="User name" required>
             <span class="la la-user input-icon"></span>
         </div>
     </div>

@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             $table->string('last_name')->after('email');
-            $table->string('username')->unique()->after('last_name'); // Ensure the column name is 'last_name'
+            $table->string('user_name')->unique()->after('last_name'); 
         });
     }
 
@@ -24,7 +24,7 @@ return new class extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             $table->dropColumn('last_name');
-            $table->dropColumn('username');
+            $table->dropColumn('user_name');
         });
     }
 };

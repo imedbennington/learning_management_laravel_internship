@@ -13,21 +13,19 @@ class RolesAndPermissionsSeeder extends Seeder
      */
     public function run(): void
     {
-
         // Reset cached roles and permissions
         app()[\Spatie\Permission\PermissionRegistrar::class]->forgetCachedPermissions();
 
-        
-        //create roles
-        $roleStudent = Role::create(['name' => 'student']);
-        $roleInstructor = Role::create(['name' => 'instructor']);
-        $roleAdmin = Role::create(['name' => 'admin']);
+        // Create roles using firstOrCreate to avoid duplicates
+        $roleStudent = Role::firstOrCreate(['name' => 'student'], ['guard_name' => 'web']);
+        $roleInstructor = Role::firstOrCreate(['name' => 'instructor'], ['guard_name' => 'web']);
+        $roleAdmin = Role::firstOrCreate(['name' => 'admin'], ['guard_name' => 'web']);
 
-        // create permissions
-        $permissionManageUsers = Permission::create(['name' => 'manage users']);
-        $permissionManageCourses = Permission::create(['name' => 'manage courses']);
+        // Create permissions
+        $permissionManageUsers = Permission::firstOrCreate(['name' => 'manage users'], ['guard_name' => 'web']);
+        $permissionManageCourses = Permission::firstOrCreate(['name' => 'manage courses'], ['guard_name' => 'web']);
 
-        // giving permissions
+        // Give permissions to roles
         $roleAdmin->givePermissionTo([$permissionManageUsers, $permissionManageCourses]);
         $roleInstructor->givePermissionTo($permissionManageCourses);
     }
