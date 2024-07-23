@@ -15,6 +15,26 @@ use App\Http\Controllers\BusinesController;
 |
 */
 //Authentication Routes
+///adminlogin
+
+use App\Http\Controllers\AdminAuthController;
+
+// Route to show the admin login form
+Route::get('admin/login', [AdminAuthController::class, 'showAdminLoginForm'])->name('admin.login');
+
+// Route to handle the admin login form submission
+Route::post('admin/login', [AdminAuthController::class, 'login'])->name('admin.login.submit');
+
+// Route to send password reset link
+Route::post('admin/password/email', [AdminAuthController::class, 'sendResetLinkEmail'])->name('admin.password.email');
+
+// Route to show password reset request form
+Route::get('admin/password/reset', [AdminAuthController::class, 'showLinkRequestForm'])->name('admin.password.request');
+
+// Route to show the admin dashboard (with authentication middleware)
+Route::get('admin/dashboard', [AdminAuthController::class, 'index'])->name('admin.dashboard')->middleware('auth:admin');
+
+
 
 Route::get('/', function () {
     return view('public_users.index');

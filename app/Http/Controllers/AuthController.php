@@ -25,7 +25,7 @@ class AuthController extends Controller
 
     public function showAdminRegistrationForm()
     {
-        return view('auth.register-admin');
+        return view('Users Frontend Theme.auth-admin-basic-signup');
     }
 
     public function registerStudent(Request $request)
@@ -74,28 +74,33 @@ class AuthController extends Controller
 
         return response()->json(['message' => 'Instructor registered successfully'], 201);
     }
-    public function registerAdmin(Request $request)
-    {
-        $request->validate([
-            'first_name' => 'required|string|max:255',
-            'last_name' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:users',
-            'password' => 'required|string|min:8|confirmed',
-        ]);
-
-        $user = User::create([
-            'first_name' => $request->first_name,
-            'last_name' => $request->last_name,
-            'email' => $request->email,
-            'password' => Hash::make($request->password),
-        ]);
-
-        $user->assignRole('admin');
-
-        return response()->json(['message' => 'Admin registered successfully'], 201);
-    }
-*/
-
+        */
+        public function registerAdmin(Request $request)
+        {
+            $request->validate([
+                'first_name' => 'required|string|max:255',
+                'last_name' => 'required|string|max:255',
+                'email' => 'required|string|email|max:255|unique:admins', // Validate against admins table
+                'password' => 'required|string|min:8|confirmed',
+                'terms' => 'accepted', // Ensure the terms checkbox is checked
+            ]);
+        
+            // Insert data into the admins table
+            $admin = \DB::table('admins')->insert([
+                'first_name' => $request->first_name,
+                'last_name' => $request->last_name,
+                'email' => $request->email,
+                'password' => Hash::make($request->password),
+                'created_at' => now(),
+                'updated_at' => now(),
+            ]);
+        
+            // Optional: Assign a role if you are using roles and permissions
+            // $user->assignRole('admin');
+            return redirect()->route('loginAdmin');
+            //return response()->json(['message' => 'Admin registered successfully'], 201);
+        }
+        
 public function login(Request $request)
 {
     $request->validate([

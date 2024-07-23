@@ -25,3 +25,4 @@ Route::view('/my-dashbord-reviews', 'public_users.dashboard-reviews')->name('my-
 Route::view('/my-dashbord-earnings', 'public_users.dashboard-earnings')->name('my-dashbord-earnings');
 Route::view('/my-dashbord-withdraws', 'public_users.dashboard-withdraw')->name('my-dashbord-withdraws');
 Route::view('/my-dashbord-submitCourse', 'public_users.dashboard-submit-course')->name('my-dashbord-submitCourse');
+Route::view('/loginAdmin', 'Users Frontend Theme.auth-cover-signin')->name('loginAdmin');
