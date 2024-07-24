@@ -16,7 +16,7 @@ class AdminAuthController extends Controller
         $credentials = $request->only('email', 'password');
 
         if (Auth::guard('admins')->attempt($credentials, $request->filled('remember'))) {
-            return redirect()->intended('admin/dashboard'); // Redirect to admin dashboard
+            return redirect()->intended('admin-dashboard'); // Redirect to admin dashboard
         }
 
         return back()->withErrors([
@@ -25,6 +25,6 @@ class AdminAuthController extends Controller
     }
     public function showAdminLoginForm()
     {
-        return view('Users Frontend Theme.index');
+        return view('Users Frontend Theme.auth-cover-signin');
     }
 }

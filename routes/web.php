@@ -18,7 +18,7 @@ use App\Http\Controllers\BusinesController;
 ///adminlogin
 
 use App\Http\Controllers\AdminAuthController;
-
+require __DIR__.'/userRoutes.php';
 // Route to show the admin login form
 Route::get('admin/login', [AdminAuthController::class, 'showAdminLoginForm'])->name('admin.login');
 

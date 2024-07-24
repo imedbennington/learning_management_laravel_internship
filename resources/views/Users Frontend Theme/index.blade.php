@@ -70,7 +70,7 @@
 						</li>
 						<li> <a href="app-chat-box.html"><i class='bx bx-radio-circle'></i>Chat Box</a>
 						</li>
-						<li> <a href="app-file-manager.html"><i class='bx bx-radio-circle'></i>File Manager</a>
+						<li> <a href="{{route('app-file-admin')}}"><i class='bx bx-radio-circle'></i>File Manager</a>
 						</li>
 						<li> <a href="app-contact-list.html"><i class='bx bx-radio-circle'></i>Contatcs</a>
 						</li>
