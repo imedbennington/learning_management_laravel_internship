@@ -68,6 +68,7 @@
 					<ul>
 						<li> <a href="app-emailbox.html"><i class='bx bx-radio-circle'></i>Email</a>
 						</li>
+						
 						<li> <a href="app-chat-box.html"><i class='bx bx-radio-circle'></i>Chat Box</a>
 						</li>
 						<li> <a href="app-file-manager.html"><i class='bx bx-radio-circle'></i>File Manager</a>
@@ -1029,6 +1030,8 @@
 						<div class="card">
 							<div class="card-body">
 								<div class="d-grid"> <a href="javascript:;" class="btn btn-primary">+ Add File</a>
+								</div>
+								<div class="d-grid"> <a href="{{route('form-add-category')}}" class="btn btn-primary mt-3">+ Add Category</a>
 								</div>
 								<h5 class="my-3">My Drive</h5>
 								<div class="fm-menu">
