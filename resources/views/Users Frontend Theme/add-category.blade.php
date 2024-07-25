@@ -5,26 +5,26 @@
 	<!-- Required meta tags -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!--favicon-->
-	<link rel="icon" href="assets/images/favicon-32x32.png" type="image/png" />
-	<!--plugins-->
-	<link href="assets/plugins/simplebar/css/simplebar.css" rel="stylesheet" />
-	<link href="assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" />
-	<link href="assets/plugins/metismenu/css/metisMenu.min.css" rel="stylesheet" />
-	<!-- loader-->
-	<link href="assets/css/pace.min.css" rel="stylesheet" />
-	<script src="assets/js/pace.min.js"></script>
-	<!-- Bootstrap CSS -->
-	<link href="assets/css/bootstrap.min.css" rel="stylesheet">
-	<link href="assets/css/bootstrap-extended.css" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-	<link href="assets/css/app.css" rel="stylesheet">
-	<link href="assets/css/icons.css" rel="stylesheet">
-	<!-- Theme Style CSS -->
-	<link rel="stylesheet" href="assets/css/dark-theme.css" />
-	<link rel="stylesheet" href="assets/css/semi-dark.css" />
-	<link rel="stylesheet" href="assets/css/header-colors.css" />
-	<title>Rocker - Bootstrap 5 Admin Dashboard Template</title>
+	<!-- Favicon -->
+    <link rel="icon" href="{{ asset('assets/images/favicon-32x32.png') }}" type="image/png" />
+    <!-- Plugins -->
+    <link href="{{ asset('assets/plugins/simplebar/css/simplebar.css') }}" rel="stylesheet" />
+    <link href="{{ asset('assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css') }}" rel="stylesheet" />
+    <link href="{{ asset('assets/plugins/metismenu/css/metisMenu.min.css') }}" rel="stylesheet" />
+    <!-- Loader -->
+    <link href="{{ asset('assets/css/pace.min.css') }}" rel="stylesheet" />
+    <script src="{{ asset('assets/js/pace.min.js') }}"></script>
+    <!-- Bootstrap CSS -->
+    <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/bootstrap-extended.css') }}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link href="{{ asset('assets/css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/icons.css') }}" rel="stylesheet">
+    <!-- Theme Style CSS -->
+    <link rel="stylesheet" href="{{ asset('assets/css/dark-theme.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/css/semi-dark.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/css/header-colors.css') }}" />
+	<title>Adding categories</title>
 </head>
 <body>
 
@@ -1023,36 +1023,52 @@
 				</div>
 				<!--end breadcrumb-->
                 <h5 class="mb-4">Vertical Form</h5>
-								<form class="row g-3">
-									<div class="col-md-6">
-										<label for="input1" class="form-label"> Name</label>
-										<input type="text" class="form-control" id="input1" placeholder="First Name">
-									</div>
-									<div class="col-md-4">
-										<select id="input9" class="form-select">
-											<option selected>Choose...</option>
-											<option>One</option>
-											<option>Two</option>
-											<option>Three</option>
-										</select>
-									</div>
-									<div class="col-md-12">
-										<div class="d-md-flex d-grid align-items-center gap-3">
-											<button type="button" class="btn btn-primary px-4">Submit</button>
-											<button type="button" class="btn btn-light px-4">Reset</button>
-										</div>
-									</div>
-								</form>
+				@if(session('error'))
+					<div class="alert alert-danger">
+						{{ session('error') }}
+					</div>
+				@elseif(session('success'))
+					<div class="alert alert-success">
+						{{ session('success') }}
+					</div>
+				@endif
+				<form action="{{ route('categories.store') }}" method="POST" class="row g-3">
+        @csrf
+        <div class="col-md-6">
+            <label for="input1" class="form-label">Name</label>
+            <input type="text" name="name" class="form-control" id="input1" placeholder="Category Name" required>
+        </div>
+        <div class="col-md-6">
+            <label for="input9" class="form-label">Existing categories</label>
+            <select id="input9" name="category_id" class="form-select">
+                <option value="" selected>Choose...</option>
+                @forelse($categories as $category)
+                    <option value="{{ $category->id }}">{{ $category->name }}</option>
+                @empty
+                     No options displayed if there are no categories
+                    <option value="" disabled>No categories available</option>
+                @endforelse
+            </select>
+        </div>
+        <div class="col-md-12">
+            <div class="d-md-flex d-grid align-items-center gap-3">
+                <button type="submit" class="btn btn-primary px-4">Submit</button>
+                <button type="reset" class="btn btn-light px-4">Reset</button>
+            </div>
+        </div>
+    </form>
+
 			</div>
 		</div>
 
-        <script src="assets/js/bootstrap.bundle.min.js"></script>
-<!--plugins-->
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/plugins/simplebar/js/simplebar.min.js"></script>
-<script src="assets/plugins/metismenu/js/metisMenu.min.js"></script>
-<script src="assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js"></script>
-<script src="https://cdn.quilljs.com/1.3.7/quill.js"></script> <!-- Updated version -->
+ <!-- Scripts -->
+ <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
+    <!-- Plugins -->
+    <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
+    <script src="{{ asset('assets/plugins/simplebar/js/simplebar.min.js') }}"></script>
+    <script src="{{ asset('assets/plugins/metismenu/js/metisMenu.min.js') }}"></script>
+    <script src="{{ asset('assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js') }}"></script>
+    <script src="https://cdn.quilljs.com/1.3.7/quill.js"></script>
 
 </body>
 

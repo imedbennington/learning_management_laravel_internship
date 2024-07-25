@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\SocialAuthController;
 use App\Http\Controllers\BusinesController;
+use App\Http\Controllers\CategoryController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,6 +20,12 @@ use App\Http\Controllers\BusinesController;
 
 use App\Http\Controllers\AdminAuthController;
 require __DIR__.'/userRoutes.php';
+require __DIR__.'/publicRoutes.php';
+//require __DIR__.'/CategoryRoutes.php';
+
+Route::get('categories/create', [CategoryController::class, 'create'])->name('categories.create');
+Route::post('categories', [CategoryController::class, 'store'])->name('categories.store');
+
 // Route to show the admin login form
 Route::get('admin/login', [AdminAuthController::class, 'showAdminLoginForm'])->name('admin.login');
 
@@ -59,7 +66,7 @@ Route::get('/register/facebook', [SocialAuthController::class, 'redirectToFacebo
 Route::get('/register/twitter', [SocialAuthController::class, 'redirectToTwitter'])->name('register.twitter');
 Route::view('/for-business', 'for-business')->name('for-business');
 
-require __DIR__.'/publicRoutes.php';
+
 // Default Route
 /*Route::get('/', function () {
     return view('welcome');

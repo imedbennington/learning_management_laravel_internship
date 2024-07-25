@@ -30,15 +30,15 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('roles', function (Blueprint $table) {
-            if (Schema::hasColumn('roles', 'id')) {
-                $table->dropColumn('id');
-            }
             if (Schema::hasColumn('roles', 'name')) {
                 $table->dropColumn('name');
             }
             if (Schema::hasColumn('roles', 'created_at')) {
                 $table->dropTimestamps();
             }
+            // Do not drop the 'id' column as it is likely a primary key
         });
     }
 };
+
+

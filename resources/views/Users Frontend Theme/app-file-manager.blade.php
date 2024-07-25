@@ -198,6 +198,7 @@
 					<ul>
 						<li> <a href="form-elements.html"><i class='bx bx-radio-circle'></i>Form Elements</a>
 						</li>
+						
 						<li> <a href="form-input-group.html"><i class='bx bx-radio-circle'></i>Input Groups</a>
 						</li>
 						<li> <a href="form-radios-and-checkboxes.html"><i class='bx bx-radio-circle'></i>Radios & Checkboxes</a>
@@ -210,7 +211,7 @@
 						</li>
 						<li> <a href="form-text-editor.html"><i class='bx bx-radio-circle'></i>Text Editor</a>
 						</li>
-						<li> <a href="form-file-upload.html"><i class='bx bx-radio-circle'></i>File Upload</a>
+						<li> <a href="{{route('form-file-upload')}}"><i class='bx bx-radio-circle'></i>File Upload</a>
 						</li>
 						<li> <a href="form-date-time-pickes.html"><i class='bx bx-radio-circle'></i>Date Pickers</a>
 						</li>
@@ -1031,7 +1032,7 @@
 							<div class="card-body">
 								<div class="d-grid"> <a href="javascript:;" class="btn btn-primary">+ Add File</a>
 								</div>
-								<div class="d-grid"> <a href="{{route('form-add-category')}}" class="btn btn-primary mt-3">+ Add Category</a>
+								<div class="d-grid"> <a href="{{route('categories.create')}}" class="btn btn-primary mt-3">+ Add Category</a>
 								</div>
 								<h5 class="my-3">My Drive</h5>
 								<div class="fm-menu">
