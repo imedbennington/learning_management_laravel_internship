@@ -6,26 +6,16 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Spatie\Permission\Traits\HasRoles;
 
-class Admins extends Authenticatable
+class Student extends Authenticatable
 {
     use Notifiable, HasRoles;
 
-    protected $guard_name = 'admin';
+    protected $guard_name = 'student';
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
     protected $fillable = [
-        'first_name', 'last_name', 'email', 'password',
+        'first_name', 'last_name', 'user_name', 'email', 'password',
     ];
 
-    /**
-     * The attributes that should be hidden for arrays.
-     *
-     * @var array
-     */
     protected $hidden = [
         'password', 'remember_token',
     ];
@@ -34,10 +24,11 @@ class Admins extends Authenticatable
     {
         parent::__construct($attributes);
 
-        // Admin-specific initialization code
+        // Student-specific initialization code
     }
+
     public function courses()
     {
-        return $this->morphMany(Course::class, 'uploader');
+        return $this->belongsToMany(Course::class, 'course_student');
     }
 }

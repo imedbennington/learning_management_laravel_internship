@@ -7,7 +7,8 @@ use Illuminate\Support\Facades\Hash;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Spatie\Permission\Traits\HasRoles;
-
+use Illuminate\Support\Facades\DB;
+use App\Models\Student;
 use App\Events\UserRegistered;
 class AuthController extends Controller
 {
@@ -29,30 +30,53 @@ class AuthController extends Controller
     }
 
     public function registerStudent(Request $request)
-{
-    $request->validate([
-        'first_name' => 'required|string|max:255',
-        'last_name' => 'required|string|max:255',
-        'user_name' => 'required|string|max:255|unique:users',
-        'email' => 'required|string|email|max:255|unique:users',
-        'password' => 'required|string|min:8|confirmed',
-    ]);
+    {
+        $request->validate([
+            'first_name' => 'required|string|max:255',
+            'last_name' => 'required|string|max:255',
+            'user_name' => 'required|string|max:255|unique:users',
+            'email' => 'required|string|email|max:255|unique:users',
+            'password' => 'required|string|min:8|confirmed',
+        ]);
 
-    $user = User::create([
-        'first_name' => $request->first_name,
-        'last_name' => $request->last_name,
-        'user_name' => $request->user_name,
-        'email' => $request->email,
-        'password' => Hash::make($request->password),
-    ]);
+        DB::beginTransaction();
 
-    $user->assignRole('student');
-    
-    // Dispatch the UserRegistered event
-    event(new UserRegistered($user));
-    return redirect()->route('dashboard');
-    //return response()->json(['message' => 'Student registered successfully'], 201);
-}
+        try {
+            // Create the user
+            $user = User::create([
+                'first_name' => $request->first_name,
+                'last_name' => $request->last_name,
+                'user_name' => $request->user_name,
+                'email' => $request->email,
+                'password' => Hash::make($request->password),
+            ]);
+
+            // Assign the 'student' role
+            $user->assignRole('student');
+
+            // Create a student entry
+            Student::create([
+                'id' => $user->id,
+                'first_name' => $request->first_name,
+                'last_name' => $request->last_name,
+                'user_name' => $request->user_name,
+                'email' => $request->email,
+                'password' => Hash::make($request->password),
+                
+            ]);
+
+            // Dispatch the UserRegistered event
+            event(new UserRegistered($user));
+
+            DB::commit();
+
+            return redirect()->route('dashboard');
+            //return response()->json(['message' => 'Student registered successfully'], 201);
+        } catch (\Exception $e) {
+            DB::rollBack();
+            return response()->json(['message' => 'Registration failed', 'error' => $e->getMessage()], 500);
+        }
+    }
 /*
     public function registerInstructor(Request $request)
     {

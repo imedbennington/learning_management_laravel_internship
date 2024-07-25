@@ -5,6 +5,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\SocialAuthController;
 use App\Http\Controllers\BusinesController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\CourseController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,8 +22,8 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\AdminAuthController;
 require __DIR__.'/userRoutes.php';
 require __DIR__.'/publicRoutes.php';
-//require __DIR__.'/CategoryRoutes.php';
-
+require __DIR__.'/CourseRoutes.php';
+Route::get('form-add-course-view', [CourseController::class, 'create'])->name('courses.create');
 Route::get('categories/create', [CategoryController::class, 'create'])->name('categories.create');
 Route::post('categories', [CategoryController::class, 'store'])->name('categories.store');
 
