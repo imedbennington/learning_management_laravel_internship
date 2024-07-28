@@ -43,7 +43,7 @@
 				</div>
 				<div class="toggle-icon ms-auto"><i class='bx bx-arrow-back'></i>
 				</div>
-			 </div>
+			</div>
 			<!--navigation-->
 			<ul class="metismenu" id="menu">
 				<li>
@@ -101,9 +101,11 @@
 					<ul>
 						<li> <a href="ecommerce-products.html"><i class='bx bx-radio-circle'></i>Products</a>
 						</li>
-						<li> <a href="ecommerce-products-details.html"><i class='bx bx-radio-circle'></i>Product Details</a>
+						<li> <a href="ecommerce-products-details.html"><i class='bx bx-radio-circle'></i>Product
+								Details</a>
 						</li>
-						<li> <a href="ecommerce-add-new-products.html"><i class='bx bx-radio-circle'></i>Add New Products</a>
+						<li> <a href="ecommerce-add-new-products.html"><i class='bx bx-radio-circle'></i>Add New
+								Products</a>
 						</li>
 						<li> <a href="ecommerce-orders.html"><i class='bx bx-radio-circle'></i>Orders</a>
 						</li>
@@ -140,7 +142,8 @@
 						</li>
 						<li> <a href="component-paginations.html"><i class='bx bx-radio-circle'></i>Pagination</a>
 						</li>
-						<li> <a href="component-popovers-tooltips.html"><i class='bx bx-radio-circle'></i>Popovers & Tooltips</a>
+						<li> <a href="component-popovers-tooltips.html"><i class='bx bx-radio-circle'></i>Popovers &
+								Tooltips</a>
 						</li>
 						<li> <a href="component-progress-bars.html"><i class='bx bx-radio-circle'></i>Progress</a>
 						</li>
@@ -201,7 +204,8 @@
 						</li>
 						<li> <a href="form-input-group.html"><i class='bx bx-radio-circle'></i>Input Groups</a>
 						</li>
-						<li> <a href="form-radios-and-checkboxes.html"><i class='bx bx-radio-circle'></i>Radios & Checkboxes</a>
+						<li> <a href="form-radios-and-checkboxes.html"><i class='bx bx-radio-circle'></i>Radios &
+								Checkboxes</a>
 						</li>
 						<li> <a href="form-layouts.html"><i class='bx bx-radio-circle'></i>Forms Layouts</a>
 						</li>
@@ -244,26 +248,39 @@
 					<ul>
 						<li><a class="has-arrow" href="javascript:;"><i class='bx bx-radio-circle'></i>Basic</a>
 							<ul>
-								<li><a href="auth-basic-signin.html" target="_blank"><i class='bx bx-radio-circle'></i>Sign In</a></li>
-								<li><a href="auth-basic-signup.html" target="_blank"><i class='bx bx-radio-circle'></i>Sign Up</a></li>
-								<li><a href="auth-basic-forgot-password.html" target="_blank"><i class='bx bx-radio-circle'></i>Forgot Password</a></li>
-								<li><a href="auth-basic-reset-password.html" target="_blank"><i class='bx bx-radio-circle'></i>Reset Password</a></li>
+								<li><a href="auth-basic-signin.html" target="_blank"><i
+											class='bx bx-radio-circle'></i>Sign In</a></li>
+								<li><a href="auth-basic-signup.html" target="_blank"><i
+											class='bx bx-radio-circle'></i>Sign Up</a></li>
+								<li><a href="auth-basic-forgot-password.html" target="_blank"><i
+											class='bx bx-radio-circle'></i>Forgot Password</a></li>
+								<li><a href="auth-basic-reset-password.html" target="_blank"><i
+											class='bx bx-radio-circle'></i>Reset Password</a></li>
 							</ul>
 						</li>
 						<li><a class="has-arrow" href="javascript:;"><i class='bx bx-radio-circle'></i>Cover</a>
 							<ul>
-								<li><a href="auth-cover-signin.html" target="_blank"><i class='bx bx-radio-circle'></i>Sign In</a></li>
-								<li><a href="auth-cover-signup.html" target="_blank"><i class='bx bx-radio-circle'></i>Sign Up</a></li>
-								<li><a href="auth-cover-forgot-password.html" target="_blank"><i class='bx bx-radio-circle'></i>Forgot Password</a></li>
-								<li><a href="auth-cover-reset-password.html" target="_blank"><i class='bx bx-radio-circle'></i>Reset Password</a></li>
+								<li><a href="auth-cover-signin.html" target="_blank"><i
+											class='bx bx-radio-circle'></i>Sign In</a></li>
+								<li><a href="auth-cover-signup.html" target="_blank"><i
+											class='bx bx-radio-circle'></i>Sign Up</a></li>
+								<li><a href="auth-cover-forgot-password.html" target="_blank"><i
+											class='bx bx-radio-circle'></i>Forgot Password</a></li>
+								<li><a href="auth-cover-reset-password.html" target="_blank"><i
+											class='bx bx-radio-circle'></i>Reset Password</a></li>
 							</ul>
 						</li>
-						<li><a class="has-arrow" href="javascript:;"><i class='bx bx-radio-circle'></i>With Header Footer</a>
+						<li><a class="has-arrow" href="javascript:;"><i class='bx bx-radio-circle'></i>With Header
+								Footer</a>
 							<ul>
-								<li><a href="auth-header-footer-signin.html" target="_blank"><i class='bx bx-radio-circle'></i>Sign In</a></li>
-								<li><a href="auth-header-footer-signup.html" target="_blank"><i class='bx bx-radio-circle'></i>Sign Up</a></li>
-								<li><a href="auth-header-footer-forgot-password.html" target="_blank"><i class='bx bx-radio-circle'></i>Forgot Password</a></li>
-								<li><a href="auth-header-footer-reset-password.html" target="_blank"><i class='bx bx-radio-circle'></i>Reset Password</a></li>
+								<li><a href="auth-header-footer-signin.html" target="_blank"><i
+											class='bx bx-radio-circle'></i>Sign In</a></li>
+								<li><a href="auth-header-footer-signup.html" target="_blank"><i
+											class='bx bx-radio-circle'></i>Sign Up</a></li>
+								<li><a href="auth-header-footer-forgot-password.html" target="_blank"><i
+											class='bx bx-radio-circle'></i>Forgot Password</a></li>
+								<li><a href="auth-header-footer-reset-password.html" target="_blank"><i
+											class='bx bx-radio-circle'></i>Reset Password</a></li>
 							</ul>
 						</li>
 					</ul>
@@ -289,13 +306,17 @@
 						<div class="menu-title">Errors</div>
 					</a>
 					<ul>
-						<li> <a href="errors-404-error.html" target="_blank"><i class='bx bx-radio-circle'></i>404 Error</a>
+						<li> <a href="errors-404-error.html" target="_blank"><i class='bx bx-radio-circle'></i>404
+								Error</a>
 						</li>
-						<li> <a href="errors-500-error.html" target="_blank"><i class='bx bx-radio-circle'></i>500 Error</a>
+						<li> <a href="errors-500-error.html" target="_blank"><i class='bx bx-radio-circle'></i>500
+								Error</a>
 						</li>
-						<li> <a href="errors-coming-soon.html" target="_blank"><i class='bx bx-radio-circle'></i>Coming Soon</a>
+						<li> <a href="errors-coming-soon.html" target="_blank"><i class='bx bx-radio-circle'></i>Coming
+								Soon</a>
 						</li>
-						<li> <a href="error-blank-page.html" target="_blank"><i class='bx bx-radio-circle'></i>Blank Page</a>
+						<li> <a href="error-blank-page.html" target="_blank"><i class='bx bx-radio-circle'></i>Blank
+								Page</a>
 						</li>
 					</ul>
 				</li>
@@ -352,7 +373,8 @@
 					<ul>
 						<li> <a class="has-arrow" href="javascript:;"><i class='bx bx-radio-circle'></i>Level One</a>
 							<ul>
-								<li> <a class="has-arrow" href="javascript:;"><i class='bx bx-radio-circle'></i>Level Two</a>
+								<li> <a class="has-arrow" href="javascript:;"><i class='bx bx-radio-circle'></i>Level
+										Two</a>
 									<ul>
 										<li> <a href="javascript:;"><i class='bx bx-radio-circle'></i>Level Three</a>
 										</li>
@@ -387,37 +409,58 @@
 					<div class="mobile-toggle-menu"><i class='bx bx-menu'></i>
 					</div>
 
-					  <div class="position-relative search-bar d-lg-block d-none" data-bs-toggle="modal" data-bs-target="#SearchModal">
+					<div class="position-relative search-bar d-lg-block d-none" data-bs-toggle="modal"
+						data-bs-target="#SearchModal">
 						<input class="form-control px-5" disabled type="search" placeholder="Search">
-						<span class="position-absolute top-50 search-show ms-3 translate-middle-y start-0 top-50 fs-5"><i class='bx bx-search'></i></span>
-					  </div>
+						<span
+							class="position-absolute top-50 search-show ms-3 translate-middle-y start-0 top-50 fs-5"><i
+								class='bx bx-search'></i></span>
+					</div>
 
 
-					  <div class="top-menu ms-auto">
+					<div class="top-menu ms-auto">
 						<ul class="navbar-nav align-items-center gap-1">
-							<li class="nav-item mobile-search-icon d-flex d-lg-none" data-bs-toggle="modal" data-bs-target="#SearchModal">
+							<li class="nav-item mobile-search-icon d-flex d-lg-none" data-bs-toggle="modal"
+								data-bs-target="#SearchModal">
 								<a class="nav-link" href="avascript:;"><i class='bx bx-search'></i>
 								</a>
 							</li>
 							<li class="nav-item dropdown dropdown-laungauge d-none d-sm-flex">
-								<a class="nav-link dropdown-toggle dropdown-toggle-nocaret" href="avascript:;" data-bs-toggle="dropdown"><img src="assets/images/county/02.png" width="22" alt="">
+								<a class="nav-link dropdown-toggle dropdown-toggle-nocaret" href="avascript:;"
+									data-bs-toggle="dropdown"><img src="assets/images/county/02.png" width="22" alt="">
 								</a>
 								<ul class="dropdown-menu dropdown-menu-end">
-									<li><a class="dropdown-item d-flex align-items-center py-2" href="javascript:;"><img src="assets/images/county/01.png" width="20" alt=""><span class="ms-2">English</span></a>
+									<li><a class="dropdown-item d-flex align-items-center py-2" href="javascript:;"><img
+												src="assets/images/county/01.png" width="20" alt=""><span
+												class="ms-2">English</span></a>
 									</li>
-									<li><a class="dropdown-item d-flex align-items-center py-2" href="javascript:;"><img src="assets/images/county/02.png" width="20" alt=""><span class="ms-2">Catalan</span></a>
+									<li><a class="dropdown-item d-flex align-items-center py-2" href="javascript:;"><img
+												src="assets/images/county/02.png" width="20" alt=""><span
+												class="ms-2">Catalan</span></a>
 									</li>
-									<li><a class="dropdown-item d-flex align-items-center py-2" href="javascript:;"><img src="assets/images/county/03.png" width="20" alt=""><span class="ms-2">French</span></a>
+									<li><a class="dropdown-item d-flex align-items-center py-2" href="javascript:;"><img
+												src="assets/images/county/03.png" width="20" alt=""><span
+												class="ms-2">French</span></a>
 									</li>
-									<li><a class="dropdown-item d-flex align-items-center py-2" href="javascript:;"><img src="assets/images/county/04.png" width="20" alt=""><span class="ms-2">Belize</span></a>
+									<li><a class="dropdown-item d-flex align-items-center py-2" href="javascript:;"><img
+												src="assets/images/county/04.png" width="20" alt=""><span
+												class="ms-2">Belize</span></a>
 									</li>
-									<li><a class="dropdown-item d-flex align-items-center py-2" href="javascript:;"><img src="assets/images/county/05.png" width="20" alt=""><span class="ms-2">Colombia</span></a>
+									<li><a class="dropdown-item d-flex align-items-center py-2" href="javascript:;"><img
+												src="assets/images/county/05.png" width="20" alt=""><span
+												class="ms-2">Colombia</span></a>
 									</li>
-									<li><a class="dropdown-item d-flex align-items-center py-2" href="javascript:;"><img src="assets/images/county/06.png" width="20" alt=""><span class="ms-2">Spanish</span></a>
+									<li><a class="dropdown-item d-flex align-items-center py-2" href="javascript:;"><img
+												src="assets/images/county/06.png" width="20" alt=""><span
+												class="ms-2">Spanish</span></a>
 									</li>
-									<li><a class="dropdown-item d-flex align-items-center py-2" href="javascript:;"><img src="assets/images/county/07.png" width="20" alt=""><span class="ms-2">Georgian</span></a>
+									<li><a class="dropdown-item d-flex align-items-center py-2" href="javascript:;"><img
+												src="assets/images/county/07.png" width="20" alt=""><span
+												class="ms-2">Georgian</span></a>
 									</li>
-									<li><a class="dropdown-item d-flex align-items-center py-2" href="javascript:;"><img src="assets/images/county/08.png" width="20" alt=""><span class="ms-2">Hindi</span></a>
+									<li><a class="dropdown-item d-flex align-items-center py-2" href="javascript:;"><img
+												src="assets/images/county/08.png" width="20" alt=""><span
+												class="ms-2">Hindi</span></a>
 									</li>
 								</ul>
 							</li>
@@ -427,235 +470,242 @@
 							</li>
 
 							<li class="nav-item dropdown dropdown-app">
-								<a class="nav-link dropdown-toggle dropdown-toggle-nocaret" data-bs-toggle="dropdown" href="javascript:;"><i class='bx bx-grid-alt'></i></a>
+								<a class="nav-link dropdown-toggle dropdown-toggle-nocaret" data-bs-toggle="dropdown"
+									href="javascript:;"><i class='bx bx-grid-alt'></i></a>
 								<div class="dropdown-menu dropdown-menu-end p-0">
 									<div class="app-container p-2 my-2">
-									  <div class="row gx-0 gy-2 row-cols-3 justify-content-center p-2">
-										 <div class="col">
-										  <a href="javascript:;">
-											<div class="app-box text-center">
-											  <div class="app-icon">
-												  <img src="assets/images/app/slack.png" width="30" alt="">
-											  </div>
-											  <div class="app-name">
-												  <p class="mb-0 mt-1">Slack</p>
-											  </div>
-											  </div>
-											</a>
-										 </div>
-										 <div class="col">
-										  <a href="javascript:;">
-											<div class="app-box text-center">
-											  <div class="app-icon">
-												  <img src="assets/images/app/behance.png" width="30" alt="">
-											  </div>
-											  <div class="app-name">
-												  <p class="mb-0 mt-1">Behance</p>
-											  </div>
-											  </div>
-										  </a>
-										 </div>
-										 <div class="col">
-										  <a href="javascript:;">
-											<div class="app-box text-center">
-											  <div class="app-icon">
-												<img src="assets/images/app/google-drive.png" width="30" alt="">
-											  </div>
-											  <div class="app-name">
-												  <p class="mb-0 mt-1">Dribble</p>
-											  </div>
-											  </div>
-											</a>
-										 </div>
-										 <div class="col">
-										  <a href="javascript:;">
-											<div class="app-box text-center">
-											  <div class="app-icon">
-												  <img src="assets/images/app/outlook.png" width="30" alt="">
-											  </div>
-											  <div class="app-name">
-												  <p class="mb-0 mt-1">Outlook</p>
-											  </div>
-											  </div>
-											</a>
-										 </div>
-										 <div class="col">
-										  <a href="javascript:;">
-											<div class="app-box text-center">
-											  <div class="app-icon">
-												  <img src="assets/images/app/github.png" width="30" alt="">
-											  </div>
-											  <div class="app-name">
-												  <p class="mb-0 mt-1">GitHub</p>
-											  </div>
-											  </div>
-											</a>
-										 </div>
-										 <div class="col">
-										  <a href="javascript:;">
-											<div class="app-box text-center">
-											  <div class="app-icon">
-												  <img src="assets/images/app/stack-overflow.png" width="30" alt="">
-											  </div>
-											  <div class="app-name">
-												  <p class="mb-0 mt-1">Stack</p>
-											  </div>
-											  </div>
-											</a>
-										 </div>
-										 <div class="col">
-										  <a href="javascript:;">
-											<div class="app-box text-center">
-											  <div class="app-icon">
-												  <img src="assets/images/app/figma.png" width="30" alt="">
-											  </div>
-											  <div class="app-name">
-												  <p class="mb-0 mt-1">Stack</p>
-											  </div>
-											  </div>
-											</a>
-										 </div>
-										 <div class="col">
-										  <a href="javascript:;">
-											<div class="app-box text-center">
-											  <div class="app-icon">
-												  <img src="assets/images/app/twitter.png" width="30" alt="">
-											  </div>
-											  <div class="app-name">
-												  <p class="mb-0 mt-1">Twitter</p>
-											  </div>
-											  </div>
-											</a>
-										 </div>
-										 <div class="col">
-										  <a href="javascript:;">
-											<div class="app-box text-center">
-											  <div class="app-icon">
-												  <img src="assets/images/app/google-calendar.png" width="30" alt="">
-											  </div>
-											  <div class="app-name">
-												  <p class="mb-0 mt-1">Calendar</p>
-											  </div>
-											  </div>
-											</a>
-										 </div>
-										 <div class="col">
-										  <a href="javascript:;">
-											<div class="app-box text-center">
-											  <div class="app-icon">
-												  <img src="assets/images/app/spotify.png" width="30" alt="">
-											  </div>
-											  <div class="app-name">
-												  <p class="mb-0 mt-1">Spotify</p>
-											  </div>
-											  </div>
-											</a>
-										 </div>
-										 <div class="col">
-										  <a href="javascript:;">
-											<div class="app-box text-center">
-											  <div class="app-icon">
-												  <img src="assets/images/app/google-photos.png" width="30" alt="">
-											  </div>
-											  <div class="app-name">
-												  <p class="mb-0 mt-1">Photos</p>
-											  </div>
-											  </div>
-											</a>
-										 </div>
-										 <div class="col">
-										  <a href="javascript:;">
-											<div class="app-box text-center">
-											  <div class="app-icon">
-												  <img src="assets/images/app/pinterest.png" width="30" alt="">
-											  </div>
-											  <div class="app-name">
-												  <p class="mb-0 mt-1">Photos</p>
-											  </div>
-											  </div>
-											</a>
-										 </div>
-										 <div class="col">
-										  <a href="javascript:;">
-											<div class="app-box text-center">
-											  <div class="app-icon">
-												  <img src="assets/images/app/linkedin.png" width="30" alt="">
-											  </div>
-											  <div class="app-name">
-												  <p class="mb-0 mt-1">linkedin</p>
-											  </div>
-											  </div>
-											</a>
-										 </div>
-										 <div class="col">
-										  <a href="javascript:;">
-											<div class="app-box text-center">
-											  <div class="app-icon">
-												  <img src="assets/images/app/dribble.png" width="30" alt="">
-											  </div>
-											  <div class="app-name">
-												  <p class="mb-0 mt-1">Dribble</p>
-											  </div>
-											  </div>
-											</a>
-										 </div>
-										 <div class="col">
-										  <a href="javascript:;">
-											<div class="app-box text-center">
-											  <div class="app-icon">
-												  <img src="assets/images/app/youtube.png" width="30" alt="">
-											  </div>
-											  <div class="app-name">
-												  <p class="mb-0 mt-1">YouTube</p>
-											  </div>
-											  </div>
-											</a>
-										 </div>
-										 <div class="col">
-										  <a href="javascript:;">
-											<div class="app-box text-center">
-											  <div class="app-icon">
-												  <img src="assets/images/app/google.png" width="30" alt="">
-											  </div>
-											  <div class="app-name">
-												  <p class="mb-0 mt-1">News</p>
-											  </div>
-											  </div>
-											</a>
-										 </div>
-										 <div class="col">
-										  <a href="javascript:;">
-											<div class="app-box text-center">
-											  <div class="app-icon">
-												  <img src="assets/images/app/envato.png" width="30" alt="">
-											  </div>
-											  <div class="app-name">
-												  <p class="mb-0 mt-1">Envato</p>
-											  </div>
-											  </div>
-											</a>
-										 </div>
-										 <div class="col">
-										  <a href="javascript:;">
-											<div class="app-box text-center">
-											  <div class="app-icon">
-												  <img src="assets/images/app/safari.png" width="30" alt="">
-											  </div>
-											  <div class="app-name">
-												  <p class="mb-0 mt-1">Safari</p>
-											  </div>
-											  </div>
-											</a>
-										 </div>
-				
-									  </div><!--end row-->
-				
+										<div class="row gx-0 gy-2 row-cols-3 justify-content-center p-2">
+											<div class="col">
+												<a href="javascript:;">
+													<div class="app-box text-center">
+														<div class="app-icon">
+															<img src="assets/images/app/slack.png" width="30" alt="">
+														</div>
+														<div class="app-name">
+															<p class="mb-0 mt-1">Slack</p>
+														</div>
+													</div>
+												</a>
+											</div>
+											<div class="col">
+												<a href="javascript:;">
+													<div class="app-box text-center">
+														<div class="app-icon">
+															<img src="assets/images/app/behance.png" width="30" alt="">
+														</div>
+														<div class="app-name">
+															<p class="mb-0 mt-1">Behance</p>
+														</div>
+													</div>
+												</a>
+											</div>
+											<div class="col">
+												<a href="javascript:;">
+													<div class="app-box text-center">
+														<div class="app-icon">
+															<img src="assets/images/app/google-drive.png" width="30"
+																alt="">
+														</div>
+														<div class="app-name">
+															<p class="mb-0 mt-1">Dribble</p>
+														</div>
+													</div>
+												</a>
+											</div>
+											<div class="col">
+												<a href="javascript:;">
+													<div class="app-box text-center">
+														<div class="app-icon">
+															<img src="assets/images/app/outlook.png" width="30" alt="">
+														</div>
+														<div class="app-name">
+															<p class="mb-0 mt-1">Outlook</p>
+														</div>
+													</div>
+												</a>
+											</div>
+											<div class="col">
+												<a href="javascript:;">
+													<div class="app-box text-center">
+														<div class="app-icon">
+															<img src="assets/images/app/github.png" width="30" alt="">
+														</div>
+														<div class="app-name">
+															<p class="mb-0 mt-1">GitHub</p>
+														</div>
+													</div>
+												</a>
+											</div>
+											<div class="col">
+												<a href="javascript:;">
+													<div class="app-box text-center">
+														<div class="app-icon">
+															<img src="assets/images/app/stack-overflow.png" width="30"
+																alt="">
+														</div>
+														<div class="app-name">
+															<p class="mb-0 mt-1">Stack</p>
+														</div>
+													</div>
+												</a>
+											</div>
+											<div class="col">
+												<a href="javascript:;">
+													<div class="app-box text-center">
+														<div class="app-icon">
+															<img src="assets/images/app/figma.png" width="30" alt="">
+														</div>
+														<div class="app-name">
+															<p class="mb-0 mt-1">Stack</p>
+														</div>
+													</div>
+												</a>
+											</div>
+											<div class="col">
+												<a href="javascript:;">
+													<div class="app-box text-center">
+														<div class="app-icon">
+															<img src="assets/images/app/twitter.png" width="30" alt="">
+														</div>
+														<div class="app-name">
+															<p class="mb-0 mt-1">Twitter</p>
+														</div>
+													</div>
+												</a>
+											</div>
+											<div class="col">
+												<a href="javascript:;">
+													<div class="app-box text-center">
+														<div class="app-icon">
+															<img src="assets/images/app/google-calendar.png" width="30"
+																alt="">
+														</div>
+														<div class="app-name">
+															<p class="mb-0 mt-1">Calendar</p>
+														</div>
+													</div>
+												</a>
+											</div>
+											<div class="col">
+												<a href="javascript:;">
+													<div class="app-box text-center">
+														<div class="app-icon">
+															<img src="assets/images/app/spotify.png" width="30" alt="">
+														</div>
+														<div class="app-name">
+															<p class="mb-0 mt-1">Spotify</p>
+														</div>
+													</div>
+												</a>
+											</div>
+											<div class="col">
+												<a href="javascript:;">
+													<div class="app-box text-center">
+														<div class="app-icon">
+															<img src="assets/images/app/google-photos.png" width="30"
+																alt="">
+														</div>
+														<div class="app-name">
+															<p class="mb-0 mt-1">Photos</p>
+														</div>
+													</div>
+												</a>
+											</div>
+											<div class="col">
+												<a href="javascript:;">
+													<div class="app-box text-center">
+														<div class="app-icon">
+															<img src="assets/images/app/pinterest.png" width="30"
+																alt="">
+														</div>
+														<div class="app-name">
+															<p class="mb-0 mt-1">Photos</p>
+														</div>
+													</div>
+												</a>
+											</div>
+											<div class="col">
+												<a href="javascript:;">
+													<div class="app-box text-center">
+														<div class="app-icon">
+															<img src="assets/images/app/linkedin.png" width="30" alt="">
+														</div>
+														<div class="app-name">
+															<p class="mb-0 mt-1">linkedin</p>
+														</div>
+													</div>
+												</a>
+											</div>
+											<div class="col">
+												<a href="javascript:;">
+													<div class="app-box text-center">
+														<div class="app-icon">
+															<img src="assets/images/app/dribble.png" width="30" alt="">
+														</div>
+														<div class="app-name">
+															<p class="mb-0 mt-1">Dribble</p>
+														</div>
+													</div>
+												</a>
+											</div>
+											<div class="col">
+												<a href="javascript:;">
+													<div class="app-box text-center">
+														<div class="app-icon">
+															<img src="assets/images/app/youtube.png" width="30" alt="">
+														</div>
+														<div class="app-name">
+															<p class="mb-0 mt-1">YouTube</p>
+														</div>
+													</div>
+												</a>
+											</div>
+											<div class="col">
+												<a href="javascript:;">
+													<div class="app-box text-center">
+														<div class="app-icon">
+															<img src="assets/images/app/google.png" width="30" alt="">
+														</div>
+														<div class="app-name">
+															<p class="mb-0 mt-1">News</p>
+														</div>
+													</div>
+												</a>
+											</div>
+											<div class="col">
+												<a href="javascript:;">
+													<div class="app-box text-center">
+														<div class="app-icon">
+															<img src="assets/images/app/envato.png" width="30" alt="">
+														</div>
+														<div class="app-name">
+															<p class="mb-0 mt-1">Envato</p>
+														</div>
+													</div>
+												</a>
+											</div>
+											<div class="col">
+												<a href="javascript:;">
+													<div class="app-box text-center">
+														<div class="app-icon">
+															<img src="assets/images/app/safari.png" width="30" alt="">
+														</div>
+														<div class="app-name">
+															<p class="mb-0 mt-1">Safari</p>
+														</div>
+													</div>
+												</a>
+											</div>
+
+										</div><!--end row-->
+
 									</div>
 								</div>
 							</li>
 
 							<li class="nav-item dropdown dropdown-large">
-								<a class="nav-link dropdown-toggle dropdown-toggle-nocaret position-relative" href="#" data-bs-toggle="dropdown"><span class="alert-count">7</span>
+								<a class="nav-link dropdown-toggle dropdown-toggle-nocaret position-relative" href="#"
+									data-bs-toggle="dropdown"><span class="alert-count">7</span>
 									<i class='bx bx-bell'></i>
 								</a>
 								<div class="dropdown-menu dropdown-menu-end">
@@ -669,11 +719,13 @@
 										<a class="dropdown-item" href="javascript:;">
 											<div class="d-flex align-items-center">
 												<div class="user-online">
-													<img src="assets/images/avatars/avatar-1.png" class="msg-avatar" alt="user avatar">
+													<img src="assets/images/avatars/avatar-1.png" class="msg-avatar"
+														alt="user avatar">
 												</div>
 												<div class="flex-grow-1">
-													<h6 class="msg-name">Daisy Anderson<span class="msg-time float-end">5 sec
-												ago</span></h6>
+													<h6 class="msg-name">Daisy Anderson<span
+															class="msg-time float-end">5 sec
+															ago</span></h6>
 													<p class="msg-info">The standard chunk of lorem</p>
 												</div>
 											</div>
@@ -683,8 +735,9 @@
 												<div class="notify bg-light-danger text-danger">dc
 												</div>
 												<div class="flex-grow-1">
-													<h6 class="msg-name">New Orders <span class="msg-time float-end">2 min
-												ago</span></h6>
+													<h6 class="msg-name">New Orders <span class="msg-time float-end">2
+															min
+															ago</span></h6>
 													<p class="msg-info">You have recived new orders</p>
 												</div>
 											</div>
@@ -692,11 +745,13 @@
 										<a class="dropdown-item" href="javascript:;">
 											<div class="d-flex align-items-center">
 												<div class="user-online">
-													<img src="assets/images/avatars/avatar-2.png" class="msg-avatar" alt="user avatar">
+													<img src="assets/images/avatars/avatar-2.png" class="msg-avatar"
+														alt="user avatar">
 												</div>
 												<div class="flex-grow-1">
-													<h6 class="msg-name">Althea Cabardo <span class="msg-time float-end">14
-												sec ago</span></h6>
+													<h6 class="msg-name">Althea Cabardo <span
+															class="msg-time float-end">14
+															sec ago</span></h6>
 													<p class="msg-info">Many desktop publishing packages</p>
 												</div>
 											</div>
@@ -704,11 +759,13 @@
 										<a class="dropdown-item" href="javascript:;">
 											<div class="d-flex align-items-center">
 												<div class="notify bg-light-success text-success">
-													<img src="assets/images/app/outlook.png" width="25" alt="user avatar">
+													<img src="assets/images/app/outlook.png" width="25"
+														alt="user avatar">
 												</div>
 												<div class="flex-grow-1">
-													<h6 class="msg-name">Account Created<span class="msg-time float-end">28 min
-												ago</span></h6>
+													<h6 class="msg-name">Account Created<span
+															class="msg-time float-end">28 min
+															ago</span></h6>
 													<p class="msg-info">Successfully created new email</p>
 												</div>
 											</div>
@@ -719,7 +776,7 @@
 												</div>
 												<div class="flex-grow-1">
 													<h6 class="msg-name">New Product Approved <span
-												class="msg-time float-end">2 hrs ago</span></h6>
+															class="msg-time float-end">2 hrs ago</span></h6>
 													<p class="msg-info">Your new product has approved</p>
 												</div>
 											</div>
@@ -727,22 +784,26 @@
 										<a class="dropdown-item" href="javascript:;">
 											<div class="d-flex align-items-center">
 												<div class="user-online">
-													<img src="assets/images/avatars/avatar-4.png" class="msg-avatar" alt="user avatar">
+													<img src="assets/images/avatars/avatar-4.png" class="msg-avatar"
+														alt="user avatar">
 												</div>
 												<div class="flex-grow-1">
-													<h6 class="msg-name">Katherine Pechon <span class="msg-time float-end">15
-												min ago</span></h6>
+													<h6 class="msg-name">Katherine Pechon <span
+															class="msg-time float-end">15
+															min ago</span></h6>
 													<p class="msg-info">Making this the first true generator</p>
 												</div>
 											</div>
 										</a>
 										<a class="dropdown-item" href="javascript:;">
 											<div class="d-flex align-items-center">
-												<div class="notify bg-light-success text-success"><i class='bx bx-check-square'></i>
+												<div class="notify bg-light-success text-success"><i
+														class='bx bx-check-square'></i>
 												</div>
 												<div class="flex-grow-1">
-													<h6 class="msg-name">Your item is shipped <span class="msg-time float-end">5 hrs
-												ago</span></h6>
+													<h6 class="msg-name">Your item is shipped <span
+															class="msg-time float-end">5 hrs
+															ago</span></h6>
 													<p class="msg-info">Successfully shipped your item</p>
 												</div>
 											</div>
@@ -750,11 +811,13 @@
 										<a class="dropdown-item" href="javascript:;">
 											<div class="d-flex align-items-center">
 												<div class="notify bg-light-primary">
-													<img src="assets/images/app/github.png" width="25" alt="user avatar">
+													<img src="assets/images/app/github.png" width="25"
+														alt="user avatar">
 												</div>
 												<div class="flex-grow-1">
-													<h6 class="msg-name">New 24 authors<span class="msg-time float-end">1 day
-												ago</span></h6>
+													<h6 class="msg-name">New 24 authors<span
+															class="msg-time float-end">1 day
+															ago</span></h6>
 													<p class="msg-info">24 new authors joined last week</p>
 												</div>
 											</div>
@@ -762,11 +825,13 @@
 										<a class="dropdown-item" href="javascript:;">
 											<div class="d-flex align-items-center">
 												<div class="user-online">
-													<img src="assets/images/avatars/avatar-8.png" class="msg-avatar" alt="user avatar">
+													<img src="assets/images/avatars/avatar-8.png" class="msg-avatar"
+														alt="user avatar">
 												</div>
 												<div class="flex-grow-1">
-													<h6 class="msg-name">Peter Costanzo <span class="msg-time float-end">6 hrs
-												ago</span></h6>
+													<h6 class="msg-name">Peter Costanzo <span
+															class="msg-time float-end">6 hrs
+															ago</span></h6>
 													<p class="msg-info">It was popularised in the 1960s</p>
 												</div>
 											</div>
@@ -780,7 +845,9 @@
 								</div>
 							</li>
 							<li class="nav-item dropdown dropdown-large">
-								<a class="nav-link dropdown-toggle dropdown-toggle-nocaret position-relative" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> <span class="alert-count">8</span>
+								<a class="nav-link dropdown-toggle dropdown-toggle-nocaret position-relative" href="#"
+									role="button" data-bs-toggle="dropdown" aria-expanded="false"> <span
+										class="alert-count">8</span>
 									<i class='bx bx-shopping-bag'></i>
 								</a>
 								<div class="dropdown-menu dropdown-menu-end">
@@ -795,7 +862,8 @@
 											<div class="d-flex align-items-center gap-3">
 												<div class="position-relative">
 													<div class="cart-product rounded-circle bg-light">
-														<img src="assets/images/products/11.png" class="" alt="product image">
+														<img src="assets/images/products/11.png" class=""
+															alt="product image">
 													</div>
 												</div>
 												<div class="flex-grow-1">
@@ -813,7 +881,8 @@
 											<div class="d-flex align-items-center gap-3">
 												<div class="position-relative">
 													<div class="cart-product rounded-circle bg-light">
-														<img src="assets/images/products/02.png" class="" alt="product image">
+														<img src="assets/images/products/02.png" class=""
+															alt="product image">
 													</div>
 												</div>
 												<div class="flex-grow-1">
@@ -831,7 +900,8 @@
 											<div class="d-flex align-items-center gap-3">
 												<div class="position-relative">
 													<div class="cart-product rounded-circle bg-light">
-														<img src="assets/images/products/03.png" class="" alt="product image">
+														<img src="assets/images/products/03.png" class=""
+															alt="product image">
 													</div>
 												</div>
 												<div class="flex-grow-1">
@@ -849,7 +919,8 @@
 											<div class="d-flex align-items-center gap-3">
 												<div class="position-relative">
 													<div class="cart-product rounded-circle bg-light">
-														<img src="assets/images/products/04.png" class="" alt="product image">
+														<img src="assets/images/products/04.png" class=""
+															alt="product image">
 													</div>
 												</div>
 												<div class="flex-grow-1">
@@ -867,7 +938,8 @@
 											<div class="d-flex align-items-center gap-3">
 												<div class="position-relative">
 													<div class="cart-product rounded-circle bg-light">
-														<img src="assets/images/products/05.png" class="" alt="product image">
+														<img src="assets/images/products/05.png" class=""
+															alt="product image">
 													</div>
 												</div>
 												<div class="flex-grow-1">
@@ -885,7 +957,8 @@
 											<div class="d-flex align-items-center gap-3">
 												<div class="position-relative">
 													<div class="cart-product rounded-circle bg-light">
-														<img src="assets/images/products/06.png" class="" alt="product image">
+														<img src="assets/images/products/06.png" class=""
+															alt="product image">
 													</div>
 												</div>
 												<div class="flex-grow-1">
@@ -903,7 +976,8 @@
 											<div class="d-flex align-items-center gap-3">
 												<div class="position-relative">
 													<div class="cart-product rounded-circle bg-light">
-														<img src="assets/images/products/07.png" class="" alt="product image">
+														<img src="assets/images/products/07.png" class=""
+															alt="product image">
 													</div>
 												</div>
 												<div class="flex-grow-1">
@@ -921,7 +995,8 @@
 											<div class="d-flex align-items-center gap-3">
 												<div class="position-relative">
 													<div class="cart-product rounded-circle bg-light">
-														<img src="assets/images/products/08.png" class="" alt="product image">
+														<img src="assets/images/products/08.png" class=""
+															alt="product image">
 													</div>
 												</div>
 												<div class="flex-grow-1">
@@ -939,7 +1014,8 @@
 											<div class="d-flex align-items-center gap-3">
 												<div class="position-relative">
 													<div class="cart-product rounded-circle bg-light">
-														<img src="assets/images/products/09.png" class="" alt="product image">
+														<img src="assets/images/products/09.png" class=""
+															alt="product image">
 													</div>
 												</div>
 												<div class="flex-grow-1">
@@ -968,28 +1044,40 @@
 						</ul>
 					</div>
 					<div class="user-box dropdown px-3">
-						<a class="d-flex align-items-center nav-link dropdown-toggle gap-3 dropdown-toggle-nocaret" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-							<img src="assets/images/avatars/avatar-2.png" class="user-img" alt="user avatar">
-							<div class="user-info">
-								<p class="user-name mb-0">Pauline Seitz</p>
-								<p class="designattion mb-0">Web Designer</p>
-							</div>
+						<a class="d-flex align-items-center nav-link dropdown-toggle gap-3 dropdown-toggle-nocaret"
+							href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+							@if(isset($admin))
+								<img src="{{ asset('assets/images/avatars/avatar-2.png') }}" class="user-img"
+									alt="user avatar">
+								<div class="user-info">
+									<p class="user-name mb-0">{{ $admin->first_name }} {{ $admin->last_name }}</p>
+									<p class="designation mb-0">Admin</p>
+								</div>
+							@else
+								<p>No admin data available.</p>
+							@endif
 						</a>
 						<ul class="dropdown-menu dropdown-menu-end">
-							<li><a class="dropdown-item d-flex align-items-center" href="javascript:;"><i class="bx bx-user fs-5"></i><span>Profile</span></a>
+							<li><a class="dropdown-item d-flex align-items-center" href="javascript:;"><i
+										class="bx bx-user fs-5"></i><span>Profile</span></a>
 							</li>
-							<li><a class="dropdown-item d-flex align-items-center" href="javascript:;"><i class="bx bx-cog fs-5"></i><span>Settings</span></a>
+							<li><a class="dropdown-item d-flex align-items-center" href="javascript:;"><i
+										class="bx bx-cog fs-5"></i><span>Settings</span></a>
 							</li>
-							<li><a class="dropdown-item d-flex align-items-center" href="javascript:;"><i class="bx bx-home-circle fs-5"></i><span>Dashboard</span></a>
+							<li><a class="dropdown-item d-flex align-items-center" href="javascript:;"><i
+										class="bx bx-home-circle fs-5"></i><span>Dashboard</span></a>
 							</li>
-							<li><a class="dropdown-item d-flex align-items-center" href="javascript:;"><i class="bx bx-dollar-circle fs-5"></i><span>Earnings</span></a>
+							<li><a class="dropdown-item d-flex align-items-center" href="javascript:;"><i
+										class="bx bx-dollar-circle fs-5"></i><span>Earnings</span></a>
 							</li>
-							<li><a class="dropdown-item d-flex align-items-center" href="javascript:;"><i class="bx bx-download fs-5"></i><span>Downloads</span></a>
+							<li><a class="dropdown-item d-flex align-items-center" href="javascript:;"><i
+										class="bx bx-download fs-5"></i><span>Downloads</span></a>
 							</li>
 							<li>
 								<div class="dropdown-divider mb-0"></div>
 							</li>
-							<li><a class="dropdown-item d-flex align-items-center" href="javascript:;"><i class="bx bx-log-out-circle"></i><span>Logout</span></a>
+							<li><a class="dropdown-item d-flex align-items-center" href="javascript:;"><i
+										class="bx bx-log-out-circle"></i><span>Logout</span></a>
 							</li>
 						</ul>
 					</div>
@@ -1015,12 +1103,16 @@
 					<div class="ms-auto">
 						<div class="btn-group">
 							<button type="button" class="btn btn-primary">Settings</button>
-							<button type="button" class="btn btn-primary split-bg-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown">	<span class="visually-hidden">Toggle Dropdown</span>
+							<button type="button"
+								class="btn btn-primary split-bg-primary dropdown-toggle dropdown-toggle-split"
+								data-bs-toggle="dropdown"> <span class="visually-hidden">Toggle Dropdown</span>
 							</button>
-							<div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-end">	<a class="dropdown-item" href="javascript:;">Action</a>
+							<div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-end"> <a
+									class="dropdown-item" href="javascript:;">Action</a>
 								<a class="dropdown-item" href="javascript:;">Another action</a>
 								<a class="dropdown-item" href="javascript:;">Something else here</a>
-								<div class="dropdown-divider"></div>	<a class="dropdown-item" href="javascript:;">Separated link</a>
+								<div class="dropdown-divider"></div> <a class="dropdown-item"
+									href="javascript:;">Separated link</a>
 							</div>
 						</div>
 					</div>
@@ -1029,10 +1121,11 @@
 				<div class="row">
 					<div class="col-xl-9 mx-auto">
 						<h6 class="mb-0 text-uppercase">Fancy File Upload</h6>
-						<hr/>
+						<hr />
 						<div class="card">
 							<div class="card-body">
-								<input id="fancy-file-upload" type="file" name="files" accept=".jpg, .png, image/jpeg, image/png" multiple>
+								<input id="fancy-file-upload" type="file" name="files"
+									accept=".jpg, .png, image/jpeg, image/png" multiple>
 							</div>
 						</div>
 					</div>
@@ -1041,11 +1134,13 @@
 				<div class="row">
 					<div class="col-xl-9 mx-auto">
 						<h6 class="mb-0 text-uppercase">Image Uploadify</h6>
-						<hr/>
+						<hr />
 						<div class="card">
 							<div class="card-body">
 								<form>
-									<input id="image-uploadify" type="file" accept=".xlsx,.xls,image/*,.doc,audio/*,.docx,video/*,.ppt,.pptx,.txt,.pdf" multiple>
+									<input id="image-uploadify" type="file"
+										accept=".xlsx,.xls,image/*,.doc,audio/*,.docx,video/*,.ppt,.pptx,.txt,.pdf"
+										multiple>
 								</form>
 							</div>
 						</div>
@@ -1058,61 +1153,98 @@
 		<!--start overlay-->
 		<div class="overlay toggle-icon"></div>
 		<!--end overlay-->
-		<!--Start Back To Top Button--> <a href="javaScript:;" class="back-to-top"><i class='bx bxs-up-arrow-alt'></i></a>
+		<!--Start Back To Top Button--> <a href="javaScript:;" class="back-to-top"><i
+				class='bx bxs-up-arrow-alt'></i></a>
 		<!--End Back To Top Button-->
 		<footer class="page-footer">
 			<p class="mb-0">Copyright © 2021. All right reserved.</p>
 		</footer>
 	</div>
-	
+
 
 	<!-- search modal -->
-    <div class="modal" id="SearchModal" tabindex="-1">
+	<div class="modal" id="SearchModal" tabindex="-1">
 		<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-fullscreen-md-down">
-		  <div class="modal-content">
-			<div class="modal-header gap-2">
-			  <div class="position-relative popup-search w-100">
-				<input class="form-control form-control-lg ps-5 border border-3 border-primary" type="search" placeholder="Search">
-				<span class="position-absolute top-50 search-show ms-3 translate-middle-y start-0 top-50 fs-4"><i class='bx bx-search'></i></span>
-			  </div>
-			  <button type="button" class="btn-close d-md-none" data-bs-dismiss="modal" aria-label="Close"></button>
-			</div>
-			<div class="modal-body">
-				<div class="search-list">
-				   <p class="mb-1">Html Templates</p>
-				   <div class="list-group">
-					  <a href="javascript:;" class="list-group-item list-group-item-action active align-items-center d-flex gap-2 py-1"><i class='bx bxl-angular fs-4'></i>Best Html Templates</a>
-					  <a href="javascript:;" class="list-group-item list-group-item-action align-items-center d-flex gap-2 py-1"><i class='bx bxl-vuejs fs-4'></i>Html5 Templates</a>
-					  <a href="javascript:;" class="list-group-item list-group-item-action align-items-center d-flex gap-2 py-1"><i class='bx bxl-magento fs-4'></i>Responsive Html5 Templates</a>
-					  <a href="javascript:;" class="list-group-item list-group-item-action align-items-center d-flex gap-2 py-1"><i class='bx bxl-shopify fs-4'></i>eCommerce Html Templates</a>
-				   </div>
-				   <p class="mb-1 mt-3">Web Designe Company</p>
-				   <div class="list-group">
-					  <a href="javascript:;" class="list-group-item list-group-item-action align-items-center d-flex gap-2 py-1"><i class='bx bxl-windows fs-4'></i>Best Html Templates</a>
-					  <a href="javascript:;" class="list-group-item list-group-item-action align-items-center d-flex gap-2 py-1"><i class='bx bxl-dropbox fs-4' ></i>Html5 Templates</a>
-					  <a href="javascript:;" class="list-group-item list-group-item-action align-items-center d-flex gap-2 py-1"><i class='bx bxl-opera fs-4'></i>Responsive Html5 Templates</a>
-					  <a href="javascript:;" class="list-group-item list-group-item-action align-items-center d-flex gap-2 py-1"><i class='bx bxl-wordpress fs-4'></i>eCommerce Html Templates</a>
-				   </div>
-				   <p class="mb-1 mt-3">Software Development</p>
-				   <div class="list-group">
-					  <a href="javascript:;" class="list-group-item list-group-item-action align-items-center d-flex gap-2 py-1"><i class='bx bxl-mailchimp fs-4'></i>Best Html Templates</a>
-					  <a href="javascript:;" class="list-group-item list-group-item-action align-items-center d-flex gap-2 py-1"><i class='bx bxl-zoom fs-4'></i>Html5 Templates</a>
-					  <a href="javascript:;" class="list-group-item list-group-item-action align-items-center d-flex gap-2 py-1"><i class='bx bxl-sass fs-4'></i>Responsive Html5 Templates</a>
-					  <a href="javascript:;" class="list-group-item list-group-item-action align-items-center d-flex gap-2 py-1"><i class='bx bxl-vk fs-4'></i>eCommerce Html Templates</a>
-				   </div>
-				   <p class="mb-1 mt-3">Online Shoping Portals</p>
-				   <div class="list-group">
-					  <a href="javascript:;" class="list-group-item list-group-item-action align-items-center d-flex gap-2 py-1"><i class='bx bxl-slack fs-4'></i>Best Html Templates</a>
-					  <a href="javascript:;" class="list-group-item list-group-item-action align-items-center d-flex gap-2 py-1"><i class='bx bxl-skype fs-4'></i>Html5 Templates</a>
-					  <a href="javascript:;" class="list-group-item list-group-item-action align-items-center d-flex gap-2 py-1"><i class='bx bxl-twitter fs-4'></i>Responsive Html5 Templates</a>
-					  <a href="javascript:;" class="list-group-item list-group-item-action align-items-center d-flex gap-2 py-1"><i class='bx bxl-vimeo fs-4'></i>eCommerce Html Templates</a>
-				   </div>
+			<div class="modal-content">
+				<div class="modal-header gap-2">
+					<div class="position-relative popup-search w-100">
+						<input class="form-control form-control-lg ps-5 border border-3 border-primary" type="search"
+							placeholder="Search">
+						<span
+							class="position-absolute top-50 search-show ms-3 translate-middle-y start-0 top-50 fs-4"><i
+								class='bx bx-search'></i></span>
+					</div>
+					<button type="button" class="btn-close d-md-none" data-bs-dismiss="modal"
+						aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<div class="search-list">
+						<p class="mb-1">Html Templates</p>
+						<div class="list-group">
+							<a href="javascript:;"
+								class="list-group-item list-group-item-action active align-items-center d-flex gap-2 py-1"><i
+									class='bx bxl-angular fs-4'></i>Best Html Templates</a>
+							<a href="javascript:;"
+								class="list-group-item list-group-item-action align-items-center d-flex gap-2 py-1"><i
+									class='bx bxl-vuejs fs-4'></i>Html5 Templates</a>
+							<a href="javascript:;"
+								class="list-group-item list-group-item-action align-items-center d-flex gap-2 py-1"><i
+									class='bx bxl-magento fs-4'></i>Responsive Html5 Templates</a>
+							<a href="javascript:;"
+								class="list-group-item list-group-item-action align-items-center d-flex gap-2 py-1"><i
+									class='bx bxl-shopify fs-4'></i>eCommerce Html Templates</a>
+						</div>
+						<p class="mb-1 mt-3">Web Designe Company</p>
+						<div class="list-group">
+							<a href="javascript:;"
+								class="list-group-item list-group-item-action align-items-center d-flex gap-2 py-1"><i
+									class='bx bxl-windows fs-4'></i>Best Html Templates</a>
+							<a href="javascript:;"
+								class="list-group-item list-group-item-action align-items-center d-flex gap-2 py-1"><i
+									class='bx bxl-dropbox fs-4'></i>Html5 Templates</a>
+							<a href="javascript:;"
+								class="list-group-item list-group-item-action align-items-center d-flex gap-2 py-1"><i
+									class='bx bxl-opera fs-4'></i>Responsive Html5 Templates</a>
+							<a href="javascript:;"
+								class="list-group-item list-group-item-action align-items-center d-flex gap-2 py-1"><i
+									class='bx bxl-wordpress fs-4'></i>eCommerce Html Templates</a>
+						</div>
+						<p class="mb-1 mt-3">Software Development</p>
+						<div class="list-group">
+							<a href="javascript:;"
+								class="list-group-item list-group-item-action align-items-center d-flex gap-2 py-1"><i
+									class='bx bxl-mailchimp fs-4'></i>Best Html Templates</a>
+							<a href="javascript:;"
+								class="list-group-item list-group-item-action align-items-center d-flex gap-2 py-1"><i
+									class='bx bxl-zoom fs-4'></i>Html5 Templates</a>
+							<a href="javascript:;"
+								class="list-group-item list-group-item-action align-items-center d-flex gap-2 py-1"><i
+									class='bx bxl-sass fs-4'></i>Responsive Html5 Templates</a>
+							<a href="javascript:;"
+								class="list-group-item list-group-item-action align-items-center d-flex gap-2 py-1"><i
+									class='bx bxl-vk fs-4'></i>eCommerce Html Templates</a>
+						</div>
+						<p class="mb-1 mt-3">Online Shoping Portals</p>
+						<div class="list-group">
+							<a href="javascript:;"
+								class="list-group-item list-group-item-action align-items-center d-flex gap-2 py-1"><i
+									class='bx bxl-slack fs-4'></i>Best Html Templates</a>
+							<a href="javascript:;"
+								class="list-group-item list-group-item-action align-items-center d-flex gap-2 py-1"><i
+									class='bx bxl-skype fs-4'></i>Html5 Templates</a>
+							<a href="javascript:;"
+								class="list-group-item list-group-item-action align-items-center d-flex gap-2 py-1"><i
+									class='bx bxl-twitter fs-4'></i>Responsive Html5 Templates</a>
+							<a href="javascript:;"
+								class="list-group-item list-group-item-action align-items-center d-flex gap-2 py-1"><i
+									class='bx bxl-vimeo fs-4'></i>eCommerce Html Templates</a>
+						</div>
+					</div>
 				</div>
 			</div>
-		  </div>
 		</div>
-	  </div>
-    <!-- end search modal -->
+	</div>
+	<!-- end search modal -->
 
 
 
@@ -1125,9 +1257,9 @@
 				<h5 class="mb-0 text-uppercase">Theme Customizer</h5>
 				<button type="button" class="btn-close ms-auto close-switcher" aria-label="Close"></button>
 			</div>
-			<hr/>
+			<hr />
 			<h6 class="mb-0">Theme Styles</h6>
-			<hr/>
+			<hr />
 			<div class="d-flex align-items-center justify-content-between">
 				<div class="form-check">
 					<input class="form-check-input" type="radio" name="flexRadioDefault" id="lightmode" checked>
@@ -1142,14 +1274,14 @@
 					<label class="form-check-label" for="semidark">Semi Dark</label>
 				</div>
 			</div>
-			<hr/>
+			<hr />
 			<div class="form-check">
 				<input class="form-check-input" type="radio" id="minimaltheme" name="flexRadioDefault">
 				<label class="form-check-label" for="minimaltheme">Minimal Theme</label>
 			</div>
-			<hr/>
+			<hr />
 			<h6 class="mb-0">Header Colors</h6>
-			<hr/>
+			<hr />
 			<div class="header-colors-indigators">
 				<div class="row row-cols-auto g-3">
 					<div class="col">
@@ -1178,9 +1310,9 @@
 					</div>
 				</div>
 			</div>
-			<hr/>
+			<hr />
 			<h6 class="mb-0">Sidebar Colors</h6>
-			<hr/>
+			<hr />
 			<div class="header-colors-indigators">
 				<div class="row row-cols-auto g-3">
 					<div class="col">

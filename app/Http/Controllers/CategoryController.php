@@ -18,10 +18,11 @@ class CategoryController extends Controller
      * Show the form for creating a new resource.
      */
     public function create()
-    {
-        $categories = Category::all(); // Fetch categories from the database
-        return view('Users Frontend Theme.add-category', compact('categories')); // Pass categories to the view
-    }
+{
+    $categories = Category::all(); // Fetch categories
+    return view('Users Frontend Theme.add-category', compact('categories')); // Pass categories to the view
+}
+
 
     /**
      * Store a newly created resource in storage.

@@ -18,7 +18,10 @@ class Instructor extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
-
+    public function getNameAttribute()
+    {
+        return $this->first_name . ' ' . $this->last_name;
+    }
     public function __construct(array $attributes = [])
     {
         parent::__construct($attributes);

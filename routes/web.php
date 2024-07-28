@@ -23,9 +23,18 @@ use App\Http\Controllers\AdminAuthController;
 require __DIR__.'/userRoutes.php';
 require __DIR__.'/publicRoutes.php';
 require __DIR__.'/CourseRoutes.php';
-Route::get('form-add-course-view', [CourseController::class, 'create'])->name('courses.create');
+// Route to show the form for creating a new course
+Route::get('form-add-course', [CourseController::class, 'create'])->name('courses.create');
+
+// Route to handle the form submission for storing a new course
+Route::post('courses', [CourseController::class, 'store'])->name('courses.store');
+
+// Route to show the form for creating a new category
 Route::get('categories/create', [CategoryController::class, 'create'])->name('categories.create');
+
+// Route to handle the form submission for storing a new category
 Route::post('categories', [CategoryController::class, 'store'])->name('categories.store');
+
 
 // Route to show the admin login form
 Route::get('admin/login', [AdminAuthController::class, 'showAdminLoginForm'])->name('admin.login');
@@ -40,7 +49,8 @@ Route::post('admin/password/email', [AdminAuthController::class, 'sendResetLinkE
 Route::get('admin/password/reset', [AdminAuthController::class, 'showLinkRequestForm'])->name('admin.password.request');
 
 // Route to show the admin dashboard (with authentication middleware)
-Route::get('admin/dashboard', [AdminAuthController::class, 'index'])->name('admin.dashboard')->middleware('auth:admin');
+//Route::get('admin/dashboard', [AdminAuthController::class, 'index'])->name('admin.dashboard')->middleware('auth:admin');
+Route::get('/admin/dashboard', [AdminAuthController::class, 'dashboard'])->middleware('auth:admin')->name('admin-dashboard');
 
 
 
@@ -75,6 +85,11 @@ Route::view('/for-business', 'for-business')->name('for-business');
 Route::get('/dashboard', function () {
     return view('public_users.dashboard');
 })->name('dashboard');
+
+
+
+Route::get('/admin/dashboard', [AdminAuthController::class, 'dashboard'])->middleware('auth:admin');
+
 
 
 Route::get('register/student', [AuthController::class, 'showStudentRegistrationForm'])->name('register.student');

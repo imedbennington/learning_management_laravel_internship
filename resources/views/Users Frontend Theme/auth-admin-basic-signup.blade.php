@@ -47,14 +47,14 @@
 										<p class="mb-0">Please fill the below details to create your account</p>
 									</div>
 									@if ($errors->any())
-                            <div class="alert alert-danger">
-                                <ul>
-                             @foreach ($errors->all() as $error)
-                             <li>{{ $error }}</li>
-                            @endforeach
-                                </ul>
-                            </div>
-                        @endif
+										<div class="alert alert-danger">
+											<ul>
+										@foreach ($errors->all() as $error)
+										<li>{{ $error }}</li>
+										@endforeach
+											</ul>
+										</div>
+									@endif
 									<div class="form-body">
 										<form class="row g-3" method="POST" action="{{ route('register.admin.submit') }}">
 											@csrf

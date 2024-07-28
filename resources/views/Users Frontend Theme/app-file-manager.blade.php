@@ -1030,7 +1030,7 @@
 					<div class="col-12 col-lg-3">
 						<div class="card">
 							<div class="card-body">
-								<div class="d-grid"> <a href="{{route('form-add-course-view')}}" class="btn btn-primary">+ Add File</a>
+								<div class="d-grid"> <a href="{{route('courses.create')}}" class="btn btn-primary">+ Add File</a>
 								</div>
 								<div class="d-grid"> <a href="{{route('categories.create')}}" class="btn btn-primary mt-3">+ Add Category</a>
 								</div>

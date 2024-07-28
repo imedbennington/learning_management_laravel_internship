@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Category;
 use App\Models\Course;
-
+use Illuminate\Support\Facades\Auth;
 class CourseController extends Controller
 {
     /**
@@ -13,13 +13,18 @@ class CourseController extends Controller
      */
     public function index()
     {
-        //
+            
+            $courses = Course::with('category', 'uploader')->get();
+            dd($courses);
+            return view('public_users.course-list', compact('courses'));
+        
     }
 
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+ // Show the form for creating a new course
+ public function create()
     {
         $categories = Category::all(); // Fetch categories for the dropdown
         return view('Users Frontend Theme.add-course', compact('categories')); // Pass the variable to the view
@@ -28,6 +33,7 @@ class CourseController extends Controller
     /**
      * Store a newly created resource in storage.
      */
+    /*
     public function store(Request $request)
     {
         // Validate the request
@@ -78,15 +84,37 @@ class CourseController extends Controller
     
         return redirect()->route('courses.create')->with('success', 'Course created successfully!');
     }
-    
+    */
 
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function store(Request $request)
     {
-        //
+        $request->validate([
+            'title' => 'required|string|max:255',
+            'description' => 'required|string',
+            'image' => 'required|image',
+            'category_id' => 'required|integer|exists:categories,id',
+        ]);
+
+        $course = new Course();
+        $course->title = $request->title;
+        $course->description = $request->description;
+        $course->image = $request->file('image')->store('course_images', 'public');
+        $course->category_id = $request->category_id;
+        $course->uploader_id = Auth::id();
+        $course->uploader_type = get_class(Auth::user());
+        $course->save();
+
+        return redirect()->route('courses.index')->with('success', 'Course created successfully.');
     }
+    
+     public function show(Course $course)
+{
+    return view('public_users.course-list', compact('courses'));
+}
+
 
     /**
      * Show the form for editing the specified resource.

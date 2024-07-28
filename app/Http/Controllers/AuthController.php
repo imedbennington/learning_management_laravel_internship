@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Auth;
 use Spatie\Permission\Traits\HasRoles;
 use Illuminate\Support\Facades\DB;
 use App\Models\Student;
+use App\Models\Admins;
 use App\Events\UserRegistered;
 class AuthController extends Controller
 {
@@ -100,28 +101,36 @@ class AuthController extends Controller
     }
         */
         public function registerAdmin(Request $request)
-        {
-            $request->validate([
-                'first_name' => 'required|string|max:255',
-                'last_name' => 'required|string|max:255',
-                'email' => 'required|string|email|max:255|unique:admins', // Validate against admins table
-                'password' => 'required|string|min:8|confirmed',
-                'terms' => 'accepted', // Ensure the terms checkbox is checked
-            ]);
         
-            // Insert data into the admins table
-            $admin = \DB::table('admins')->insert([
-                'first_name' => $request->first_name,
-                'last_name' => $request->last_name,
-                'email' => $request->email,
-                'password' => Hash::make($request->password),
-                'created_at' => now(),
-                'updated_at' => now(),
-            ]);
-        
-            // Optional: Assign a role if you are using roles and permissions
-            // $user->assignRole('admin');
-            return redirect()->route('loginAdmin');
+{
+    // Validate the request
+    $request->validate([
+        'first_name' => 'required|string|max:255',
+        'last_name' => 'required|string|max:255',
+        'email' => 'required|string|email|max:255|unique:admins',
+        'password' => 'required|string|min:8|confirmed',
+        'terms' => 'accepted',
+    ]);
+
+    // Create the admin using Eloquent
+    $admin = Admins::create([
+        'first_name' => $request->first_name,
+        'last_name' => $request->last_name,
+        'email' => $request->email,
+        'password' => Hash::make($request->password),
+    ]);
+
+    // Check if the admin was created successfully
+    if ($admin) {
+        // Assign a role to the newly created admin
+        $admin->assignRole('admin'); // Ensure the `assignRole` method is available
+    } else {
+        // Handle the error (optional)
+        return back()->withErrors(['error' => 'Failed to create admin']);
+    }
+
+    // Redirect or return a response
+    return redirect()->route('loginAdmin');
             //return response()->json(['message' => 'Admin registered successfully'], 201);
         }
         
