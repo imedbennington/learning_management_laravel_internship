@@ -31,4 +31,8 @@ class Student extends Authenticatable
     {
         return $this->belongsToMany(Course::class, 'course_student');
     }
+
+    public function requests(){
+        return $this->hasOne(RequestHistory::class);
+    }
 }

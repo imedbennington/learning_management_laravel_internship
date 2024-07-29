@@ -23,6 +23,7 @@ use App\Http\Controllers\AdminAuthController;
 require __DIR__.'/userRoutes.php';
 require __DIR__.'/publicRoutes.php';
 require __DIR__.'/CourseRoutes.php';
+require __DIR__.'/RequestHistoryRoutes.php';
 // Route to show the form for creating a new course
 Route::get('form-add-course', [CourseController::class, 'create'])->name('courses.create');
 
