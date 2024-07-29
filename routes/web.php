@@ -87,8 +87,13 @@ Route::get('/dashboard', function () {
 })->name('dashboard');
 
 
+Route::middleware('auth:admin')->group(function () {
+    Route::get('admin/dashboard', [AdminAuthController::class, 'dashboard'])->name('admin.dashboard');
+    Route::get('admin/fileManager', [AdminAuthController::class, 'app-file-manager'])->name('app-file-manager');
+    Route::get('admin/uploadFile', [AdminAuthController::class, 'add-course'])->name('add-course');
+});
 
-Route::get('/admin/dashboard', [AdminAuthController::class, 'dashboard'])->middleware('auth:admin');
+//Route::get('/admin/dashboard', [AdminAuthController::class, 'dashboard'])->middleware('auth:admin');
 
 
 

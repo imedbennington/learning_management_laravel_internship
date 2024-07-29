@@ -14,9 +14,11 @@ class CourseController extends Controller
     public function index()
     {
             
-            $courses = Course::with('category', 'uploader')->get();
-            dd($courses);
-            return view('public_users.course-list', compact('courses'));
+        $courses = Course::all();
+        //::with('category', 'uploader')->get();
+        dd($courses); // Dump and die to inspect data
+        return view('public_users.course-list', ['courses' => []]);
+        //return view('public_users.course-list', compact('courses'));
         
     }
 
@@ -33,62 +35,68 @@ class CourseController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    /*
-    public function store(Request $request)
-    {
-        // Validate the request
-        $request->validate([
-            'title' => 'required|string|max:255',
-            'description' => 'required|string',
-            'category_id' => 'required|exists:categories,id',
-            'course_files.*' => 'file|mimes:pdf,doc,docx|max:2048',
-            'images.*' => 'file|mimes:jpeg,png|max:2048',
-        ]);
     
-        $course = new Course();
-        $course->title = $request->input('title');
-        $course->description = $request->input('description');
-        $course->category_id = $request->input('category_id');
+     public function store(Request $request)
+     {
+         // Validate the request
+         $request->validate([
+             'title' => 'required|string|max:255',
+             'description' => 'required|string',
+             'category_id' => 'required|exists:categories,id',
+             'course_files.*' => 'file|mimes:pdf,doc,docx|max:2048',
+             'images.*' => 'required|image|mimes:jpeg,png|max:2048',
+         ]);
+     
+         $course = new Course();
+         $course->title = $request->input('title');
+         $course->description = $request->input('description');
+         $course->category_id = $request->input('category_id');
+     
+         // Handle course files
+         if ($request->hasFile('course_files')) {
+             $filePaths = [];
+             foreach ($request->file('course_files') as $file) {
+                 $filePaths[] = $file->store('courses', 'public');
+             }
+             $course->course_files = implode(',', $filePaths);
+         }
+     
+         // Handle images
+         if ($request->hasFile('images')) {
+             $imagePaths = [];
+             foreach ($request->file('images') as $image) {
+                 $imagePaths[] = $image->store('images', 'public');
+             }
+             $course->images = implode(',', $imagePaths);
+         }
+     
+         // Set uploader_id and uploader_name based on authenticated admin
+         if (auth('admin')->check()) {
+             $admin = auth('admin')->user();
+             $course->uploader_id = $admin->id;
+             $course->uploader_first_name = $admin->first_name;
+             $course->uploader_last_name = $admin->last_name;
+             
+             $course->uploader_type = $admin->roles->first()->name;
+         } else {
+             $course->uploader_id = null;
+             $course->uploader_first_name = 'Unknown';
+             $course->uploader_last_name = 'Unknown';
+             $course->uploader_type = 'None';
+         }
+     
+         $course->save();
+     
+         return redirect()->route('courses.create')->with('success', 'Course created successfully!');
+     }
+     
     
-        // Handle course files
-        if ($request->hasFile('course_files')) {
-            $filePaths = [];
-            foreach ($request->file('course_files') as $file) {
-                $filePaths[] = $file->store('courses', 'public');
-            }
-            $course->course_files = implode(',', $filePaths);
-        }
-    
-        // Handle images
-        if ($request->hasFile('images')) {
-            $imagePaths = [];
-            foreach ($request->file('images') as $image) {
-                $imagePaths[] = $image->store('images', 'public');
-            }
-            $course->images = implode(',', $imagePaths);
-        }
-    
-        // Set uploader_id based on user role
-        if (auth()->check()) {
-            $user = auth()->user();
-            if ($user->hasRole('admin') || $user->hasRole('instructor')) {
-                $course->uploader_id = $user->id;
-            } else {
-                $course->uploader_id = null; // Set to null if not an admin or instructor
-            }
-        } else {
-            $course->uploader_id = null; // Set to null if no user is authenticated
-        }
-    
-        $course->save();
-    
-        return redirect()->route('courses.create')->with('success', 'Course created successfully!');
-    }
-    */
 
     /**
      * Display the specified resource.
      */
+
+     /*
     public function store(Request $request)
     {
         $request->validate([
@@ -115,7 +123,7 @@ class CourseController extends Controller
     return view('public_users.course-list', compact('courses'));
 }
 
-
+*/
     /**
      * Show the form for editing the specified resource.
      */

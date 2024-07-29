@@ -1059,13 +1059,13 @@
 									alt="user avatar">
 								<div class="user-info">
 									<p class="user-name mb-0">{{ $admin->first_name }} {{ $admin->last_name }}</p>
-									<p class="designation mb-0"><!--<p>Admin Data: {{ dd($admin) }}</p>-->
-									</p>
+									<p class="designation mb-0"><!-- Optional additional info can go here --></p>
 								</div>
 							@else
 								<p>No admin data available.</p>
 							@endif
 						</a>
+
 						<ul class="dropdown-menu dropdown-menu-end">
 							<li><a class="dropdown-item d-flex align-items-center" href="javascript:;"><i
 										class="bx bx-user fs-5"></i><span>Profile</span></a>

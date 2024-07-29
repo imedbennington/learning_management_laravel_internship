@@ -1038,37 +1038,46 @@
                 <div class="user-box dropdown px-3">
                     <a class="d-flex align-items-center nav-link dropdown-toggle gap-3 dropdown-toggle-nocaret" href="#"
                         role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="assets/images/avatars/avatar-2.png" class="user-img" alt="user avatar">
+
                         <div class="user-info">
-                            <p class="user-name mb-0">Pauline Seitz</p>
-                            <p class="designattion mb-0">Web Designer</p>
-                        </div>
+                            @if(isset($admin))
+                                <img src="{{ asset('assets/images/avatars/avatar-2.png') }}" class="user-img"
+                                    alt="user avatar">
+                                <div class="user-info">
+                                    <p class="user-name mb-0">{{ $admin->first_name }} {{ $admin->last_name }}</p>
+                                    <p class="designation mb-0"><!-- Optional additional info can go here --></p>
+                                </div>
+                            @else
+                                <p>No admin data available.</p>
+                            @endif
                     </a>
-                    <ul class="dropdown-menu dropdown-menu-end">
-                        <li><a class="dropdown-item d-flex align-items-center" href="javascript:;"><i
-                                    class="bx bx-user fs-5"></i><span>Profile</span></a>
-                        </li>
-                        <li><a class="dropdown-item d-flex align-items-center" href="javascript:;"><i
-                                    class="bx bx-cog fs-5"></i><span>Settings</span></a>
-                        </li>
-                        <li><a class="dropdown-item d-flex align-items-center" href="javascript:;"><i
-                                    class="bx bx-home-circle fs-5"></i><span>Dashboard</span></a>
-                        </li>
-                        <li><a class="dropdown-item d-flex align-items-center" href="javascript:;"><i
-                                    class="bx bx-dollar-circle fs-5"></i><span>Earnings</span></a>
-                        </li>
-                        <li><a class="dropdown-item d-flex align-items-center" href="javascript:;"><i
-                                    class="bx bx-download fs-5"></i><span>Downloads</span></a>
-                        </li>
-                        <li>
-                            <div class="dropdown-divider mb-0"></div>
-                        </li>
-                        <li><a class="dropdown-item d-flex align-items-center" href="javascript:;"><i
-                                    class="bx bx-log-out-circle"></i><span>Logout</span></a>
-                        </li>
-                    </ul>
                 </div>
-            </nav>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item d-flex align-items-center" href="javascript:;"><i
+                                class="bx bx-user fs-5"></i><span>Profile</span></a>
+                    </li>
+                    <li><a class="dropdown-item d-flex align-items-center" href="javascript:;"><i
+                                class="bx bx-cog fs-5"></i><span>Settings</span></a>
+                    </li>
+                    <li><a class="dropdown-item d-flex align-items-center" href="javascript:;"><i
+                                class="bx bx-home-circle fs-5"></i><span>Dashboard</span></a>
+                    </li>
+                    <li><a class="dropdown-item d-flex align-items-center" href="javascript:;"><i
+                                class="bx bx-dollar-circle fs-5"></i><span>Earnings</span></a>
+                    </li>
+                    <li><a class="dropdown-item d-flex align-items-center" href="javascript:;"><i
+                                class="bx bx-download fs-5"></i><span>Downloads</span></a>
+                    </li>
+                    <li>
+                        <div class="dropdown-divider mb-0"></div>
+                    </li>
+                    <li><a class="dropdown-item d-flex align-items-center" href="javascript:;"><i
+                                class="bx bx-log-out-circle"></i><span>Logout</span></a>
+                    </li>
+                </ul>
+        </div>
+        </nav>
         </div>
     </header>
     <div class="page-wrapper">
@@ -1100,10 +1109,10 @@
                             @csrf
                             <div class="col-md-12">
                                 <label for="title" class="form-label">Title</label>
-                                <input type="text" class="form-control" id="title" name="title" placeholder="title"
+                                <input type="text" class="form-control" id="title" name="title" placeholder="Title"
                                     required>
                                 <div class="invalid-feedback">
-                                    Title
+                                    Title is required.
                                 </div>
                             </div>
                             <div class="col-md-12">
@@ -1115,8 +1124,8 @@
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <label for="category_id" class="form-label">Existing categories</label>
-                                <select id="category_id" name="category_id" class="form-select">
+                                <label for="category_id" class="form-label">Existing Categories</label>
+                                <select id="category_id" name="category_id" class="form-select" required>
                                     <option value="" selected>Choose...</option>
                                     @forelse($categories as $category)
                                         <option value="{{ $category->id }}">{{ $category->name }}</option>
@@ -1124,6 +1133,9 @@
                                         <option value="" disabled>No categories available</option>
                                     @endforelse
                                 </select>
+                                <div class="invalid-feedback">
+                                    Please select a category.
+                                </div>
                             </div>
                             <div class="mb-3">
                                 <label for="courseFiles" class="form-label">Course Files</label>
@@ -1131,7 +1143,10 @@
                             </div>
                             <div class="mb-3">
                                 <label for="images" class="form-label">Images</label>
-                                <input class="form-control" type="file" id="images" name="images[]" multiple>
+                                <input class="form-control" type="file" id="images" name="images[]" multiple required>
+                                <div class="invalid-feedback">
+                                    Please upload at least one image.
+                                </div>
                             </div>
                             <div class="col-md-12">
                                 <div class="d-md-flex d-grid align-items-center gap-3">
@@ -1140,6 +1155,7 @@
                                 </div>
                             </div>
                         </form>
+
                     </div>
                 </div>
             </div>
