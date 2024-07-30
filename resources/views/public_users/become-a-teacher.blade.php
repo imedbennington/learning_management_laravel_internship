@@ -32,6 +32,7 @@
 
 <body>
 
+<!--<p>Hello, {{ $student->first_name }}. Here you can apply to become a teacher.</p>-->
     <!-- start cssload-loader -->
     <div class="preloader">
         <div class="loader">
@@ -1068,6 +1069,7 @@
                             <form method="post" class="row" action="{{ route('requests.store') }}">
                                 @csrf
                                 <div class="input-box col-lg-6">
+                                <input type="hidden" name="student_id" value="{{ $student->id}}">
                                     <label class="label-text">First Name</label>
                                     <div class="form-group">
                                         <input class="form-control form--control" type="text" name="first_name"

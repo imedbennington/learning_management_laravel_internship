@@ -44,6 +44,7 @@ class Kernel extends HttpKernel
         'throttle' => \Illuminate\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
         'auth:admin' => \App\Http\Middleware\Authenticate::class,
+        'share.student.data' => \App\Http\Middleware\ShareStudentData::class,
     ];
 
     protected $middlewareGroups = [
@@ -55,6 +56,7 @@ class Kernel extends HttpKernel
             \App\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
             \App\Http\Middleware\ShareAdminData::class,
+            \App\Http\Middleware\ShareStudentData::class,
         ],
 
 

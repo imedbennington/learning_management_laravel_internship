@@ -655,7 +655,7 @@
                                 </ul>
                             </div>
                         @endif
-                        <form method="post" action="{{route('login.submit')}}" class="pt-4">
+                        <form method="post" action="{{ route('login.student') }}" class="pt-4">
                             @csrf
                             <div class="d-flex flex-wrap align-items-center pb-4">
                                 <button class="btn theme-btn flex-grow-1 mx-2 mb-2"><i class="la la-google mr-2"></i>Google</button>

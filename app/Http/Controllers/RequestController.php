@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use App\Models\RequestHistory;
+use Carbon\Carbon;
 class RequestController extends Controller
 {
     /**
@@ -30,7 +31,7 @@ class RequestController extends Controller
     {
         // Validate the incoming request data
         $validatedData = $request->validate([
-            //'student_id' => 'required|exists:students,id',
+            'student_id' => 'required|exists:students,id',
             'first_name' => 'required|string|max:255',
             'last_name' => 'required|string|max:255',
             'address' => 'required|string|max:255',
@@ -42,12 +43,12 @@ class RequestController extends Controller
             'date_of_birth' => 'required|date',
             'status' => 'sometimes|string|in:pending,approved,rejected',
         ]);
-
+        $dateOfBirth = Carbon::parse($validatedData['date_of_birth'])->format('Y-m-d');
         //$validatedData['student_id'] = auth()->user()->id;
 
         // Create a new request
         RequestHistory::create([
-            //'student_id' => $validatedData['student_id'],
+            'student_id' => $validatedData['student_id'],
             'first_name' => $validatedData['first_name'],
             'last_name' => $validatedData['last_name'],
             'address' => $validatedData['address'],
@@ -56,7 +57,8 @@ class RequestController extends Controller
             'country' => $validatedData['country'],
             'gender' => $validatedData['gender'],
             'phone' => $validatedData['phone'],
-            'date_of_birth' => $validatedData['date_of_birth'],
+            //'date_of_birth' => $validatedData['date_of_birth'],
+            'date_of_birth' => $dateOfBirth,
             'status' => $validatedData['status'] ?? 'pending', 
         ]);
 

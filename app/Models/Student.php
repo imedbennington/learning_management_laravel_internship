@@ -10,6 +10,7 @@ class Student extends Authenticatable
 {
     use Notifiable, HasRoles;
 
+    protected $table = 'students';
     protected $guard_name = 'student';
 
     protected $fillable = [

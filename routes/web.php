@@ -129,3 +129,7 @@ Route::middleware(['auth:sanctum', 'role:student'])->group(function () {
         return 'Student Dashboard';
     })->name('student.dashboard');
 });
+
+
+Route::post('/login/student', [AuthController::class, 'loginStudent'])->name('login.student');
+Route::post('/login/user', [AuthController::class, 'loginUser'])->name('login.user');
