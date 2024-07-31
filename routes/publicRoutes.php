@@ -29,6 +29,10 @@ Route::view('/my-dashbord-submitCourse', 'public_users.dashboard-submit-course')
 Route::view('/loginAdmin', 'Users Frontend Theme.auth-cover-signin')->name('loginAdmin');
 Route::view('/become-teacher', 'public_users.become-a-teacher')->name('become-teacher');
 Route::view('/course-list', 'public_users.course-list')->name('course-list');
+Route::view('/lesson-details', 'public_users.lesson-details')->name('lesson-details');
+Route::view('/course-details', 'public_users.course-details')->name('course-details');
+Route::view('/shopping-cart', 'public_users.shopping-cart')->name('shopping-cart');
+Route::view('/pricing-table', 'public_users.pricing-table')->name('pricing-table');
 Route::get('/get_student', [AuthController::class, 'get_student'])
     ->middleware('auth:student') // Ensure this uses the 'student' guard
     ->name('get_student');

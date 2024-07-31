@@ -210,7 +210,7 @@
                                                             <img class="mr-3" src="images/small-img-3.jpg" alt="Course thumbnail image">
                                                         </a>
                                                         <div class="media-body">
-                                                            <h5><a href="lesson-details.html">The Complete JavaScript Course 2021: From Zero to Expert!</a></h5>
+                                                            <h5><a href="{{route('lesson-details')}}">The Complete JavaScript Course 2021: From Zero to Expert!</a></h5>
                                                             <div class="skillbar-box pt-3">
                                                                 <div class="skillbar skillbar-skillbar" data-percent="36%">
                                                                     <div class="skillbar-bar skillbar--bar bg-1"></div>
@@ -288,11 +288,11 @@
                                                 <ul class="cart-dropdown-menu after-none">
                                                     <li>
                                                         <div class="media media-card">
-                                                            <a href="course-details.html" class="media-img">
+                                                            <a href="{{route('course-details')}}" class="media-img">
                                                                 <img class="mr-3" src="images/small-img.jpg" alt="Cart image">
                                                             </a>
                                                             <div class="media-body">
-                                                                <h5><a href="course-details.html">The Complete JavaScript Course 2021: From Zero to Expert!</a></h5>
+                                                                <h5><a href="{{route('course-details')}}">The Complete JavaScript Course 2021: From Zero to Expert!</a></h5>
                                                                 <span class="d-block lh-18 py-1">Kamran Ahmed</span>
                                                                 <p class="text-black font-weight-semi-bold lh-18">$12.99 <span class="before-price fs-14">$129.99</span></p>
                                                             </div>
@@ -305,7 +305,7 @@
                                                                 <img class="mr-3" src="images/small-img.jpg" alt="Cart image">
                                                             </a>
                                                             <div class="media-body">
-                                                                <h5><a href="course-details.html">The Complete JavaScript Course 2021: From Zero to Expert!</a></h5>
+                                                                <h5><a href="{{route('course-details')}}">The Complete JavaScript Course 2021: From Zero to Expert!</a></h5>
                                                                 <span class="d-block lh-18 py-1">Kamran Ahmed</span>
                                                                 <p class="text-black font-weight-semi-bold lh-18">$12.99 <span class="before-price fs-14">$129.99</span></p>
                                                             </div>
@@ -1227,29 +1227,27 @@
                                                 </div>
                                             </div>
                                         </div><!-- end card-image -->
-                                        <div class="card-body">
-                                            <h5 class="card-title"><a href="lesson-details.html">Microsoft SQL Server 2019 for Everyone</a></h5>
-                                            <p class="card-text lh-22 pt-2"><a href="teacher-detail.html">Jose Portilla</a><span>, Software Engineer and Developer</span></p>
-                                            <div class="my-course-progress-bar-wrap d-flex flex-wrap align-items-center mt-3 position-relative">
-                                                <p class="skillbar-title">Complete:</p>
-                                                <div class="skillbar-box">
-                                                    <div class="skillbar skillbar-skillbar-2" data-percent="0%">
-                                                        <div class="skillbar-bar skillbar--bar-2 bg-1"></div>
-                                                    </div><!-- End Skill Bar -->
-                                                </div>
-                                                <div class="skill-bar-percent">0%</div>
-                                            </div><!-- end my-course-progress-bar-wrap -->
-                                            <div class="rating-wrap d-flex align-items-center justify-content-between pt-3">
-                                                <div class="review-stars">
-                                                    <span class="la la-star-o"></span>
-                                                    <span class="la la-star-o"></span>
-                                                    <span class="la la-star-o"></span>
-                                                    <span class="la la-star-o"></span>
-                                                    <span class="la la-star-o"></span>
-                                                </div>
-                                                <a href="#" class="btn theme-btn theme-btn-sm theme-btn-transparent" data-toggle="modal" data-target="#ratingModal">Leave a rating</a>
-                                            </div><!-- end rating-wrap -->
-                                        </div><!-- end card-body -->
+                                        <div class="container">
+                                        <div class="container">
+                                        <div class="row">
+    @foreach($courses as $course)
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="{{ asset($course->image) }}" class="card-img-top" alt="{{ $course->title }}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ $course->title }}</h5>
+                    <p class="card-text">{{ $course->description }}</p>
+                    <p class="card-text">Category: {{ $course->category->name }}</p>
+                    <p class="card-text">Uploader: {{ $course->uploader->first_name }} {{ $course->uploader->last_name }}</p>
+                    <p class="card-text">Students Enrolled: {{ $course->students->count() }}</p>
+                    <a href="#" class="btn btn-primary">View Details</a>
+                </div>
+            </div>
+        </div>
+    @endforeach
+</div>
+
+</div><!-- end card-body -->
                                     </div><!-- end card -->
                                 </div><!-- end col-lg-4 -->
                                 <div class="col-lg-4 responsive-column-half">
@@ -1762,7 +1760,7 @@
                                         </div><!-- end card-image -->
                                         <div class="card-body">
                                             <h6 class="ribbon ribbon-blue-bg fs-14 mb-3">All Levels</h6>
-                                            <h5 class="card-title"><a href="course-details.html">The Business Intelligence Analyst Course 2021</a></h5>
+                                            <h5 class="card-title"><a href="{{route('course-details')}}">The Business Intelligence Analyst Course 2021</a></h5>
                                             <p class="card-text"><a href="teacher-detail.html">Jose Portilla</a></p>
                                             <div class="rating-wrap d-flex align-items-center py-2">
                                                 <div class="review-stars">
@@ -1785,7 +1783,7 @@
                                 <div class="col-lg-4 responsive-column-half">
                                     <div class="card card-item">
                                         <div class="card-image">
-                                            <a href="course-details.html" class="d-block">
+                                            <a href="{{route('course-details')}}" class="d-block">
                                                 <img class="card-img-top lazy" src="images/img-loading.png" data-src="images/img9.jpg" alt="Card image cap">
                                             </a>
                                             <div class="course-badge-labels">
@@ -1794,7 +1792,7 @@
                                         </div><!-- end card-image -->
                                         <div class="card-body">
                                             <h6 class="ribbon ribbon-blue-bg fs-14 mb-3">All Levels</h6>
-                                            <h5 class="card-title"><a href="course-details.html">The Business Intelligence Analyst Course 2021</a></h5>
+                                            <h5 class="card-title"><a href="{{route('course-details')}}">The Business Intelligence Analyst Course 2021</a></h5>
                                             <p class="card-text"><a href="teacher-detail.html">Jose Portilla</a></p>
                                             <div class="rating-wrap d-flex align-items-center py-2">
                                                 <div class="review-stars">
@@ -1817,13 +1815,13 @@
                                 <div class="col-lg-4 responsive-column-half">
                                     <div class="card card-item">
                                         <div class="card-image">
-                                            <a href="course-details.html" class="d-block">
+                                            <a href="{{route('course-details')}}" class="d-block">
                                                 <img class="card-img-top lazy" src="images/img-loading.png" data-src="images/img10.jpg" alt="Card image cap">
                                             </a>
                                         </div><!-- end card-image -->
                                         <div class="card-body">
                                             <h6 class="ribbon ribbon-blue-bg fs-14 mb-3">All Levels</h6>
-                                            <h5 class="card-title"><a href="course-details.html">The Business Intelligence Analyst Course 2021</a></h5>
+                                            <h5 class="card-title"><a href="{{route('course-details')}}">The Business Intelligence Analyst Course 2021</a></h5>
                                             <p class="card-text"><a href="teacher-detail.html">Jose Portilla</a></p>
                                             <div class="rating-wrap d-flex align-items-center py-2">
                                                 <div class="review-stars">
@@ -2004,7 +2002,7 @@
                                             </div>
                                         </div><!-- end card-image -->
                                         <div class="card-body">
-                                            <h5 class="card-title"><a href="lesson-details.html">The Complete JavaScript Course 2020: Build Real Projects!</a></h5>
+                                            <h5 class="card-title"><a href="{{route('lesson-details')}}">The Complete JavaScript Course 2020: Build Real Projects!</a></h5>
                                             <p class="card-text lh-22 pt-2"><a href="teacher-detail.html">Jose Portilla</a><span>, Software Engineer and Developer</span></p>
                                             <div class="my-course-progress-bar-wrap d-flex flex-wrap align-items-center mt-3 position-relative">
                                                 <p class="skillbar-title">Complete:</p>

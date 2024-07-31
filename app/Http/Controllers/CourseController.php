@@ -14,14 +14,12 @@ class CourseController extends Controller
     public function index()
     {
             
-        $courses = Course::all();
-        //::with('category', 'uploader')->get();
-        dd($courses); // Dump and die to inspect data
-        return view('public_users.course-list', ['courses' => []]);
-        //return view('public_users.course-list', compact('courses'));
+        $courses = Course::with(['category', 'uploader','students'])->get();
+        return view('public_users.my-courses', compact('courses'));
         
     }
-
+    
+    
     /**
      * Show the form for creating a new resource.
      */
