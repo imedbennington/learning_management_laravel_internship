@@ -45,6 +45,7 @@ class Kernel extends HttpKernel
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
         'auth:admin' => \App\Http\Middleware\Authenticate::class,
         'share.student.data' => \App\Http\Middleware\ShareStudentData::class,
+        'share.courses.data' => \App\Http\Middleware\ShareCoursesData::class,
     ];
 
     protected $middlewareGroups = [
@@ -57,6 +58,7 @@ class Kernel extends HttpKernel
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
             \App\Http\Middleware\ShareAdminData::class,
             \App\Http\Middleware\ShareStudentData::class,
+            \App\Http\Middleware\ShareCoursesData::class,
         ],
 
 

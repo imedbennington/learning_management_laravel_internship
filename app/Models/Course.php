@@ -27,5 +27,10 @@ class Course extends Model
     {
         return $this->belongsToMany(Student::class, 'courses_students');
     }
+
+    public function coupons()
+    {
+        return $this->hasMany(Coupon::class);
+    }
 }
 

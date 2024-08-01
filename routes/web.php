@@ -6,6 +6,7 @@ use App\Http\Controllers\SocialAuthController;
 use App\Http\Controllers\BusinesController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CourseController;
+use App\Http\Controllers\CoupnsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -133,3 +134,5 @@ Route::middleware(['auth:sanctum', 'role:student'])->group(function () {
 
 Route::post('/login/student', [AuthController::class, 'loginStudent'])->name('login.student');
 Route::post('/login/user', [AuthController::class, 'loginUser'])->name('login.user');
+
+Route::post('/request-coupon', [CoupnsController::class, 'create'])->name('coupons.request');

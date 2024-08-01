@@ -1,5 +1,6 @@
 <?php
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\CourseController;
 use Illuminate\Support\Facades\Route;
 // View Routes
 Route::view('/sign-up', 'public_users.sign-up')->name('sign-up');
@@ -33,12 +34,20 @@ Route::view('/lesson-details', 'public_users.lesson-details')->name('lesson-deta
 Route::view('/course-details', 'public_users.course-details')->name('course-details');
 Route::view('/shopping-cart', 'public_users.shopping-cart')->name('shopping-cart');
 Route::view('/pricing-table', 'public_users.pricing-table')->name('pricing-table');
+Route::view('/teacher-detail', 'public_users.teacher-detail')->name('teacher-detail');
+Route::view('/request-coupon', 'public_users.request-coupon')->name('request-coupon');
 Route::get('/get_student', [AuthController::class, 'get_student'])
     ->middleware('auth:student') // Ensure this uses the 'student' guard
     ->name('get_student');
 
     Route::middleware('share.student.data')->group(function () {
         Route::get('/student/dashboard', [AuthController::class, 'get_student'])->name('student.dashboard');
+        Route::get('/student/my-courses', [AuthController::class, 'get_student'])->name('student.my-courses');
         Route::get('/student/become-teacher', [AuthController::class, 'become-teacher'])->name('student.become-teacher');
+        Route::get('/student/apply-coupon', [AuthController::class, 'get-student'])->name('student.apply-coupon');
+    });
+    Route::middleware('share.courses.data')->group(function () {
+        Route::get('/student/my-courses', [CourseController::class, 'index'])->name('student.my-courses');
+        // Other routes
     });
     

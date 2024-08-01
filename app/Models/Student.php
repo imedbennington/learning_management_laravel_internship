@@ -36,4 +36,9 @@ class Student extends Authenticatable
     public function requests(){
         return $this->hasOne(RequestHistory::class);
     }
+
+    public function coupons()
+    {
+        return $this->hasMany(Coupon::class);
+    }
 }

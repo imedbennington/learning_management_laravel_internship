@@ -30,7 +30,10 @@ Route::view('/component-notifications', 'Users Frontend Theme.component-notifica
 Route::view('/form-file-upload', 'Users Frontend Theme.form-file-upload')->name('form-file-upload');
 Route::view('/form-add-category', 'Users Frontend Theme.add-category')->name('form-add-category');
 
+
+Route::view('/form-add-category', 'Users Frontend Theme.add-category')->name('form-add-category');
+
 // web.php or userRoutes.php
-    Route::view('/form-add-course-view', 'Users Frontend Theme.add-course')->name('form-add-course-view');
+    Route::view('/teacher.details', 'Users Frontend Theme.teacher.detail')->name('teacher.details');
 
 //Route::get('/show-admin-dashboard', [AdminController::class, 'index'])->name('show-admin-dashboard');
