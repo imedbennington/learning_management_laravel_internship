@@ -31,6 +31,12 @@ Route::view('/form-file-upload', 'Users Frontend Theme.form-file-upload')->name(
 Route::view('/form-add-category', 'Users Frontend Theme.add-category')->name('form-add-category');
 
 
+Route::get('/admin/demands', [AdminController::class, 'showDemands'])->name('admin.demands');
+Route::post('/admin/demands/approve/{id}', [AdminController::class, 'approveDemand'])->name('admin.demands.approve');
+Route::post('/admin/demands/cancel/{id}', [AdminController::class, 'cancelDemand'])->name('admin.demands.cancel');
+
+
+
 Route::view('/form-add-category', 'Users Frontend Theme.add-category')->name('form-add-category');
 
 // web.php or userRoutes.php

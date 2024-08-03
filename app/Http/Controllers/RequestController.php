@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use App\Models\RequestHistory;
 use Carbon\Carbon;
+use App\Models\Student;
 class RequestController extends Controller
 {
     /**
@@ -13,7 +14,8 @@ class RequestController extends Controller
      */
     public function index()
     {
-        //
+        //$demands = RequestController::all();
+        return view('Users Frontend Theme.admin-request-list');
     }
 
     /**
@@ -29,6 +31,7 @@ class RequestController extends Controller
      */
     public function store(Request $request)
     {
+        
         // Validate the incoming request data
         $validatedData = $request->validate([
             'student_id' => 'required|exists:students,id',
@@ -45,6 +48,11 @@ class RequestController extends Controller
         ]);
         $dateOfBirth = Carbon::parse($validatedData['date_of_birth'])->format('Y-m-d');
         //$validatedData['student_id'] = auth()->user()->id;
+
+        // Retrieve the student record
+    $student = Student::findOrFail($validatedData['student_id']);
+    $student->is_approved = false;
+    $student->save();
 
         // Create a new request
         RequestHistory::create([

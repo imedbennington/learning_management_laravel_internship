@@ -46,61 +46,10 @@
     <!--======================================
         START HEADER AREA
     ======================================-->
-    <header class="header-menu-area bg-white">
-        <div class="header-top pr-150px pl-150px border-bottom border-bottom-gray py-1">
-            <div class="container-fluid">
-                <div class="row align-items-center">
-                    <div class="col-lg-6">
-                        <div class="header-widget">
-                            <ul class="generic-list-item d-flex flex-wrap align-items-center fs-14">
-                                <li class="d-flex align-items-center pr-3 mr-3 border-right border-right-gray"><i
-                                        class="la la-phone mr-1"></i><a href="tel:00123456789"> (00) 123 456 789</a>
-                                </li>
-                                <li class="d-flex align-items-center"><i class="la la-envelope-o mr-1"></i><a
-                                        href="mailto:contact@aduca.com"> contact@aduca.com</a></li>
-                            </ul>
-                        </div><!-- end header-widget -->
-                    </div><!-- end col-lg-6 -->
-                    <div class="col-lg-6">
-                        <div class="header-widget d-flex flex-wrap align-items-center justify-content-end">
-                            <div class="theme-picker d-flex align-items-center">
-                                <button class="theme-picker-btn dark-mode-btn" title="Dark mode">
-                                    <svg id="moon" viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round"
-                                        stroke-linejoin="round">
-                                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                                    </svg>
-                                </button>
-                                <button class="theme-picker-btn light-mode-btn" title="Light mode">
-                                    <svg id="sun" viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round"
-                                        stroke-linejoin="round">
-                                        <circle cx="12" cy="12" r="5"></circle>
-                                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                                    </svg>
-                                </button>
-                            </div>
-                            <ul
-                                class="generic-list-item d-flex flex-wrap align-items-center fs-14 border-left border-left-gray pl-3 ml-3">
-                                <li class="d-flex align-items-center pr-3 mr-3 border-right border-right-gray"><i
-                                        class="la la-sign-in mr-1"></i><a href="login.html"> Login</a></li>
-                                <li class="d-flex align-items-center"><i class="la la-user mr-1"></i><a
-                                        href="sign-up.html"> Register</a></li>
-                            </ul>
-                        </div><!-- end header-widget -->
-                    </div><!-- end col-lg-6 -->
-                </div><!-- end row -->
-            </div><!-- end container-fluid -->
-        </div><!-- end header-top -->
-        <div class="header-menu-content pr-150px pl-150px bg-white">
+    <header class="header-menu-area">
+        <div class="header-menu-content pr-30px pl-30px bg-white shadow-sm">
             <div class="container-fluid">
                 <div class="main-menu-content">
-                    <a href="#" class="down-button"><i class="la la-angle-down"></i></a>
                     <div class="row align-items-center">
                         <div class="col-lg-2">
                             <div class="logo-box">
@@ -259,167 +208,409 @@
                                 </div><!-- end menu-category -->
                                 <form method="post">
                                     <div class="form-group mb-0">
-                                        <input class="form-control form--control pl-3" type="text" name="search"
-                                            placeholder="Search for anything">
+                                        <input class="form-control form--control form--control-gray pl-3" type="text"
+                                            name="search" placeholder="Search for anything">
                                         <span class="la la-search search-icon"></span>
                                     </div>
                                 </form>
-                                <nav class="main-menu">
-                                    <ul>
-                                        <li>
-                                            <a href="#">Home <i class="la la-angle-down fs-12"></i></a>
-                                            <ul class="dropdown-menu-item">
-                                                <li><a href="index.html">Home One</a></li>
-                                                <li><a href="home-2.html">Home Two</a></li>
-                                                <li><a href="home-3.html">Home Three</a></li>
-                                                <li><a href="home-4.html">Home four</a></li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="#">courses <i class="la la-angle-down fs-12"></i></a>
-                                            <ul class="dropdown-menu-item">
-                                                <li><a href="course-grid.html">course grid</a></li>
-                                                <li><a href="course-list.html">course list</a></li>
-                                                <li><a href="course-grid-left-sidebar.html">grid left sidebar</a></li>
-                                                <li><a href="course-grid-right-sidebar.html">grid right sidebar</a></li>
-                                                <li><a href="course-list-left-sidebar.html">list left sidebar <span
-                                                            class="ribbon ribbon-blue-bg">New</span></a></li>
-                                                <li><a href="course-list-right-sidebar.html">list right sidebar <span
-                                                            class="ribbon ribbon-blue-bg">New</span></a></li>
-                                                <li><a href="course-details.html">course details</a></li>
-                                                <li><a href="lesson-details.html">lesson details</a></li>
-                                                <li><a href="my-courses.html">My courses</a></li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="#">Student <i class="la la-angle-down fs-12"></i></a>
-                                            <ul class="dropdown-menu-item">
-                                                <li><a href="student-detail.html">student detail</a></li>
-                                                <li><a href="student-quiz.html">take quiz</a></li>
-                                                <li><a href="student-quiz-results.html">quiz results</a></li>
-                                                <li><a href="student-quiz-result-details.html">quiz details</a></li>
-                                                <li><a href="student-quiz-result-details-2.html">quiz details 2</a></li>
-                                                <li><a href="student-path.html">path details</a></li>
-                                                <li><a href="student-path-assessment.html">Skill Assessment</a></li>
-                                                <li><a href="student-path-assessment-result.html">Skill result</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="mega-menu-has">
-                                            <a href="#">pages <i class="la la-angle-down fs-12"></i></a>
-                                            <div class="dropdown-menu-item mega-menu">
-                                                <ul class="row no-gutters">
-                                                    <li class="col-lg-3">
-                                                        <a href="dashboard.html">dashboard <span
-                                                                class="ribbon">Hot</span></a>
-                                                        <a href="about.html">about</a>
-                                                        <a href="teachers.html">Teachers</a>
-                                                        <a href="teacher-detail.html">Teacher detail</a>
-                                                        <a href="categories.html">categories</a>
-                                                        <a href="terms-and-conditions.html">Terms & conditions</a>
-                                                        <a href="privacy-policy.html">privacy policy</a>
-                                                        <a href="invite.html">invite friend</a>
-                                                    </li>
-                                                    <li class="col-lg-3">
-                                                        <a href="careers.html">careers</a>
-                                                        <a href="career-details.html">career details</a>
-                                                        <a href="become-a-teacher.html">become an instructor</a>
-                                                        <a href="faq.html">FAQs</a>
-                                                        <a href="admission.html">admission</a>
-                                                        <a href="gallery.html">gallery</a>
-                                                        <a href="pricing-table.html">pricing tables</a>
-                                                        <a href="contact.html">contact</a>
-                                                    </li>
-                                                    <li class="col-lg-3">
-                                                        <a href="for-business.html">for business</a>
-                                                        <a href="sign-up.html">sign-up</a>
-                                                        <a href="login.html">login</a>
-                                                        <a href="recover.html">recover</a>
-                                                        <a href="shopping-cart.html">cart</a>
-                                                        <a href="checkout.html">checkout</a>
-                                                        <a href="error.html">page 404</a>
-                                                    </li>
-                                                    <li class="col-lg-3">
-                                                        <div class="menu-banner position-relative h-100">
-                                                            <div class="overlay rounded-rounded opacity-4"></div>
-                                                            <div
-                                                                class="menu-banner-content p-4 position-absolute bottom-0 left-0">
-                                                                <h4 class="fs-20 font-weight-bold pb-3 text-white">30
-                                                                    days free trail for new users</h4>
-                                                                <a href="sign-up.html"
-                                                                    class="btn theme-btn theme-btn-sm theme-btn-white">Start
-                                                                    Learning <i
-                                                                        class="la la-arrow-right icon ml-1"></i></a>
-                                                            </div>
-                                                            <img src="images/menu-banner-img.jpg"
-                                                                alt="menu banner image"
-                                                                class="w-100 h-100 rounded-rounded">
-                                                        </div>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <a href="#">blog <i class="la la-angle-down fs-12"></i></a>
-                                            <ul class="dropdown-menu-item">
-                                                <li><a href="blog-full-width.html">blog full width </a></li>
-                                                <li><a href="blog-no-sidebar.html">blog no sidebar</a></li>
-                                                <li><a href="blog-left-sidebar.html">blog left sidebar</a></li>
-                                                <li><a href="blog-right-sidebar.html">blog right sidebar</a></li>
-                                                <li><a href="blog-single.html">blog detail</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul><!-- end ul -->
-                                </nav><!-- end main-menu -->
-                                <div class="shop-cart mr-4">
-                                    <ul>
-                                        <li>
-                                            <p class="shop-cart-btn d-flex align-items-center">
-                                                <i class="la la-shopping-cart"></i>
-                                                <span class="product-count">2</span>
-                                            </p>
-                                            <ul class="cart-dropdown-menu">
-                                                <li class="media media-card">
-                                                    <a href="shopping-cart.html" class="media-img">
-                                                        <img src="images/small-img.jpg" alt="Cart image">
-                                                    </a>
-                                                    <div class="media-body">
-                                                        <h5><a href="course-details.html">The Complete JavaScript Course
-                                                                2021: From Zero to Expert!</a></h5>
-                                                        <span class="d-block lh-18 py-1">Kamran Ahmed</span>
-                                                        <p class="text-black font-weight-semi-bold lh-18">$12.99 <span
-                                                                class="before-price fs-14">$129.99</span></p>
-                                                    </div>
-                                                </li>
-                                                <li class="media media-card">
-                                                    <a href="shopping-cart.html" class="media-img">
-                                                        <img src="images/small-img.jpg" alt="Cart image">
-                                                    </a>
-                                                    <div class="media-body">
-                                                        <h5><a href="course-details.html">The Complete JavaScript Course
-                                                                2021: From Zero to Expert!</a></h5>
-                                                        <span class="d-block lh-18 py-1">Kamran Ahmed</span>
-                                                        <p class="text-black font-weight-semi-bold lh-18">$12.99 <span
-                                                                class="before-price fs-14">$129.99</span></p>
-                                                    </div>
-                                                </li>
-                                                <li class="media media-card">
-                                                    <div class="media-body fs-16">
-                                                        <p class="text-black font-weight-semi-bold lh-18">Total: <span
-                                                                class="cart-total">$12.99</span> <span
-                                                                class="before-price fs-14">$129.99</span></p>
-                                                    </div>
-                                                </li>
+                                <div class="nav-right-button d-flex align-items-center">
+                                    <div class="user-action-wrap d-flex align-items-center">
+                                        <div class="shop-cart course-cart pr-3 mr-3 border-right border-right-gray">
+                                            <ul>
                                                 <li>
-                                                    <a href="shopping-cart.html" class="btn theme-btn w-100">Got to cart
-                                                        <i class="la la-arrow-right icon ml-1"></i></a>
+                                                    <p class="shop-cart-btn d-flex align-items-center fs-16">
+                                                        My Courses
+                                                        <span class="la la-angle-down fs-13 ml-1"></span>
+                                                    </p>
+                                                    <ul class="cart-dropdown-menu after-none">
+                                                        <li class="media media-card">
+                                                            <a href="lesson-details.html" class="media-img">
+                                                                <img class="mr-3" src="images/small-img-3.jpg"
+                                                                    alt="Course thumbnail image">
+                                                            </a>
+                                                            <div class="media-body">
+                                                                <h5><a href="{{route('lesson-details')}}">The Complete
+                                                                        JavaScript Course 2021: From Zero to Expert!</a>
+                                                                </h5>
+                                                                <div class="skillbar-box pt-3">
+                                                                    <div class="skillbar skillbar-skillbar"
+                                                                        data-percent="36%">
+                                                                        <div class="skillbar-bar skillbar--bar bg-1">
+                                                                        </div>
+                                                                    </div><!-- End Skill Bar -->
+                                                                </div><!-- End skillbar-box -->
+                                                            </div>
+                                                        </li>
+                                                        <li class="media media-card">
+                                                            <a href="lesson-details.html" class="media-img">
+                                                                <img class="mr-3" src="images/small-img-4.jpg"
+                                                                    alt="Course thumbnail image">
+                                                            </a>
+                                                            <div class="media-body">
+                                                                <h5><a href="lesson-details.html">The Complete
+                                                                        JavaScript Course 2021: From Zero to Expert!</a>
+                                                                </h5>
+                                                                <div class="skillbar-box pt-3">
+                                                                    <div class="skillbar skillbar-skillbar"
+                                                                        data-percent="77%">
+                                                                        <div class="skillbar-bar skillbar--bar bg-1">
+                                                                        </div>
+                                                                    </div><!-- End Skill Bar -->
+                                                                </div><!-- End skillbar-box -->
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <a href="my-courses.html" class="btn theme-btn w-100">Got to
+                                                                my course <i
+                                                                    class="la la-arrow-right icon ml-1"></i></a>
+                                                        </li>
+                                                    </ul>
                                                 </li>
                                             </ul>
-                                        </li>
-                                    </ul>
-                                </div><!-- end shop-cart -->
-                                <div class="nav-right-button">
-                                    <a href="admission.html" class="btn theme-btn d-none d-lg-inline-block"><i
-                                            class="la la-user-plus mr-1"></i> Admission</a>
+                                        </div><!-- end course-cart -->
+                                        <div class="shop-cart pr-3 mr-3 border-right border-right-gray">
+                                            <ul>
+                                                <li>
+                                                    <p class="shop-cart-btn d-flex align-items-center">
+                                                        <i class="la la-shopping-cart fs-22"></i>
+                                                        <span class="dot-status bg-1"></span>
+                                                    </p>
+                                                    <ul class="cart-dropdown-menu after-none">
+                                                        <li class="media media-card">
+                                                            <a href="shopping-cart.html" class="media-img">
+                                                                <img class="mr-3" src="images/small-img.jpg"
+                                                                    alt="Cart image">
+                                                            </a>
+                                                            <div class="media-body">
+                                                                <h5><a href="shopping-cart.html">The Complete JavaScript
+                                                                        Course 2021: From Zero to Expert!</a></h5>
+                                                                <span class="d-block lh-18 py-1">Kamran Ahmed</span>
+                                                                <p class="text-black font-weight-semi-bold lh-18">$12.99
+                                                                    <span class="before-price fs-14">$129.99</span>
+                                                                </p>
+                                                            </div>
+                                                        </li>
+                                                        <li class="media media-card">
+                                                            <a href="shopping-cart.html" class="media-img">
+                                                                <img class="mr-3" src="images/small-img.jpg"
+                                                                    alt="Cart image">
+                                                            </a>
+                                                            <div class="media-body">
+                                                                <h5><a href="shopping-cart.html">The Complete JavaScript
+                                                                        Course 2021: From Zero to Expert!</a></h5>
+                                                                <span class="d-block lh-18 py-1">Kamran Ahmed</span>
+                                                                <p class="text-black font-weight-semi-bold lh-18">$12.99
+                                                                    <span class="before-price fs-14">$129.99</span>
+                                                                </p>
+                                                            </div>
+                                                        </li>
+                                                        <li class="media media-card">
+                                                            <div class="media-body fs-16">
+                                                                <p class="text-black font-weight-semi-bold lh-18">Total:
+                                                                    <span class="cart-total">$12.99</span> <span
+                                                                        class="before-price fs-14">$129.99</span>
+                                                                </p>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <a href="shopping-cart.html" class="btn theme-btn w-100">Got
+                                                                to cart <i class="la la-arrow-right icon ml-1"></i></a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div><!-- end shop-cart -->
+                                        <div class="shop-cart wishlist-cart pr-3 mr-3 border-right border-right-gray">
+                                            <ul>
+                                                <li>
+                                                    <p class="shop-cart-btn">
+                                                        <i class="la la-heart-o"></i>
+                                                        <span class="dot-status bg-1"></span>
+                                                    </p>
+                                                    <ul class="cart-dropdown-menu after-none">
+                                                        <li>
+                                                            <div class="media media-card">
+                                                                <a href="{{route('course-details')}}" class="media-img">
+                                                                    <img class="mr-3" src="images/small-img.jpg"
+                                                                        alt="Cart image">
+                                                                </a>
+                                                                <div class="media-body">
+                                                                    <h5><a href="{{route('course-details')}}">The
+                                                                            Complete JavaScript Course 2021: From Zero
+                                                                            to Expert!</a></h5>
+                                                                    <span class="d-block lh-18 py-1">Kamran Ahmed</span>
+                                                                    <p class="text-black font-weight-semi-bold lh-18">
+                                                                        $12.99 <span
+                                                                            class="before-price fs-14">$129.99</span>
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                            <a href="#"
+                                                                class="btn theme-btn theme-btn-sm theme-btn-transparent lh-28 w-100 mt-3">Add
+                                                                to cart <i class="la la-arrow-right icon ml-1"></i></a>
+                                                        </li>
+                                                        <li>
+                                                            <div class="media media-card">
+                                                                <a href="course-details.html" class="media-img">
+                                                                    <img class="mr-3" src="images/small-img.jpg"
+                                                                        alt="Cart image">
+                                                                </a>
+                                                                <div class="media-body">
+                                                                    <h5><a href="{{route('course-details')}}">The
+                                                                            Complete JavaScript Course 2021: From Zero
+                                                                            to Expert!</a></h5>
+                                                                    <span class="d-block lh-18 py-1">Kamran Ahmed</span>
+                                                                    <p class="text-black font-weight-semi-bold lh-18">
+                                                                        $12.99 <span
+                                                                            class="before-price fs-14">$129.99</span>
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                            <a href="#"
+                                                                class="btn theme-btn theme-btn-sm theme-btn-transparent lh-28 w-100 mt-3">Add
+                                                                to cart <i class="la la-arrow-right icon ml-1"></i></a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="my-courses.html" class="btn theme-btn w-100">Got to
+                                                                wishlist <i class="la la-arrow-right icon ml-1"></i></a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div><!-- end shop-cart -->
+                                        <div
+                                            class="shop-cart notification-cart pr-3 mr-3 border-right border-right-gray">
+                                            <ul>
+                                                <li>
+                                                    <p class="shop-cart-btn">
+                                                        <i class="la la-bell"></i>
+                                                        <span class="dot-status bg-1"></span>
+                                                    </p>
+                                                    <ul
+                                                        class="cart-dropdown-menu after-none p-0 notification-dropdown-menu">
+                                                        <li
+                                                            class="menu-heading-block d-flex align-items-center justify-content-between">
+                                                            <h4>Notifications</h4>
+                                                            <span class="ribbon fs-14">18</span>
+                                                        </li>
+                                                        <li>
+                                                            <div class="notification-body">
+                                                                <a href="dashboard.html"
+                                                                    class="media media-card align-items-center">
+                                                                    <div
+                                                                        class="icon-element icon-element-sm flex-shrink-0 bg-1 mr-3 text-white">
+                                                                        <i class="la la-bolt"></i>
+                                                                    </div>
+                                                                    <div class="media-body">
+                                                                        <h5>Your resume updated!</h5>
+                                                                        <span
+                                                                            class="d-block lh-18 pt-1 text-gray fs-13">1
+                                                                            hour ago</span>
+                                                                    </div>
+                                                                </a>
+                                                                <a href="dashboard.html"
+                                                                    class="media media-card align-items-center">
+                                                                    <div
+                                                                        class="icon-element icon-element-sm flex-shrink-0 bg-2 mr-3 text-white">
+                                                                        <i class="la la-lock"></i>
+                                                                    </div>
+                                                                    <div class="media-body">
+                                                                        <h5>You changed password</h5>
+                                                                        <span
+                                                                            class="d-block lh-18 pt-1 text-gray fs-13">November
+                                                                            12, 2019</span>
+                                                                    </div>
+                                                                </a>
+                                                                <a href="dashboard.html"
+                                                                    class="media media-card align-items-center">
+                                                                    <div
+                                                                        class="icon-element icon-element-sm flex-shrink-0 bg-3 mr-3 text-white">
+                                                                        <i class="la la-user"></i>
+                                                                    </div>
+                                                                    <div class="media-body">
+                                                                        <h5>Your account has been created successfully
+                                                                        </h5>
+                                                                        <span
+                                                                            class="d-block lh-18 pt-1 text-gray fs-13">November
+                                                                            12, 2019</span>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </li>
+                                                        <li class="menu-heading-block">
+                                                            <a href="dashboard.html" class="btn theme-btn w-100">Show
+                                                                All Notifications <i
+                                                                    class="la la-arrow-right icon ml-1"></i></a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div><!-- end shop-cart -->
+                                        <div class="shop-cart user-profile-cart">
+                                            <ul>
+                                                <li>
+                                                    <div class="shop-cart-btn">
+                                                        <div class="avatar-xs">
+                                                            <img class="rounded-full img-fluid"
+                                                                src="images/small-avatar-1.jpg" alt="Avatar image">
+                                                        </div>
+                                                        <span class="dot-status bg-1"></span>
+                                                    </div>
+                                                    <ul
+                                                        class="cart-dropdown-menu after-none p-0 notification-dropdown-menu">
+                                                        <li class="menu-heading-block d-flex align-items-center">
+                                                            <a href="teacher-detail.html"
+                                                                class="avatar-sm flex-shrink-0 d-block">
+                                                                <img class="rounded-full img-fluid"
+                                                                    src="images/small-avatar-1.jpg" alt="Avatar image">
+                                                            </a>
+                                                            <div class="ml-2">
+                                                                <h4><a href="teacher-detail.html"
+                                                                        class="text-black">{{ $student->first_name }}</a>
+                                                                </h4>
+                                                                <span
+                                                                    class="d-block fs-14 lh-20">{{ $student->email }}</span>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div
+                                                                class="theme-picker d-flex align-items-center justify-content-center lh-40">
+                                                                <button
+                                                                    class="theme-picker-btn dark-mode-btn w-100 font-weight-semi-bold justify-content-center"
+                                                                    title="Dark mode">
+                                                                    <svg class="mr-1" viewBox="0 0 24 24"
+                                                                        stroke-width="1.5" stroke-linecap="round"
+                                                                        stroke-linejoin="round">
+                                                                        <path
+                                                                            d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z">
+                                                                        </path>
+                                                                    </svg>
+                                                                    Dark Mode
+                                                                </button>
+                                                                <button
+                                                                    class="theme-picker-btn light-mode-btn w-100 font-weight-semi-bold justify-content-center"
+                                                                    title="Light mode">
+                                                                    <svg class="mr-1" viewBox="0 0 24 24"
+                                                                        stroke-width="1.5" stroke-linecap="round"
+                                                                        stroke-linejoin="round">
+                                                                        <circle cx="12" cy="12" r="5"></circle>
+                                                                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                                                                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                                                                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64">
+                                                                        </line>
+                                                                        <line x1="18.36" y1="18.36" x2="19.78"
+                                                                            y2="19.78"></line>
+                                                                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                                                                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                                                                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36">
+                                                                        </line>
+                                                                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22">
+                                                                        </line>
+                                                                    </svg>
+                                                                    Light Mode
+                                                                </button>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <ul class="generic-list-item">
+                                                                <li>
+                                                                    <a href="my-courses.html">
+                                                                        <i class="la la-file-video-o mr-1"></i> My
+                                                                        courses
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="shopping-cart.html">
+                                                                        <i class="la la-shopping-basket mr-1"></i> My
+                                                                        cart
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="my-courses.html">
+                                                                        <i class="la la-heart-o mr-1"></i> My wishlist
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="section-block"></div>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="dashboard.html">
+                                                                        <i class="la la-bell mr-1"></i> Notifications
+                                                                        <span
+                                                                            class="badge bg-info text-white ml-2 p-1">9+</span>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="dashboard-message.html">
+                                                                        <i class="la la-envelope mr-1"></i> Messages
+                                                                        <span
+                                                                            class="badge bg-info text-white ml-2 p-1">12+</span>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="section-block"></div>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="dashboard-settings.html">
+                                                                        <i class="la la-gear mr-1"></i> Settings
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="dashboard-purchase-history.html">
+                                                                        <i class="la la-history mr-1"></i> Purchase
+                                                                        history
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="section-block"></div>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="student-detail.html">
+                                                                        <i class="la la-user mr-1"></i> Public profile
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="dashboard-settings.html">
+                                                                        <i class="la la-edit mr-1"></i> Edit profile
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="section-block"></div>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#">
+                                                                        <i class="la la-question mr-1"></i> Help
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="index.html">
+                                                                        <i class="la la-power-off mr-1"></i> Logout
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="section-block"></div>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#" class="position-relative">
+                                                                        <span
+                                                                            class="fs-17 font-weight-semi-bold d-block">Aduca
+                                                                            for Business</span>
+                                                                        <span
+                                                                            class="lh-20 d-block fs-14 text-gray">Bring
+                                                                            learning to your company</span>
+                                                                        <span
+                                                                            class="position-absolute top-0 right-0 mt-3 mr-3 fs-18 text-gray">
+                                                                            <i class="la la-external-link"></i>
+                                                                        </span>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div><!-- end shop-cart -->
+                                    </div>
                                 </div><!-- end nav-right-button -->
                             </div><!-- end menu-wrapper -->
                         </div><!-- end col-lg-10 -->
@@ -432,90 +623,71 @@
                 data-toggle="tooltip" data-placement="left" title="Close menu">
                 <i class="la la-times"></i>
             </div><!-- end off-canvas-menu-close -->
-            <ul class="generic-list-item off-canvas-menu-list pt-90px">
-                <li>
-                    <a href="#">Home</a>
-                    <ul class="sub-menu">
-                        <li><a href="index.html">Home One</a></li>
-                        <li><a href="home-2.html">Home Two</a></li>
-                        <li><a href="home-3.html">Home Three</a></li>
-                        <li><a href="home-4.html">Home four</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">courses</a>
-                    <ul class="sub-menu">
-                        <li><a href="course-grid.html">course grid</a></li>
-                        <li><a href="course-list.html">course list</a></li>
-                        <li><a href="course-grid-left-sidebar.html">grid left sidebar</a></li>
-                        <li><a href="course-grid-right-sidebar.html">grid right sidebar</a></li>
-                        <li><a href="course-list-left-sidebar.html">list left sidebar <span
-                                    class="ribbon ribbon-blue-bg">New</span></a></li>
-                        <li><a href="course-list-right-sidebar.html">list right sidebar <span
-                                    class="ribbon ribbon-blue-bg">New</span></a></li>
-                        <li><a href="course-details.html">course details</a></li>
-                        <li><a href="lesson-details.html">lesson details</a></li>
-                        <li><a href="my-courses.html">My courses</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">Student</a>
-                    <ul class="sub-menu">
-                        <li><a href="student-detail.html">student detail</a></li>
-                        <li><a href="student-quiz.html">take quiz</a></li>
-                        <li><a href="student-quiz-results.html">quiz results</a></li>
-                        <li><a href="student-quiz-result-details.html">quiz details</a></li>
-                        <li><a href="student-quiz-result-details-2.html">quiz details 2</a></li>
-                        <li><a href="student-path.html">path details</a></li>
-                        <li><a href="student-path-assessment.html">Skill Assessment</a></li>
-                        <li><a href="student-path-assessment-result.html">Skill result</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">pages</a>
-                    <ul class="sub-menu">
-                        <li><a href="dashboard.html">dashboard <span class="ribbon">Hot</span></a></li>
-                        <li><a href="about.html">about</a></li>
-                        <li><a href="teachers.html">Teachers</a></li>
-                        <li><a href="teacher-detail.html">Teacher detail</a></li>
-                        <li><a href="careers.html">careers</a></li>
-                        <li><a href="career-details.html">career details</a></li>
-                        <li><a href="categories.html">categories</a></li>
-                        <li><a href="terms-and-conditions.html">Terms & conditions</a></li>
-                        <li><a href="privacy-policy.html">privacy policy</a></li>
-                        <li><a href="for-business.html">for business</a></li>
-                        <li><a href="become-a-teacher.html">become an instructor</a></li>
-                        <li><a href="faq.html">FAQs</a></li>
-                        <li><a href="admission.html">admission</a></li>
-                        <li><a href="gallery.html">gallery</a></li>
-                        <li><a href="pricing-table.html">pricing tables</a></li>
-                        <li><a href="contact.html">contact</a></li>
-                        <li><a href="sign-up.html">sign-up</a></li>
-                        <li><a href="login.html">login</a></li>
-                        <li><a href="recover.html">recover</a></li>
-                        <li><a href="shopping-cart.html">cart</a></li>
-                        <li><a href="checkout.html">checkout</a></li>
-                        <li><a href="error.html">page 404</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">blog</a>
-                    <ul class="sub-menu">
-                        <li><a href="blog-full-width.html">blog full width </a></li>
-                        <li><a href="blog-no-sidebar.html">blog no sidebar</a></li>
-                        <li><a href="blog-left-sidebar.html">blog left sidebar</a></li>
-                        <li><a href="blog-right-sidebar.html">blog right sidebar</a></li>
-                        <li><a href="blog-single.html">blog detail</a></li>
-                    </ul>
-                </li>
+            <h4 class="off-canvas-menu-heading pt-90px">Alerts</h4>
+            <ul class="generic-list-item off-canvas-menu-list pt-1 pb-2 border-bottom border-bottom-gray">
+                <li><a href="dashboard.html">Notifications</a></li>
+                <li><a href="dashboard-message.html">Messages</a></li>
+                <li><a href="my-courses.html">Wishlist</a></li>
+                <li><a href="shopping-cart.html">My cart</a></li>
             </ul>
+            <h4 class="off-canvas-menu-heading pt-20px">Account</h4>
+            <ul class="generic-list-item off-canvas-menu-list pt-1 pb-2 border-bottom border-bottom-gray">
+                <li><a href="dashboard-settings.html">Account settings</a></li>
+                <li><a href="dashboard-purchase-history.html">Purchase history</a></li>
+            </ul>
+            <h4 class="off-canvas-menu-heading pt-20px">Profile</h4>
+            <ul class="generic-list-item off-canvas-menu-list pt-1 pb-2 border-bottom border-bottom-gray">
+                <li><a href="student-detail.html">Public profile</a></li>
+                <li><a href="dashboard-settings.html">Edit profile</a></li>
+                <li><a href="index.html">Log out</a></li>
+            </ul>
+            <h4 class="off-canvas-menu-heading pt-20px">More from Aduca</h4>
+            <ul class="generic-list-item off-canvas-menu-list pt-1">
+                <li><a href="for-business.html">Aduca for Business</a></li>
+                <li><a href="#">Get the app</a></li>
+                <li><a href="invite.html">Invite friends</a></li>
+                <li><a href="contact.html">Help</a></li>
+            </ul>
+            <div class="theme-picker d-flex align-items-center justify-content-center mt-4 px-3">
+                <button
+                    class="theme-picker-btn dark-mode-btn btn theme-btn-sm theme-btn-white w-100 font-weight-semi-bold justify-content-center"
+                    title="Dark mode">
+                    <svg class="mr-1" viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    Dark Mode
+                </button>
+                <button
+                    class="theme-picker-btn light-mode-btn btn theme-btn-sm theme-btn-white w-100 font-weight-semi-bold justify-content-center"
+                    title="Light mode">
+                    <svg class="mr-1" viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    Light Mode
+                </button>
+            </div>
         </div><!-- end off-canvas-menu -->
         <div class="off-canvas-menu custom-scrollbar-styled category-off-canvas-menu">
             <div class="off-canvas-menu-close cat-menu-close icon-element icon-element-sm shadow-sm"
                 data-toggle="tooltip" data-placement="left" title="Close menu">
                 <i class="la la-times"></i>
             </div><!-- end off-canvas-menu-close -->
-            <ul class="generic-list-item off-canvas-menu-list pt-90px">
+            <h4 class="off-canvas-menu-heading pt-90px">Learn</h4>
+            <ul class="generic-list-item off-canvas-menu-list pt-1 pb-2 border-bottom border-bottom-gray">
+                <li><a href="my-courses.html">My learning</a></li>
+            </ul>
+            <h4 class="off-canvas-menu-heading pt-20px">Categories</h4>
+            <ul class="generic-list-item off-canvas-menu-list pt-1">
                 <li>
                     <a href="course-grid.html">Development</a>
                     <ul class="sub-menu">

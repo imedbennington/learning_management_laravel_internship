@@ -32,7 +32,6 @@ class RolesAndPermissionsSeeder extends Seeder
 
     {
         // Reset cached roles and permissions
-        // Reset cached roles and permissions
         app()[\Spatie\Permission\PermissionRegistrar::class]->forgetCachedPermissions();
 
         // Create roles for both guards
@@ -41,16 +40,33 @@ class RolesAndPermissionsSeeder extends Seeder
         $roleAdminWeb = Role::firstOrCreate(['name' => 'admin'], ['guard_name' => 'web']);
         $roleAdminAdmin = Role::firstOrCreate(['name' => 'admin'], ['guard_name' => 'admin']);
 
-        // Create permissions
-        $permissionManageUsers = Permission::firstOrCreate(['name' => 'manage users'], ['guard_name' => 'web']);
-        $permissionManageCourses = Permission::firstOrCreate(['name' => 'manage courses'], ['guard_name' => 'web']);
+        // Create permissions for 'web' guard
+        $permissionManageUsersWeb = Permission::firstOrCreate(['name' => 'manage users'], ['guard_name' => 'web']);
+        $permissionManageCoursesWeb = Permission::firstOrCreate(['name' => 'manage courses'], ['guard_name' => 'web']);
+        $permissionUploadCoursesWeb = Permission::firstOrCreate(['name' => 'upload courses'], ['guard_name' => 'web']);
+        $permissionPostArticlesWeb = Permission::firstOrCreate(['name' => 'post articles'], ['guard_name' => 'web']);
 
-        // Assign permissions to roles
-        $roleAdminWeb->givePermissionTo([$permissionManageUsers, $permissionManageCourses]);
-        $roleInstructor->givePermissionTo($permissionManageCourses);
+        // Create permissions for 'admin' guard
+        $permissionManageUsersAdmin = Permission::firstOrCreate(['name' => 'manage users'], ['guard_name' => 'admin']);
+        $permissionManageCoursesAdmin = Permission::firstOrCreate(['name' => 'manage courses'], ['guard_name' => 'admin']);
 
-        // Ensure the admin role for 'admin' guard has permissions
-        $roleAdminAdmin->givePermissionTo([$permissionManageUsers, $permissionManageCourses]);
-    }
-    
+        // Assign permissions to roles for the 'web' guard
+        $roleAdminWeb->givePermissionTo([
+            $permissionManageUsersWeb,
+            $permissionManageCoursesWeb,
+            $permissionUploadCoursesWeb,
+            $permissionPostArticlesWeb
+        ]);
+
+        $roleInstructor->givePermissionTo([
+            $permissionUploadCoursesWeb,
+            $permissionPostArticlesWeb
+        ]);
+
+        // Assign permissions to roles for the 'admin' guard
+        $roleAdminAdmin->givePermissionTo([
+            $permissionManageUsersAdmin,
+            $permissionManageCoursesAdmin
+        ]);
+    }   
 }

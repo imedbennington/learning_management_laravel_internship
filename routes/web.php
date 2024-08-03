@@ -7,6 +7,7 @@ use App\Http\Controllers\BusinesController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CourseController;
 use App\Http\Controllers\CoupnsController;
+use App\Http\Controllers\RequestController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -136,3 +137,7 @@ Route::post('/login/student', [AuthController::class, 'loginStudent'])->name('lo
 Route::post('/login/user', [AuthController::class, 'loginUser'])->name('login.user');
 
 Route::post('/request-coupon', [CoupnsController::class, 'create'])->name('coupons.request');
+
+Route::middleware(['share.demand.data'])->group(function () {
+    Route::get('/demandlist', [RequestController::class, 'index'])->name('demandlist');
+});

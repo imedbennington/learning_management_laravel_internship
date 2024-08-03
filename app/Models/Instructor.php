@@ -8,7 +8,7 @@ use Spatie\Permission\Traits\HasRoles;
 class Instructor extends Authenticatable
 {
     use Notifiable, HasRoles;
-
+    protected $table = 'instructor';
     protected $guard_name = 'instructor';
 
     protected $fillable = [

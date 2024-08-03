@@ -46,6 +46,7 @@ class Kernel extends HttpKernel
         'auth:admin' => \App\Http\Middleware\Authenticate::class,
         'share.student.data' => \App\Http\Middleware\ShareStudentData::class,
         'share.courses.data' => \App\Http\Middleware\ShareCoursesData::class,
+        'share.demand.data' => \App\Http\Middleware\ShareDemandData::class,
     ];
 
     protected $middlewareGroups = [
@@ -59,6 +60,8 @@ class Kernel extends HttpKernel
             \App\Http\Middleware\ShareAdminData::class,
             \App\Http\Middleware\ShareStudentData::class,
             \App\Http\Middleware\ShareCoursesData::class,
+            \App\Http\Middleware\ShareDemandData::class,
+            
         ],
 
 
