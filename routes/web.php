@@ -8,6 +8,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CourseController;
 use App\Http\Controllers\CoupnsController;
 use App\Http\Controllers\RequestController;
+use App\Http\Controllers\InstructorController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -101,11 +102,12 @@ Route::middleware('auth:admin')->group(function () {
 
 
 Route::get('register/student', [AuthController::class, 'showStudentRegistrationForm'])->name('register.student');
-Route::get('register/instructor', [AuthController::class, 'showInstructorRegistrationForm'])->name('register.instructor');
-Route::get('register/admin', [AuthController::class, 'showAdminRegistrationForm'])->name('register.admin');
 
+Route::get('getInstructorLogin', [InstructorController::class, 'showInstructorLogin'])->name('login.instructor');
+Route::post('instructor/login', [InstructorController::class, 'login'])->name('login.instructor.submit');
+
+Route::get('register/admin', [AuthController::class, 'showAdminRegistrationForm'])->name('register.admin');
 Route::post('register/student', [AuthController::class, 'registerStudent'])->name('register.student.submit');
-Route::post('register/instructor', [AuthController::class, 'registerInstructor'])->name('register.instructor.submit');
 Route::post('register/admin', [AuthController::class, 'registerAdmin'])->name('register.admin.submit');
 
 Route::get('login', [AuthController::class, 'showLoginForm'])->name('login');

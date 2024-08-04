@@ -30,8 +30,12 @@ Route::view('/component-notifications', 'Users Frontend Theme.component-notifica
 Route::view('/form-file-upload', 'Users Frontend Theme.form-file-upload')->name('form-file-upload');
 Route::view('/form-add-category', 'Users Frontend Theme.add-category')->name('form-add-category');
 
+Route::middleware(['share.demand.data'])->group(function () {
+    Route::view('/get_requests', 'Users Frontend Theme.admin-request-list')->name('get_requests');
+    Route::get('/admin/demands', [AdminController::class, 'showDemands'])->name('admin.demands');
+});
 
-Route::get('/admin/demands', [AdminController::class, 'showDemands'])->name('admin.demands');
+
 Route::post('/admin/demands/approve/{id}', [AdminController::class, 'approveDemand'])->name('admin.demands.approve');
 Route::post('/admin/demands/cancel/{id}', [AdminController::class, 'cancelDemand'])->name('admin.demands.cancel');
 

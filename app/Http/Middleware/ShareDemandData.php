@@ -7,6 +7,7 @@ use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Illuminate\Support\Facades\View;
+
 class ShareDemandData
 {
     /**
@@ -16,10 +17,12 @@ class ShareDemandData
      */
     public function handle(Request $request, Closure $next): Response
     {
-        // Fetch demand data here if needed
         $demands = RequestHistory::all();
-        // Share data with specific view
-        if ($request->routeIs('demandlist')) {
+
+        // Share data with specific views
+        if ($request->routeIs('get_requests')) {
+            View::share('demands', $demands);
+        } elseif ($request->routeIs('admin.demands')) {
             View::share('demands', $demands);
         }
 

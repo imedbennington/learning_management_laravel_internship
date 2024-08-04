@@ -21,11 +21,6 @@ class AuthController extends Controller
         return view('auth.register-student');
     }
 
-    public function showInstructorRegistrationForm()
-    {
-        return view('auth.register-instructor');
-    }
-
     public function showAdminRegistrationForm()
     {
         return view('Users Frontend Theme.auth-admin-basic-signup');

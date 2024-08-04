@@ -5,25 +5,36 @@
 	<!-- Required meta tags -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" href="{{ asset('assets/images/favicon-32x32.png') }}" type="image/png" />
+
+	<!-- Favicon -->
+	<link rel="icon" href="{{ asset('assets/images/favicon-32x32.png') }}" type="image/png">
+
 	<!-- Plugins -->
-	<link href="{{ asset('assets/plugins/vectormap/jquery-jvectormap-2.0.2.css') }}" rel="stylesheet" />
-	<link href="{{ asset('assets/plugins/simplebar/css/simplebar.css') }}" rel="stylesheet" />
-	<link href="{{ asset('assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css') }}" rel="stylesheet" />
-	<link href="{{ asset('assets/plugins/metismenu/css/metisMenu.min.css') }}" rel="stylesheet" />
+	<link href="{{ asset('assets/plugins/vectormap/jquery-jvectormap-2.0.2.css') }}" rel="stylesheet">
+	<link href="{{ asset('assets/plugins/simplebar/css/simplebar.css') }}" rel="stylesheet">
+	<link href="{{ asset('assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css') }}" rel="stylesheet">
+	<link href="{{ asset('assets/plugins/metismenu/css/metisMenu.min.css') }}" rel="stylesheet">
+
 	<!-- Loader -->
-	<link href="{{ asset('assets/css/pace.min.css') }}" rel="stylesheet" />
+	<link href="{{ asset('assets/css/pace.min.css') }}" rel="stylesheet">
 	<script src="{{ asset('assets/js/pace.min.js') }}"></script>
+
 	<!-- Bootstrap CSS -->
 	<link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
 	<link href="{{ asset('assets/css/bootstrap-extended.css') }}" rel="stylesheet">
+
+	<!-- Google Fonts -->
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+	<!-- Application CSS -->
 	<link href="{{ asset('assets/css/app.css') }}" rel="stylesheet">
 	<link href="{{ asset('assets/css/icons.css') }}" rel="stylesheet">
+
 	<!-- Theme Style CSS -->
-	<link rel="stylesheet" href="{{ asset('assets/css/dark-theme.css') }}" />
-	<link rel="stylesheet" href="{{ asset('assets/css/semi-dark.css') }}" />
-	<link rel="stylesheet" href="{{ asset('assets/css/header-colors.css') }}" />
+	<link rel="stylesheet" href="{{ asset('assets/css/dark-theme.css') }}">
+	<link rel="stylesheet" href="{{ asset('assets/css/semi-dark.css') }}">
+	<link rel="stylesheet" href="{{ asset('assets/css/header-colors.css') }}">
+
 	<title>Rocker - Bootstrap 5 Admin Dashboard Template</title>
 </head>
 
@@ -53,11 +64,9 @@
 					<ul>
 						<li> <a href="index.html"><i class='bx bx-radio-circle'></i>Default</a>
 						</li>
-						<li> <a href="{{route('admin-dashboard-alternate')}}"><i
-									class='bx bx-radio-circle'></i>Alternate</a>
+						<li> <a href="index2.html"><i class='bx bx-radio-circle'></i>Alternate</a>
 						</li>
-						<li> <a href="{{route('admin-dashboard-graphical')}}l"><i
-									class='bx bx-radio-circle'></i>Graphical</a>
+						<li> <a href="index3.html"><i class='bx bx-radio-circle'></i>Graphical</a>
 						</li>
 					</ul>
 				</li>
@@ -68,21 +77,19 @@
 						<div class="menu-title">Application</div>
 					</a>
 					<ul>
-						<li> <a href="{{route('app-email')}}"><i class='bx bx-radio-circle'></i>Email</a>
+						<li> <a href="app-emailbox.html"><i class='bx bx-radio-circle'></i>Email</a>
 						</li>
-						<li> <a href="{{route('get_requests')}}"><i class='bx bx-radio-circle'></i>Requests</a>
+						<li> <a href="app-chat-box.html"><i class='bx bx-radio-circle'></i>Chat Box</a>
 						</li>
-						<li> <a href="{{route('chat-box')}}"><i class='bx bx-radio-circle'></i>Chat Box</a>
+						<li> <a href="app-file-manager.html"><i class='bx bx-radio-circle'></i>File Manager</a>
 						</li>
-						<li> <a href="{{route('app-file-admin')}}"><i class='bx bx-radio-circle'></i>File Manager</a>
+						<li> <a href="app-contact-list.html"><i class='bx bx-radio-circle'></i>Contatcs</a>
 						</li>
-						<li> <a href="{{route('app-contact')}}"><i class='bx bx-radio-circle'></i>Contatcs</a>
+						<li> <a href="app-to-do.html"><i class='bx bx-radio-circle'></i>Todo List</a>
 						</li>
-						<li> <a href="{{route('app-to-do')}}"><i class='bx bx-radio-circle'></i>Todo List</a>
+						<li> <a href="app-invoice.html"><i class='bx bx-radio-circle'></i>Invoice</a>
 						</li>
-						<li> <a href="{{route('app-invoice')}}"><i class='bx bx-radio-circle'></i>Invoice</a>
-						</li>
-						<li> <a href="{{route('app-fullcalender')}}"><i class='bx bx-radio-circle'></i>Calendar</a>
+						<li> <a href="app-fullcalender.html"><i class='bx bx-radio-circle'></i>Calendar</a>
 						</li>
 					</ul>
 				</li>
@@ -120,45 +127,38 @@
 						<div class="menu-title">Components</div>
 					</a>
 					<ul>
-						<li> <a href="{{route('component-alerts')}}"><i class='bx bx-radio-circle'></i>Alerts</a>
+						<li> <a href="component-alerts.html"><i class='bx bx-radio-circle'></i>Alerts</a>
 						</li>
-						<li> <a href="{{route('component-accordions')}}"><i
-									class='bx bx-radio-circle'></i>Accordions</a>
+						<li> <a href="component-accordions.html"><i class='bx bx-radio-circle'></i>Accordions</a>
 						</li>
-						<li> <a href="{{route('component-badges')}}"><i class='bx bx-radio-circle'></i>Badges</a>
+						<li> <a href="component-badges.html"><i class='bx bx-radio-circle'></i>Badges</a>
 						</li>
-						<li> <a href="{{route('component-buttons')}}"><i class='bx bx-radio-circle'></i>Buttons</a>
+						<li> <a href="component-buttons.html"><i class='bx bx-radio-circle'></i>Buttons</a>
 						</li>
-						<li> <a href="{{route('component-cards')}}"><i class='bx bx-radio-circle'></i>Cards</a>
+						<li> <a href="component-cards.html"><i class='bx bx-radio-circle'></i>Cards</a>
 						</li>
-						<li> <a href="{{route('component-carousels')}}"><i class='bx bx-radio-circle'></i>Carousels</a>
+						<li> <a href="component-carousels.html"><i class='bx bx-radio-circle'></i>Carousels</a>
 						</li>
-						<li> <a href="{{route('component-list-groups')}}"><i class='bx bx-radio-circle'></i>List
-								Groups</a>
+						<li> <a href="component-list-groups.html"><i class='bx bx-radio-circle'></i>List Groups</a>
 						</li>
-						<li> <a href="{{route('component-media-object')}}"><i class='bx bx-radio-circle'></i>Media
-								Objects</a>
+						<li> <a href="component-media-object.html"><i class='bx bx-radio-circle'></i>Media Objects</a>
 						</li>
-						<li> <a href="{{route('component-modals')}}"><i class='bx bx-radio-circle'></i>Modals</a>
+						<li> <a href="component-modals.html"><i class='bx bx-radio-circle'></i>Modals</a>
 						</li>
-						<li> <a href="{{route('component-navs-tabs')}}"><i class='bx bx-radio-circle'></i>Navs &
-								Tabs</a>
+						<li> <a href="component-navs-tabs.html"><i class='bx bx-radio-circle'></i>Navs & Tabs</a>
 						</li>
-						<li> <a href="{{route('component-navbar')}}"><i class='bx bx-radio-circle'></i>Navbar</a>
+						<li> <a href="component-navbar.html"><i class='bx bx-radio-circle'></i>Navbar</a>
 						</li>
-						<li> <a href="{{route('component-paginations')}}"><i
-									class='bx bx-radio-circle'></i>Pagination</a>
+						<li> <a href="component-paginations.html"><i class='bx bx-radio-circle'></i>Pagination</a>
 						</li>
-						<li> <a href="{{route('component-popovers-tooltips')}}"><i
-									class='bx bx-radio-circle'></i>Popovers & Tooltips</a>
+						<li> <a href="component-popovers-tooltips.html"><i class='bx bx-radio-circle'></i>Popovers &
+								Tooltips</a>
 						</li>
-						<li> <a href="{{route('component-progress-bars')}}"><i
-									class='bx bx-radio-circle'></i>Progress</a>
+						<li> <a href="component-progress-bars.html"><i class='bx bx-radio-circle'></i>Progress</a>
 						</li>
-						<li> <a href="{{route('component-spinners')}}"><i class='bx bx-radio-circle'></i>Spinners</a>
+						<li> <a href="component-spinners.html"><i class='bx bx-radio-circle'></i>Spinners</a>
 						</li>
-						<li> <a href="{{route('component-notifications')}}"><i
-									class='bx bx-radio-circle'></i>Notifications</a>
+						<li> <a href="component-notifications.html"><i class='bx bx-radio-circle'></i>Notifications</a>
 						</li>
 						<li> <a href="component-avtars-chips.html"><i class='bx bx-radio-circle'></i>Avatrs & Chips</a>
 						</li>
@@ -224,7 +224,7 @@
 						</li>
 						<li> <a href="form-text-editor.html"><i class='bx bx-radio-circle'></i>Text Editor</a>
 						</li>
-						<li> <a href="{{route('form-file-upload')}}"><i class='bx bx-radio-circle'></i>File Upload</a>
+						<li> <a href="form-file-upload.html"><i class='bx bx-radio-circle'></i>File Upload</a>
 						</li>
 						<li> <a href="form-date-time-pickes.html"><i class='bx bx-radio-circle'></i>Date Pickers</a>
 						</li>
@@ -1056,18 +1056,11 @@
 						<a class="d-flex align-items-center nav-link dropdown-toggle gap-3 dropdown-toggle-nocaret"
 							href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 							<img src="assets/images/avatars/avatar-2.png" class="user-img" alt="user avatar">
-							@if(isset($admin))
-								<img src="{{ asset('assets/images/avatars/avatar-2.png') }}" class="user-img"
-									alt="user avatar">
-								<div class="user-info">
-									<p class="user-name mb-0">{{ $admin->first_name }} {{ $admin->last_name }}</p>
-									<p class="designation mb-0"><!-- Optional additional info can go here --></p>
-								</div>
-							@else
-								<p>No admin data available.</p>
-							@endif
+							<div class="user-info">
+								<p class="user-name mb-0">Pauline Seitz</p>
+								<p class="designattion mb-0">Web Designer</p>
+							</div>
 						</a>
-
 						<ul class="dropdown-menu dropdown-menu-end">
 							<li><a class="dropdown-item d-flex align-items-center" href="javascript:;"><i
 										class="bx bx-user fs-5"></i><span>Profile</span></a>
@@ -1099,77 +1092,9 @@
 		<!--start page wrapper -->
 		<div class="page-wrapper">
 			<div class="page-content">
-				<div class="row row-cols-1 row-cols-md-2 row-cols-xl-4">
-					<div class="col">
-						<div class="card radius-10 border-start border-0 border-4 border-info">
-							<div class="card-body">
-								<div class="d-flex align-items-center">
-									<div>
-										<p class="mb-0 text-secondary">Total Orders</p>
-										<h4 class="my-1 text-info">4805</h4>
-										<p class="mb-0 font-13">+2.5% from last week</p>
-									</div>
-									<div class="widgets-icons-2 rounded-circle bg-gradient-blues text-white ms-auto"><i
-											class='bx bxs-cart'></i>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col">
-						<div class="card radius-10 border-start border-0 border-4 border-danger">
-							<div class="card-body">
-								<div class="d-flex align-items-center">
-									<div>
-										<p class="mb-0 text-secondary">Total Revenue</p>
-										<h4 class="my-1 text-danger">$84,245</h4>
-										<p class="mb-0 font-13">+5.4% from last week</p>
-									</div>
-									<div class="widgets-icons-2 rounded-circle bg-gradient-burning text-white ms-auto">
-										<i class='bx bxs-wallet'></i>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col">
-						<div class="card radius-10 border-start border-0 border-4 border-success">
-							<div class="card-body">
-								<div class="d-flex align-items-center">
-									<div>
-										<p class="mb-0 text-secondary">Bounce Rate</p>
-										<h4 class="my-1 text-success">34.6%</h4>
-										<p class="mb-0 font-13">-4.5% from last week</p>
-									</div>
-									<div
-										class="widgets-icons-2 rounded-circle bg-gradient-ohhappiness text-white ms-auto">
-										<i class='bx bxs-bar-chart-alt-2'></i>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col">
-						<div class="card radius-10 border-start border-0 border-4 border-warning">
-							<div class="card-body">
-								<div class="d-flex align-items-center">
-									<div>
-										<p class="mb-0 text-secondary">Total Customers</p>
-										<h4 class="my-1 text-warning">8.4K</h4>
-										<p class="mb-0 font-13">+8.4% from last week</p>
-									</div>
-									<div class="widgets-icons-2 rounded-circle bg-gradient-orange text-white ms-auto"><i
-											class='bx bxs-group'></i>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div><!--end row-->
-
 				<div class="row">
-					<div class="col-12 col-lg-8 d-flex">
-						<div class="card radius-10 w-100">
+					<div class="col-12 col-lg-8">
+						<div class="card radius-10">
 							<div class="card-header">
 								<div class="d-flex align-items-center">
 									<div>
@@ -1195,48 +1120,18 @@
 								</div>
 							</div>
 							<div class="card-body">
-								<div class="d-flex align-items-center ms-auto font-13 gap-2 mb-3">
-									<span class="border px-1 rounded cursor-pointer"><i class="bx bxs-circle me-1"
-											style="color: #14abef"></i>Sales</span>
-									<span class="border px-1 rounded cursor-pointer"><i class="bx bxs-circle me-1"
-											style="color: #ffc107"></i>Visits</span>
-								</div>
-								<div class="chart-container-1">
+								<div class="chart-container-0">
 									<canvas id="chart1"></canvas>
-								</div>
-							</div>
-							<div
-								class="row row-cols-1 row-cols-md-3 row-cols-xl-3 g-0 row-group text-center border-top">
-								<div class="col">
-									<div class="p-3">
-										<h5 class="mb-0">24.15M</h5>
-										<small class="mb-0">Overall Visitor <span> <i
-													class="bx bx-up-arrow-alt align-middle"></i> 2.43%</span></small>
-									</div>
-								</div>
-								<div class="col">
-									<div class="p-3">
-										<h5 class="mb-0">12:38</h5>
-										<small class="mb-0">Visitor Duration <span> <i
-													class="bx bx-up-arrow-alt align-middle"></i> 12.65%</span></small>
-									</div>
-								</div>
-								<div class="col">
-									<div class="p-3">
-										<h5 class="mb-0">639.82</h5>
-										<small class="mb-0">Pages/Visit <span> <i
-													class="bx bx-up-arrow-alt align-middle"></i> 5.62%</span></small>
-									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="col-12 col-lg-4 d-flex">
-						<div class="card radius-10 w-100">
+					<div class="col-12 col-lg-4">
+						<div class="card radius-10">
 							<div class="card-header">
 								<div class="d-flex align-items-center">
 									<div>
-										<h6 class="mb-0">Trending Products</h6>
+										<h6 class="mb-0">Order Status</h6>
 									</div>
 									<div class="dropdown ms-auto">
 										<a class="dropdown-toggle dropdown-toggle-nocaret" href="#"
@@ -1258,34 +1153,317 @@
 								</div>
 							</div>
 							<div class="card-body">
-								<div class="chart-container-2">
+								<div class="chart-container-0">
 									<canvas id="chart2"></canvas>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div><!--end row-->
+
+
+				<div class="row">
+					<div class="col-12 col-lg-4">
+						<div class="card radius-10">
+							<div class="card-body">
+								<div class="">
+									<div id="chart3" style="height:250px;"></div>
 								</div>
 							</div>
 							<ul class="list-group list-group-flush">
 								<li
 									class="list-group-item d-flex bg-transparent justify-content-between align-items-center border-top">
-									Jeans <span class="badge bg-success rounded-pill">25</span>
+									Apple <span class="badge bg-danger rounded-pill">20</span>
 								</li>
 								<li
 									class="list-group-item d-flex bg-transparent justify-content-between align-items-center">
-									T-Shirts <span class="badge bg-danger rounded-pill">10</span>
+									Samsung <span class="badge bg-primary rounded-pill">15</span>
 								</li>
 								<li
 									class="list-group-item d-flex bg-transparent justify-content-between align-items-center">
-									Shoes <span class="badge bg-primary rounded-pill">65</span>
-								</li>
-								<li
-									class="list-group-item d-flex bg-transparent justify-content-between align-items-center">
-									Lingerie <span class="badge bg-warning text-dark rounded-pill">14</span>
+									Nokia <span class="badge bg-success rounded-pill">30</span>
 								</li>
 							</ul>
 						</div>
 					</div>
+					<div class="col-12 col-lg-8">
+						<div class="card radius-10">
+							<div class="card-body">
+								<div class="row row-cols-1 row-cols-md-2 row-cols-xl-2 g-3">
+									<div class="col">
+										<div class="card radius-10 overflow-hidden mb-0 shadow-none border">
+											<div class="card-body">
+												<div class="d-flex align-items-center">
+													<div>
+														<p class="mb-0 text-secondary font-14">Total Orders</p>
+														<h5 class="my-0">8052</h5>
+													</div>
+													<div class="text-primary ms-auto font-30"><i
+															class='bx bx-cart-alt'></i>
+													</div>
+												</div>
+											</div>
+											<div class="mt-1" id="chart4"></div>
+											<div class="position-absolute end-0 bottom-0 m-2"><span
+													class="text-success">+25%</span></div>
+										</div>
+									</div>
+									<div class="col">
+										<div class="card radius-10 overflow-hidden mb-0 shadow-none border">
+											<div class="card-body">
+												<div class="d-flex align-items-center">
+													<div>
+														<p class="mb-0 text-secondary font-14">Total Revenue</p>
+														<h5 class="my-0">$6.2K</h5>
+													</div>
+													<div class="text-danger ms-auto font-30"><i
+															class='bx bx-dollar'></i>
+													</div>
+												</div>
+											</div>
+											<div class="mt-1" id="chart5"></div>
+											<div class="position-absolute end-0 bottom-0 m-2"><span
+													class="text-success">+15%</span></div>
+										</div>
+									</div>
+									<div class="col">
+										<div class="card radius-10 overflow-hidden mb-0 shadow-none border">
+											<div class="card-body">
+												<div class="d-flex align-items-center">
+													<div>
+														<p class="mb-0 text-secondary font-14">New Users</p>
+														<h5 class="my-0">1.3K</h5>
+													</div>
+													<div class="text-success ms-auto font-30"><i
+															class='bx bx-group'></i>
+													</div>
+												</div>
+											</div>
+											<div class="mt-1" id="chart6"></div>
+											<div class="position-absolute end-0 bottom-0 m-2"><span
+													class="text-danger">-10%</span></div>
+										</div>
+									</div>
+									<div class="col">
+										<div class="card radius-10 overflow-hidden mb-0 shadow-none border">
+											<div class="card-body">
+												<div class="d-flex align-items-center">
+													<div>
+														<p class="mb-0 text-secondary font-14">Sold Items</p>
+														<h5 class="my-0">956</h5>
+													</div>
+													<div class="text-warning ms-auto font-30"><i class='bx bx-beer'></i>
+													</div>
+												</div>
+											</div>
+											<div class="mt-1" id="chart7"></div>
+											<div class="position-absolute end-0 bottom-0 m-2"><span
+													class="text-danger">-14%</span></div>
+										</div>
+									</div>
+									<div class="col">
+										<div class="card radius-10 overflow-hidden mb-0 shadow-none border">
+											<div class="card-body">
+												<div class="d-flex align-items-center">
+													<div>
+														<p class="mb-0 text-secondary font-14">Total Visits</p>
+														<h5 class="my-0">12M</h5>
+													</div>
+													<div class="text-info ms-auto font-30"><i
+															class='bx bx-camera-movie'></i>
+													</div>
+												</div>
+											</div>
+											<div class="mt-1" id="chart8"></div>
+											<div class="position-absolute end-0 bottom-0 m-2"><span
+													class="text-success">+28%</span></div>
+										</div>
+									</div>
+									<div class="col">
+										<div class="card radius-10 overflow-hidden mb-0 shadow-none border">
+											<div class="card-body">
+												<div class="d-flex align-items-center">
+													<div>
+														<p class="mb-0 text-secondary font-14">Total Returns</p>
+														<h5 class="my-0">178</h5>
+													</div>
+													<div class="ms-auto font-30"><i class='bx bx-refresh'></i>
+													</div>
+												</div>
+											</div>
+											<div class="mt-1" id="chart9"></div>
+											<div class="position-absolute end-0 bottom-0 m-2"><span
+													class="text-success">+35%</span></div>
+										</div>
+									</div>
+								</div><!--end row-->
+							</div>
+						</div>
+					</div>
+
 				</div><!--end row-->
 
+
+				<div class="row">
+					<div class="col-12 col-lg-8 col-xl-8">
+						<div class="card radius-10">
+							<div class="card-header bg-transparent">
+								<div class="d-flex align-items-center">
+									<div>
+										<h6 class="mb-0">Top Selling Country</h6>
+									</div>
+									<div class="dropdown ms-auto">
+										<a class="dropdown-toggle dropdown-toggle-nocaret" href="#"
+											data-bs-toggle="dropdown"><i
+												class='bx bx-dots-horizontal-rounded font-22 text-option'></i>
+										</a>
+										<ul class="dropdown-menu">
+											<li><a class="dropdown-item" href="javascript:;">Action</a>
+											</li>
+											<li><a class="dropdown-item" href="javascript:;">Another action</a>
+											</li>
+											<li>
+												<hr class="dropdown-divider">
+											</li>
+											<li><a class="dropdown-item" href="javascript:;">Something else here</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="card-body">
+								<div id="dashboard-map" style="height: 250px"></div>
+								<hr>
+								<div class="mb-4">
+									<div class="d-flex align-items-center gap-3">
+										<div class="country-icon">
+											<img src="assets/images/county/01.png" width="35" alt="">
+										</div>
+										<div class="flex-grow-1">
+											<p class="mb-2">United States <span class="float-end">50%</span></p>
+											<div class="progress" style="height: 5px;">
+												<div class="progress-bar bg-gradient-ibiza" role="progressbar"
+													style="width: 50%"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="mb-4">
+									<div class="d-flex align-items-center gap-3">
+										<div class="country-icon">
+											<img src="assets/images/county/02.png" width="35" alt="">
+										</div>
+										<div class="flex-grow-1">
+											<p class="mb-2">England <span class="float-end">65%</span></p>
+											<div class="progress" style="height: 5px;">
+												<div class="progress-bar bg-gradient-deepblue" role="progressbar"
+													style="width: 65%"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="mb-4">
+									<div class="d-flex align-items-center gap-3">
+										<div class="country-icon">
+											<img src="assets/images/county/03.png" width="35" alt="">
+										</div>
+										<div class="flex-grow-1">
+											<p class="mb-2">England <span class="float-end">75%</span></p>
+											<div class="progress" style="height: 5px;">
+												<div class="progress-bar bg-gradient-ohhappiness" role="progressbar"
+													style="width: 75%"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="mb-4">
+									<div class="d-flex align-items-center gap-3">
+										<div class="country-icon">
+											<img src="assets/images/county/04.png" width="35" alt="">
+										</div>
+										<div class="flex-grow-1">
+											<p class="mb-2">England <span class="float-end">85%</span></p>
+											<div class="progress" style="height: 5px;">
+												<div class="progress-bar bg-gradient-orange" role="progressbar"
+													style="width: 85%"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="mb-0">
+									<div class="d-flex align-items-center gap-3">
+										<div class="country-icon">
+											<img src="assets/images/county/05.png" width="35" alt="">
+										</div>
+										<div class="flex-grow-1">
+											<p class="mb-2">England <span class="float-end">95%</span></p>
+											<div class="progress" style="height: 5px;">
+												<div class="progress-bar bg-gradient-blues" role="progressbar"
+													style="width: 95%"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-12 col-lg-4 col-xl-4">
+						<div class="card radius-10 overflow-hidden">
+							<div class="card-body">
+								<div class="d-flex align-items-center mb-2">
+									<div>
+										<p class="mb-0 text-secondary font-14">Page Views</p>
+										<h5 class="my-0">2050</h5>
+									</div>
+									<div class="ms-auto font-30"><i class='bx bx-bookmark-alt'></i>
+									</div>
+								</div>
+								<div class="chart-container-5">
+									<canvas id="chart10"></canvas>
+								</div>
+							</div>
+						</div>
+						<div class="card radius-10 overflow-hidden">
+							<div class="card-body">
+								<div class="d-flex align-items-center mb-2">
+									<div>
+										<p class="mb-0 text-secondary font-14">Bounce Rate</p>
+										<h5 class="my-0">24.5%</h5>
+									</div>
+									<div class="ms-auto font-30"><i class='bx bx-line-chart'></i>
+									</div>
+								</div>
+								<div class="chart-container-5">
+									<canvas id="chart11"></canvas>
+								</div>
+							</div>
+						</div>
+
+						<div class="card radius-10 overflow-hidden">
+							<div class="card-body">
+								<div class="d-flex align-items-center mb-2">
+									<div>
+										<p class="mb-0 text-secondary font-14">Total Cliks</p>
+										<h5 class="my-0">8945</h5>
+									</div>
+									<div class="ms-auto font-30"><i class='bx bx-heart'></i>
+									</div>
+								</div>
+								<div class="chart-container-5">
+									<canvas id="chart12"></canvas>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div><!--End Row-->
+
+
 				<div class="card radius-10">
-					<div class="card-header">
+					<div class="card-header bg-transparent">
 						<div class="d-flex align-items-center">
 							<div>
 								<h6 class="mb-0">Recent Orders</h6>
@@ -1434,285 +1612,20 @@
 					</div>
 				</div>
 
-
-				<div class="row">
-					<div class="col-12 col-lg-7 col-xl-8 d-flex">
-						<div class="card radius-10 w-100">
-							<div class="card-header bg-transparent">
-								<div class="d-flex align-items-center">
-									<div>
-										<h6 class="mb-0">Recent Orders</h6>
-									</div>
-									<div class="dropdown ms-auto">
-										<a class="dropdown-toggle dropdown-toggle-nocaret" href="#"
-											data-bs-toggle="dropdown"><i
-												class='bx bx-dots-horizontal-rounded font-22 text-option'></i>
-										</a>
-										<ul class="dropdown-menu">
-											<li><a class="dropdown-item" href="javascript:;">Action</a>
-											</li>
-											<li><a class="dropdown-item" href="javascript:;">Another action</a>
-											</li>
-											<li>
-												<hr class="dropdown-divider">
-											</li>
-											<li><a class="dropdown-item" href="javascript:;">Something else here</a>
-											</li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="card-body">
-								<div class="row">
-									<div class="col-lg-7 col-xl-8 border-end">
-										<div id="geographic-map-2"></div>
-									</div>
-									<div class="col-lg-5 col-xl-4">
-
-										<div class="mb-4">
-											<p class="mb-2"><i class="flag-icon flag-icon-us me-1"></i> USA <span
-													class="float-end">70%</span></p>
-											<div class="progress" style="height: 7px;">
-												<div class="progress-bar bg-primary progress-bar-striped"
-													role="progressbar" style="width: 70%"></div>
-											</div>
-										</div>
-
-										<div class="mb-4">
-											<p class="mb-2"><i class="flag-icon flag-icon-ca me-1"></i> Canada <span
-													class="float-end">65%</span></p>
-											<div class="progress" style="height: 7px;">
-												<div class="progress-bar bg-danger progress-bar-striped"
-													role="progressbar" style="width: 65%"></div>
-											</div>
-										</div>
-
-										<div class="mb-4">
-											<p class="mb-2"><i class="flag-icon flag-icon-gb me-1"></i> England <span
-													class="float-end">60%</span></p>
-											<div class="progress" style="height: 7px;">
-												<div class="progress-bar bg-success progress-bar-striped"
-													role="progressbar" style="width: 60%"></div>
-											</div>
-										</div>
-
-										<div class="mb-4">
-											<p class="mb-2"><i class="flag-icon flag-icon-au me-1"></i> Australia <span
-													class="float-end">55%</span></p>
-											<div class="progress" style="height: 7px;">
-												<div class="progress-bar bg-warning progress-bar-striped"
-													role="progressbar" style="width: 55%"></div>
-											</div>
-										</div>
-
-										<div class="mb-4">
-											<p class="mb-2"><i class="flag-icon flag-icon-in me-1"></i> India <span
-													class="float-end">50%</span></p>
-											<div class="progress" style="height: 7px;">
-												<div class="progress-bar bg-info progress-bar-striped"
-													role="progressbar" style="width: 50%"></div>
-											</div>
-										</div>
-
-										<div class="mb-0">
-											<p class="mb-2"><i class="flag-icon flag-icon-cn me-1"></i> China <span
-													class="float-end">45%</span></p>
-											<div class="progress" style="height: 7px;">
-												<div class="progress-bar bg-dark progress-bar-striped"
-													role="progressbar" style="width: 45%"></div>
-											</div>
-										</div>
-
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-12 col-lg-5 col-xl-4 d-flex">
-						<div class="card w-100 radius-10">
-							<div class="card-body">
-								<div class="card radius-10 border shadow-none">
-									<div class="card-body">
-										<div class="d-flex align-items-center">
-											<div>
-												<p class="mb-0 text-secondary">Total Likes</p>
-												<h4 class="my-1">45.6M</h4>
-												<p class="mb-0 font-13">+6.2% from last week</p>
-											</div>
-											<div class="widgets-icons-2 bg-gradient-cosmic text-white ms-auto"><i
-													class='bx bxs-heart-circle'></i>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="card radius-10 border shadow-none">
-									<div class="card-body">
-										<div class="d-flex align-items-center">
-											<div>
-												<p class="mb-0 text-secondary">Comments</p>
-												<h4 class="my-1">25.6K</h4>
-												<p class="mb-0 font-13">+3.7% from last week</p>
-											</div>
-											<div class="widgets-icons-2 bg-gradient-ibiza text-white ms-auto"><i
-													class='bx bxs-comment-detail'></i>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="card radius-10 mb-0 border shadow-none">
-									<div class="card-body">
-										<div class="d-flex align-items-center">
-											<div>
-												<p class="mb-0 text-secondary">Total Shares</p>
-												<h4 class="my-1">85.4M</h4>
-												<p class="mb-0 font-13">+4.6% from last week</p>
-											</div>
-											<div class="widgets-icons-2 bg-gradient-kyoto text-dark ms-auto"><i
-													class='bx bxs-share-alt'></i>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-
-						</div>
-
-					</div>
-				</div><!--end row-->
-
-				<div class="row row-cols-1 row-cols-lg-3">
-					<div class="col d-flex">
-						<div class="card radius-10 w-100">
-							<div class="card-body">
-								<p class="font-weight-bold mb-1 text-secondary">Weekly Revenue</p>
-								<div class="d-flex align-items-center mb-4">
-									<div>
-										<h4 class="mb-0">$89,540</h4>
-									</div>
-									<div class="">
-										<p class="mb-0 align-self-center font-weight-bold text-success ms-2">4.4% <i
-												class="bx bxs-up-arrow-alt mr-2"></i>
-										</p>
-									</div>
-								</div>
-								<div class="chart-container-0 mt-5">
-									<canvas id="chart3"></canvas>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col d-flex">
-						<div class="card radius-10 w-100">
-							<div class="card-header bg-transparent">
-								<div class="d-flex align-items-center">
-									<div>
-										<h6 class="mb-0">Orders Summary</h6>
-									</div>
-									<div class="dropdown ms-auto">
-										<a class="dropdown-toggle dropdown-toggle-nocaret" href="#"
-											data-bs-toggle="dropdown"><i
-												class='bx bx-dots-horizontal-rounded font-22 text-option'></i>
-										</a>
-										<ul class="dropdown-menu">
-											<li><a class="dropdown-item" href="javascript:;">Action</a>
-											</li>
-											<li><a class="dropdown-item" href="javascript:;">Another action</a>
-											</li>
-											<li>
-												<hr class="dropdown-divider">
-											</li>
-											<li><a class="dropdown-item" href="javascript:;">Something else here</a>
-											</li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="card-body">
-								<div class="chart-container-1 mt-3">
-									<canvas id="chart4"></canvas>
-								</div>
-							</div>
-							<ul class="list-group list-group-flush">
-								<li
-									class="list-group-item d-flex bg-transparent justify-content-between align-items-center border-top">
-									Completed <span class="badge bg-gradient-quepal rounded-pill">25</span>
-								</li>
-								<li
-									class="list-group-item d-flex bg-transparent justify-content-between align-items-center">
-									Pending <span class="badge bg-gradient-ibiza rounded-pill">10</span>
-								</li>
-								<li
-									class="list-group-item d-flex bg-transparent justify-content-between align-items-center">
-									Process <span class="badge bg-gradient-deepblue rounded-pill">65</span>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="col d-flex">
-						<div class="card radius-10 w-100">
-							<div class="card-header bg-transparent">
-								<div class="d-flex align-items-center">
-									<div>
-										<h6 class="mb-0">Top Selling Categories</h6>
-									</div>
-									<div class="dropdown ms-auto">
-										<a class="dropdown-toggle dropdown-toggle-nocaret" href="#"
-											data-bs-toggle="dropdown"><i
-												class='bx bx-dots-horizontal-rounded font-22 text-option'></i>
-										</a>
-										<ul class="dropdown-menu">
-											<li><a class="dropdown-item" href="javascript:;">Action</a>
-											</li>
-											<li><a class="dropdown-item" href="javascript:;">Another action</a>
-											</li>
-											<li>
-												<hr class="dropdown-divider">
-											</li>
-											<li><a class="dropdown-item" href="javascript:;">Something else here</a>
-											</li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="card-body">
-								<div class="chart-container-0">
-									<canvas id="chart5"></canvas>
-								</div>
-							</div>
-							<div class="row row-group border-top g-0">
-								<div class="col">
-									<div class="p-3 text-center">
-										<h4 class="mb-0 text-danger">$45,216</h4>
-										<p class="mb-0">Clothing</p>
-									</div>
-								</div>
-								<div class="col">
-									<div class="p-3 text-center">
-										<h4 class="mb-0 text-success">$68,154</h4>
-										<p class="mb-0">Electronic</p>
-									</div>
-								</div>
-							</div><!--end row-->
-						</div>
-					</div>
-				</div><!--end row-->
-
 			</div>
 		</div>
 		<!--end page wrapper -->
 		<!--start overlay-->
 		<div class="overlay toggle-icon"></div>
 		<!--end overlay-->
-		<!--Start Back To Top Button-->
-		<a href="javaScript:;" class="back-to-top"><i class='bx bxs-up-arrow-alt'></i></a>
+		<!--Start Back To Top Button--> <a href="javaScript:;" class="back-to-top"><i
+				class='bx bxs-up-arrow-alt'></i></a>
 		<!--End Back To Top Button-->
 		<footer class="page-footer">
-			<p class="mb-0">Copyright © 2022. All right reserved.</p>
+			<p class="mb-0">Copyright © 2021. All right reserved.</p>
 		</footer>
 	</div>
 	<!--end wrapper-->
-
 
 	<!-- search modal -->
 	<div class="modal" id="SearchModal" tabindex="-1">
@@ -1797,7 +1710,6 @@
 		</div>
 	</div>
 	<!-- end search modal -->
-
 
 
 
@@ -1898,8 +1810,10 @@
 	</div>
 	<!--end switcher-->
 	<!-- Bootstrap JS -->
-	<script src="assets/js/bootstrap.bundle.min.js"></script>
-	<!--plugins-->
+	<!-- Bootstrap Bundle JS -->
+	<script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
+
+	<!-- Plugins -->
 	<script src="{{ asset('assets/js/jquery.min.js') }}"></script>
 	<script src="{{ asset('assets/plugins/simplebar/js/simplebar.min.js') }}"></script>
 	<script src="{{ asset('assets/plugins/metismenu/js/metisMenu.min.js') }}"></script>
@@ -1907,12 +1821,16 @@
 	<script src="{{ asset('assets/plugins/vectormap/jquery-jvectormap-2.0.2.min.js') }}"></script>
 	<script src="{{ asset('assets/plugins/vectormap/jquery-jvectormap-world-mill-en.js') }}"></script>
 	<script src="{{ asset('assets/plugins/chartjs/js/chart.js') }}"></script>
-	<script src="{{ asset('assets/js/index.js') }}"></script>
-	<!--app JS-->
-	<script src="assets/js/app.js"></script>
-	<script>
-		new PerfectScrollbar(".app-container")
-	</script>
+	<script src="{{ asset('assets/plugins/sparkline-charts/jquery.sparkline.min.js') }}"></script>
+
+	<!-- Morris JavaScript -->
+	<script src="{{ asset('assets/plugins/raphael/raphael-min.js') }}"></script>
+	<script src="{{ asset('assets/plugins/morris/js/morris.js') }}"></script>
+
+	<!-- Custom JS -->
+	<script src="{{ asset('assets/js/index2.js') }}"></script>
+	<script src="{{ asset('assets/js/app.js') }}"></script>
+
 </body>
 
 </html>
