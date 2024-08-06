@@ -1245,7 +1245,13 @@
                                     <label class="label-text">First Name</label>
                                     <div class="form-group">
                                         <input class="form-control form--control" type="text" name="first_name"
-                                            placeholder="e.g. Alex">
+                                            placeholder="e.g. Alex" value="{{ $student->first_name}}">
+                                        <span class="la la-user input-icon"></span>
+                                    </div>
+                                    <label class="label-text">User Name</label>
+                                    <div class="form-group">
+                                        <input class="form-control form--control" type="text" name="user_name"
+                                            placeholder="e.g. Alex" value="{{ $student->user_name}}">
                                         <span class="la la-user input-icon"></span>
                                     </div>
                                 </div><!-- end input-box -->
@@ -1253,7 +1259,7 @@
                                     <label class="label-text">Last Name</label>
                                     <div class="form-group">
                                         <input class="form-control form--control" type="text" name="last_name"
-                                            placeholder="e.g. Smith">
+                                            placeholder="e.g. Smith" value="{{ $student->last_name}}">
                                         <span class="la la-user input-icon"></span>
                                     </div>
                                 </div><!-- end input-box -->
@@ -1261,7 +1267,21 @@
                                     <label class="label-text">Email Address</label>
                                     <div class="form-group">
                                         <input class="form-control form--control" type="email" name="email"
-                                            placeholder="e.g. alexsmith@gmail.com">
+                                        value="{{ $student->email}}">
+                                        <span class="la la-envelope input-icon"></span>
+                                    </div>
+                                </div>
+                                <div class="input-box col-lg-6">
+                                    <label class="label-text">Password</label>
+                                    <div class="form-group">
+                                        <input class="form-control form--control" type="password" name="password">
+                                        <span class="la la-envelope input-icon"></span>
+                                    </div>
+                                </div>
+                                <div class="input-box col-lg-6">
+                                    <label class="label-text">Confirm Password</label>
+                                    <div class="form-group">
+                                        <input class="form-control form--control" type="password" name="password_confirmation">
                                         <span class="la la-envelope input-icon"></span>
                                     </div>
                                 </div><!-- end input-box -->

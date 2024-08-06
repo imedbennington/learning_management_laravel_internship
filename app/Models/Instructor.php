@@ -12,7 +12,7 @@ class Instructor extends Authenticatable
     protected $guard_name = 'instructor';
 
     protected $fillable = [
-        'first_name', 'last_name', 'email', 'password',
+        'first_name', 'user_name', 'last_name', 'email', 'password',
     ];
 
     protected $hidden = [

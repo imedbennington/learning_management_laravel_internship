@@ -111,9 +111,9 @@ class AdminController extends Controller
     $instructor = Instructor::create([
         'first_name' => $student->first_name,
         'last_name' => $student->last_name,
-        'user_name' => $student->user_name, // Make sure this field exists in Instructor
+        'user_name' => $student->user_name,
         'email' => $student->email,
-        'password' => $student->password, // Directly copy the hash
+        'password' => $student->password,
     ]);
 
     // Debug: Log password hashes

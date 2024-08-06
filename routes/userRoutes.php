@@ -47,3 +47,6 @@ Route::view('/form-add-category', 'Users Frontend Theme.add-category')->name('fo
     Route::view('/teacher.details', 'Users Frontend Theme.teacher.detail')->name('teacher.details');
 
 //Route::get('/show-admin-dashboard', [AdminController::class, 'index'])->name('show-admin-dashboard');
+Route::get('index2', function () {
+    return view('Users Frontend Theme.index2');
+})->name('index2');
