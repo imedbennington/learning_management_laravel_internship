@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Spatie\Permission\Models\Role;
 use Spatie\Permission\Models\Permission;
 use App\Models\Instructor;
+use Auth;
 use Hash;
 class AdminController extends Controller
 {
@@ -66,12 +67,6 @@ class AdminController extends Controller
     {
         //
     }
-    public function showDemands()
-    {
-        $demands = RequestHistory::all(); // Fetch all demands
-        return view('Users Frontend Theme.admin-request-list', compact('demands'));
-    }
-
     public function approveDemand($id)
 {
     $demand = RequestHistory::find($id);
@@ -97,36 +92,51 @@ class AdminController extends Controller
     // Ensure the 'instructor' role exists with the 'student' guard
     $roleInstructor = Role::firstOrCreate([
         'name' => 'instructor',
-        'guard_name' => 'student' // Use the 'student' guard
+        'guard_name' => 'student'
     ]);
 
-    // Sync the roles for the student using the 'student' guard
+    // Sync roles and permissions
     $student->syncRoles([$roleInstructor]);
-
-    // Ensure permissions exist with the 'student' guard and assign them
     $permissionUploadCourses = Permission::firstOrCreate([
         'name' => 'upload courses',
-        'guard_name' => 'student' // Use the 'student' guard
+        'guard_name' => 'student'
     ]);
     $permissionPostArticles = Permission::firstOrCreate([
         'name' => 'post articles',
-        'guard_name' => 'student' // Use the 'student' guard
+        'guard_name' => 'student'
     ]);
-
     $student->syncPermissions([$permissionUploadCourses, $permissionPostArticles]);
 
-    // Copy the student data to the instructors table
+    // Create instructor with the same password hash
     $instructor = Instructor::create([
-        //'id'=>$student->id,
         'first_name' => $student->first_name,
         'last_name' => $student->last_name,
-        'user_name' => $student->user_name,
+        'user_name' => $student->user_name, // Make sure this field exists in Instructor
         'email' => $student->email,
-        'password' => Hash::make($student->password), // Hash the password
+        'password' => $student->password, // Directly copy the hash
     ]);
+
+    // Debug: Log password hashes
+    \Log::info('Student password hash: ' . $student->password);
+    \Log::info('Instructor password hash: ' . $instructor->password);
+
+    // Verify authentication
+    if (!Auth::guard('student')->attempt(['email' => $student->email, 'password' => $student->password])) {
+        \Log::error('Failed to authenticate student. Email: ' . $student->email);
+        return redirect()->back()->with('error', 'Invalid password for the student.');
+    }
+
+    if (!Auth::guard('instructor')->attempt(['email' => $instructor->email, 'password' => $instructor->password])) {
+        \Log::error('Failed to authenticate new instructor. Email: ' . $instructor->email);
+        return redirect()->back()->with('error', 'Failed to authenticate new instructor with copied password.');
+    }
 
     return redirect()->route('admin.demands')->with('success', 'Demand approved and user role and permissions updated successfully.');
 }
+
+
+
+
 
 
     // Method to cancel a demand

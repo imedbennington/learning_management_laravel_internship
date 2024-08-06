@@ -50,53 +50,52 @@ public function become_teacher()
 
 
     public function registerStudent(Request $request)
-    {
-        $request->validate([
-            'first_name' => 'required|string|max:255',
-            'last_name' => 'required|string|max:255',
-            'user_name' => 'required|string|max:255|unique:users',
-            'email' => 'required|string|email|max:255|unique:users',
-            'password' => 'required|string|min:8|confirmed',
+{
+    $request->validate([
+        'first_name' => 'required|string|max:255',
+        'last_name' => 'required|string|max:255',
+        'user_name' => 'required|string|max:255|unique:users',
+        'email' => 'required|string|email|max:255|unique:users',
+        'password' => 'required|string|min:8|confirmed',
+    ]);
+
+    DB::beginTransaction();
+
+    try {
+        // Create the user (password will be hashed automatically)
+        $user = User::create([
+            'first_name' => $request->first_name,
+            'last_name' => $request->last_name,
+            'user_name' => $request->user_name,
+            'email' => $request->email,
+            'password' => $request->password, // Plain password
         ]);
 
-        DB::beginTransaction();
+        // Assign the 'student' role
+        $user->assignRole('student');
 
-        try {
-            // Create the user
-            $user = User::create([
-                'first_name' => $request->first_name,
-                'last_name' => $request->last_name,
-                'user_name' => $request->user_name,
-                'email' => $request->email,
-                'password' => Hash::make($request->password),
-            ]);
+        // Create a student entry
+        Student::create([
+            'id' => $user->id,
+            'first_name' => $request->first_name,
+            'last_name' => $request->last_name,
+            'user_name' => $request->user_name,
+            'email' => $request->email,
+            'password' => $user->password, // Use hashed password from User model
+        ]);
 
-            // Assign the 'student' role
-            $user->assignRole('student');
+        // Dispatch the UserRegistered event
+        event(new UserRegistered($user));
 
-            // Create a student entry
-            Student::create([
-                'id' => $user->id,
-                'first_name' => $request->first_name,
-                'last_name' => $request->last_name,
-                'user_name' => $request->user_name,
-                'email' => $request->email,
-                'password' => Hash::make($request->password),
+        DB::commit();
 
-            ]);
-
-            // Dispatch the UserRegistered event
-            event(new UserRegistered($user));
-
-            DB::commit();
-
-            return redirect()->route('dashboard');
-            //return response()->json(['message' => 'Student registered successfully'], 201);
-        } catch (\Exception $e) {
-            DB::rollBack();
-            return response()->json(['message' => 'Registration failed', 'error' => $e->getMessage()], 500);
-        }
+        return redirect()->route('dashboard');
+    } catch (\Exception $e) {
+        DB::rollBack();
+        return response()->json(['message' => 'Registration failed', 'error' => $e->getMessage()], 500);
     }
+}
+
     /*
         public function registerInstructor(Request $request)
         {
@@ -119,7 +118,7 @@ public function become_teacher()
             return response()->json(['message' => 'Instructor registered successfully'], 201);
         }
             */
-    public function registerAdmin(Request $request)
+    /*public function registerAdmin(Request $request)
     {
         // Validate the request
         $request->validate([
@@ -151,6 +150,34 @@ public function become_teacher()
         return redirect()->route('loginAdmin');
         //return response()->json(['message' => 'Admin registered successfully'], 201);
     }
+*/
+public function registerAdmin(Request $request)
+{
+    // Validate the request
+    $request->validate([
+        'first_name' => 'required|string|max:255',
+        'last_name' => 'required|string|max:255',
+        'email' => 'required|string|email|max:255|unique:admins',
+        'password' => 'required|string|min:8|confirmed',
+        'terms' => 'accepted',
+    ]);
+
+    // Create the admin using Eloquent
+    $admin = Admins::create([
+        'first_name' => $request->first_name,
+        'last_name' => $request->last_name,
+        'email' => $request->email,
+        'password' => $request->password, // Password will be hashed by the mutator
+    ]);
+
+    if ($admin) {
+        $admin->assignRole('admin');
+        return redirect()->route('loginAdmin');
+    } else {
+        return back()->withErrors(['error' => 'Failed to create admin']);
+    }
+}
+
 
     public function loginStudent(Request $request)
 {
@@ -170,6 +197,9 @@ public function become_teacher()
         'email' => ['The provided credentials are incorrect.'],
     ]);
 }
+
+
+
 
 public function loginUser(Request $request)
 {

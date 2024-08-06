@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Spatie\Permission\Traits\HasRoles;
-
+use Illuminate\Support\Facades\Hash;
 class Student extends Authenticatable
 {
     use Notifiable, HasRoles;
@@ -27,7 +27,6 @@ class Student extends Authenticatable
 
         // Student-specific initialization code
     }
-
     public function courses()
     {
         return $this->belongsToMany(Course::class, 'courses_students');

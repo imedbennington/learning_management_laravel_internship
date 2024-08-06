@@ -16,19 +16,15 @@ class AdminAuthController extends Controller
     $credentials = $request->only('email', 'password');
 
     if (Auth::guard('admin')->attempt($credentials, $request->filled('remember'))) {
-        // Optional: Log for debugging
-        \Log::info('Admin logged in:', ['email' => $request->email]);
-
-        return redirect()->intended('admin/dashboard'); // Redirect to admin dashboard
+        return redirect()->intended('admin/dashboard');
     }
-
-    // Optional: Log for debugging
-    \Log::warning('Login failed:', ['email' => $request->email]);
 
     return back()->withErrors([
         'email' => 'The provided credentials do not match our records.',
     ])->withInput($request->only('email', 'remember'));
 }
+
+
 
 
     public function dashboard()

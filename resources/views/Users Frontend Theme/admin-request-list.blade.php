@@ -1092,6 +1092,7 @@
                         <th>ID</th>
                         <!--<th> student ID</th>-->
                         <th>First name</th>
+                        <th>User name</th>
                         <th>Last name</th>
                         <th>Address</th>
                         <th>Email</th>
@@ -1110,6 +1111,7 @@
                             <td>{{ $demand->id }}</td>
                             <!--<td>{{ $demand->student_id }}</td>-->
                             <td>{{ $demand->first_name }}</td>
+                            <td>{{ $demand->user_name }}</td>
                             <td>{{ $demand->last_name }}</td>
                             <td>{{ $demand->adrress }}</td>
                             <td>{{ $demand->email }}</td>

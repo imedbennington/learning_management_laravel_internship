@@ -36,6 +36,7 @@ class RequestController extends Controller
         $validatedData = $request->validate([
             'student_id' => 'required|exists:students,id',
             'first_name' => 'required|string|max:255',
+            'user_name' => 'required|string|max:255',
             'last_name' => 'required|string|max:255',
             'address' => 'required|string|max:255',
             'email' => 'required|email|max:255',
@@ -58,6 +59,7 @@ class RequestController extends Controller
         RequestHistory::create([
             'student_id' => $validatedData['student_id'],
             'first_name' => $validatedData['first_name'],
+            'user_name' => $validatedData['user_name'],
             'last_name' => $validatedData['last_name'],
             'address' => $validatedData['address'],
             'email' => $validatedData['email'],
