@@ -8,20 +8,23 @@ class AdminAuthController extends Controller
 {
     public function login(Request $request)
 {
-    $request->validate([
-        'email' => 'required|string|email',
-        'password' => 'required|string',
-    ]);
-
-    $credentials = $request->only('email', 'password');
-
-    if (Auth::guard('admin')->attempt($credentials, $request->filled('remember'))) {
-        return redirect()->intended('admin/dashboard');
+    {
+        $request->validate([
+            'email' => 'required|string|email',
+            'password' => 'required|string',
+        ]);
+    
+        $credentials = $request->only('email', 'password');
+    
+        if (Auth::guard('admin')->attempt($credentials, $request->filled('remember'))) {
+            // Debug output
+            return redirect()->intended(route('admin.dashboard'));
+        }
+    
+        return back()->withErrors([
+            'email' => 'The provided credentials do not match our records.',
+        ])->withInput($request->only('email', 'remember'));
     }
-
-    return back()->withErrors([
-        'email' => 'The provided credentials do not match our records.',
-    ])->withInput($request->only('email', 'remember'));
 }
 
 
@@ -37,6 +40,11 @@ class AdminAuthController extends Controller
         // Optionally, you can redirect to a login page or show an error message
         return redirect()->route('loginAdmin')->with('error', 'You are not authenticated.');
     }
+}
+
+public function index()
+{
+    return view('Users Frontend Theme.index'); 
 }
 
     public function showAdminLoginForm()

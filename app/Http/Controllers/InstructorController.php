@@ -15,32 +15,29 @@ class InstructorController extends Controller
         return view('Users Frontend Theme.auth-basic-instructor-signin');
     }
     public function login(Request $request)
-{
-    // Validate the login form data
-    $validated = $request->validate([
-        'email' => 'required|email',
-        'password' => 'required',
-    ]);
+    {
+        $validated = $request->validate([
+            'email' => 'required|email',
+            'password' => 'required',
+        ]);
 
-    // Attempt to log the instructor in
-    if (Auth::guard('instructor')->attempt([
-        'email' => $validated['email'],
-        'password' => $validated['password']
-    ])) {
-        // Redirect to intended page or default route
-        return redirect()->intended('index2');
+        if (Auth::guard('instructor')->attempt([
+            'email' => $validated['email'],
+            'password' => $validated['password']
+        ])) {
+            // Redirect to the intended page or default route
+            return redirect()->intended(route('index2'));
+        }
+
+        return redirect()->back()->withErrors([
+            'email' => 'Invalid credentials.',
+        ]);
     }
-
-    // Redirect back with an error if login fails
-    return redirect()->back()->withErrors([
-        'email' => 'Invalid credentials.',
-    ]);
-}
 
     
      public function index()
     {
-        //
+        return view('Users Frontend Theme.index2');
     }
 
     /**

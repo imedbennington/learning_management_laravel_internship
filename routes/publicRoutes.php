@@ -36,6 +36,8 @@ Route::view('/shopping-cart', 'public_users.shopping-cart')->name('shopping-cart
 Route::view('/pricing-table', 'public_users.pricing-table')->name('pricing-table');
 Route::view('/teacher-detail', 'public_users.teacher-detail')->name('teacher-detail');
 Route::view('/request-coupon', 'public_users.request-coupon')->name('request-coupon');
+Route::view('/for-business', 'public_users.for-business')->name('for-business');
+Route::view('/log_in', 'public_users.login')->name('log_in');
 Route::get('/get_student', [AuthController::class, 'get_student'])
     ->middleware('auth:student') // Ensure this uses the 'student' guard
     ->name('get_student');

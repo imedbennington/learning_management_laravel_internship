@@ -49,5 +49,10 @@ class User extends Authenticatable
     {
         $this->attributes['password'] = bcrypt($value);
     }
+
+    public function hasRole($role)
+{
+    return $this->role === $role;
+}
     
 }

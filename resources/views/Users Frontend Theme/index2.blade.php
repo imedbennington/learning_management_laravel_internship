@@ -79,6 +79,8 @@
 					<ul>
 						<li> <a href="app-emailbox.html"><i class='bx bx-radio-circle'></i>Email</a>
 						</li>
+						<li> <a href="{{route('posts.index')}}"><i class='bx bx-radio-circle'></i>Blogging</a>
+						</li>
 						<li> <a href="app-chat-box.html"><i class='bx bx-radio-circle'></i>Chat Box</a>
 						</li>
 						<li> <a href="app-file-manager.html"><i class='bx bx-radio-circle'></i>File Manager</a>
@@ -1057,8 +1059,14 @@
 							href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 							<img src="assets/images/avatars/avatar-2.png" class="user-img" alt="user avatar">
 							<div class="user-info">
-								<p class="user-name mb-0">Pauline Seitz</p>
-								<p class="designattion mb-0">Web Designer</p>
+								<!-- Check if the 'instructor' variable is available and display it -->
+								@if(isset($instructor))
+									<p class="user-name mb-0">{{ $instructor['first_name'] }} {{ $instructor['last_name'] }}
+									</p>
+								@else
+									<p class="user-name mb-0">Instructor information not available</p>
+								@endif
+								<p class="designation mb-0">Web Designer</p>
 							</div>
 						</a>
 						<ul class="dropdown-menu dropdown-menu-end">

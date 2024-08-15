@@ -29,6 +29,8 @@ Route::view('/component-spinners', 'Users Frontend Theme.component-spinners')->n
 Route::view('/component-notifications', 'Users Frontend Theme.component-notifications')->name('component-notifications');
 Route::view('/form-file-upload', 'Users Frontend Theme.form-file-upload')->name('form-file-upload');
 Route::view('/form-add-category', 'Users Frontend Theme.add-category')->name('form-add-category');
+Route::view('/log_in', 'Users Frontend Theme.login')->name('log_in');
+
 
 Route::middleware(['share.demand.data'])->group(function () {
     Route::view('/get_requests', 'Users Frontend Theme.admin-request-list')->name('get_requests');
@@ -46,7 +48,7 @@ Route::view('/form-add-category', 'Users Frontend Theme.add-category')->name('fo
 // web.php or userRoutes.php
     Route::view('/teacher.details', 'Users Frontend Theme.teacher.detail')->name('teacher.details');
 
-//Route::get('/show-admin-dashboard', [AdminController::class, 'index'])->name('show-admin-dashboard');
+Route::get('/show-admin-dashboard', [AdminController::class, 'index'])->name('show-admin-dashboard');
 Route::get('index2', function () {
     return view('Users Frontend Theme.index2');
 })->name('index2');

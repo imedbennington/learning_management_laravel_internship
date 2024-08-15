@@ -33,7 +33,7 @@ class Kernel extends HttpKernel
 
     protected $routeMiddleware = [
         // Other middleware
-        'auth' => \App\Http\Middleware\Authenticate::class,
+        //'auth' => \App\Http\Middleware\Authenticate::class, 
         'admin' => \App\Http\Middleware\AdminMiddleware::class,
         'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
         'bindings' => \Illuminate\Routing\Middleware\SubstituteBindings::class,
@@ -47,6 +47,7 @@ class Kernel extends HttpKernel
         'share.student.data' => \App\Http\Middleware\ShareStudentData::class,
         'share.courses.data' => \App\Http\Middleware\ShareCoursesData::class,
         'share.demand.data' => \App\Http\Middleware\ShareDemandData::class,
+        'role' => \App\Http\Middleware\RoleMiddleware::class,
     ];
 
     protected $middlewareGroups = [
@@ -61,6 +62,7 @@ class Kernel extends HttpKernel
             \App\Http\Middleware\ShareStudentData::class,
             \App\Http\Middleware\ShareCoursesData::class,
             \App\Http\Middleware\ShareDemandData::class,
+            \App\Http\Middleware\ShareInstructorsData::class,
             
         ],
 

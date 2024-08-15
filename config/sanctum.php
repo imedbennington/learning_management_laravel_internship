@@ -80,4 +80,15 @@ return [
         'verify_csrf_token' => App\Http\Middleware\VerifyCsrfToken::class,
     ],
 
+    'guards' => [
+    'web' => [
+        'driver' => 'session',
+        'provider' => 'users',
+    ],
+    'instructor' => [
+        'driver' => 'sanctum',
+        'provider' => 'instructors',
+    ],
+],
+
 ];
