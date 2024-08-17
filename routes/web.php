@@ -63,7 +63,7 @@ Route::post('logout', [AuthController::class, 'logout'])->middleware('auth:sanct
 
 // Student Authentication Routes
 Route::get('register/student', [AuthController::class, 'showStudentRegistrationForm'])->name('register.student');
-Route::post('register/student', [AuthController::class, 'registerStudent'])->name('register.student.submit');
+Route::post('register/student', [AuthController::class, 'registerStudent'])->name('register.submit');
 Route::post('/login/student', [AuthController::class, 'loginStudent'])->name('login.student');
 
 // Admin Registration Routes

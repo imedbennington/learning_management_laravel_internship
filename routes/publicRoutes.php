@@ -38,6 +38,7 @@ Route::view('/teacher-detail', 'public_users.teacher-detail')->name('teacher-det
 Route::view('/request-coupon', 'public_users.request-coupon')->name('request-coupon');
 Route::view('/for-business', 'public_users.for-business')->name('for-business');
 Route::view('/log_in', 'public_users.login')->name('log_in');
+Route::view('/register', 'public_users.sign-up')->name('register');
 Route::get('/get_student', [AuthController::class, 'get_student'])
     ->middleware('auth:student') // Ensure this uses the 'student' guard
     ->name('get_student');

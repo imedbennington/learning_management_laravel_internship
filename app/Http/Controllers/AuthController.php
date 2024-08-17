@@ -89,7 +89,7 @@ public function become_teacher()
 
         DB::commit();
 
-        return redirect()->route('dashboard');
+        return redirect()->route('my-profile');
     } catch (\Exception $e) {
         DB::rollBack();
         return response()->json(['message' => 'Registration failed', 'error' => $e->getMessage()], 500);

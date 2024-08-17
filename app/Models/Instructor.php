@@ -30,7 +30,6 @@ class Instructor extends Authenticatable
     }
     public function hasRole($role)
     {
-        // Assuming roles are stored in a 'roles' table and related to the user
         return $this->roles()->contains('name', $role);
     }
     public function courses()

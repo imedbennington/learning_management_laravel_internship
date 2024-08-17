@@ -68,71 +68,74 @@ class AdminController extends Controller
         //
     }
     public function approveDemand($id)
-{
-    $demand = RequestHistory::find($id);
-
-    if (!$demand) {
-        return redirect()->back()->with('error', 'Demand not found.');
+    {
+        $demand = RequestHistory::find($id);
+    
+        if (!$demand) {
+            return redirect()->back()->with('error', 'Demand not found.');
+        }
+    
+        // Update the demand status
+        $demand->status = 'approved';
+        $demand->save();
+    
+        // Get the email from the demand
+        $email = $demand->email;
+    
+        // Fetch the student by email
+        $student = Student::where('email', $email)->first();
+    
+        if (!$student) {
+            return redirect()->back()->with('error', 'Student not found.');
+        }
+    
+        // Ensure the 'instructor' role exists with the 'student' guard
+        $roleInstructor = Role::firstOrCreate([
+            'name' => 'instructor',
+            'guard_name' => 'student'
+        ]);
+    
+        // Assign the 'instructor' role to the student
+        $student->syncRoles([$roleInstructor]);
+    
+        // Create necessary permissions
+        $permissionUploadCourses = Permission::firstOrCreate([
+            'name' => 'upload courses',
+            'guard_name' => 'student'
+        ]);
+        $permissionPostArticles = Permission::firstOrCreate([
+            'name' => 'post articles',
+            'guard_name' => 'student'
+        ]);
+    
+        // Assign permissions to the student
+        $student->syncPermissions([$permissionUploadCourses, $permissionPostArticles]);
+    
+        // Create instructor using the same details as the student
+        $instructor = Instructor::create([
+            'first_name' => $student->first_name,
+            'last_name' => $student->last_name,
+            'user_name' => $student->user_name,
+            'email' => $student->email,
+            'password' => bcrypt($student->password), // Ensure password is hashed
+        ]);
+    
+        // Authenticate as the student to ensure the role has been applied
+        if (!Auth::guard('student')->attempt(['email' => $student->email, 'password' => $student->password])) {
+            \Log::error('Failed to authenticate student. Email: ' . $student->email);
+            return redirect()->back()->with('error', 'Invalid password for the student.');
+        }
+    
+        // Authenticate as the instructor to verify successful creation
+        if (!Auth::guard('instructor')->attempt(['email' => $instructor->email, 'password' => $instructor->password])) {
+            \Log::error('Failed to authenticate new instructor. Email: ' . $instructor->email);
+            return redirect()->back()->with('error', 'Failed to authenticate new instructor with copied password.');
+        }
+    
+        return redirect()->route('admin.demands')->with('success', 'Demand approved and user role and permissions updated successfully.');
     }
+    
 
-    // Update the demand status
-    $demand->status = 'approved';
-    $demand->save();
-
-    // Get the email from the demand
-    $email = $demand->email;
-
-    // Fetch the student by email
-    $student = Student::where('email', $email)->first();
-
-    if (!$student) {
-        return redirect()->back()->with('error', 'Student not found.');
-    }
-
-    // Ensure the 'instructor' role exists with the 'student' guard
-    $roleInstructor = Role::firstOrCreate([
-        'name' => 'instructor',
-        'guard_name' => 'student'
-    ]);
-
-    // Sync roles and permissions
-    $student->syncRoles([$roleInstructor]);
-    $permissionUploadCourses = Permission::firstOrCreate([
-        'name' => 'upload courses',
-        'guard_name' => 'student'
-    ]);
-    $permissionPostArticles = Permission::firstOrCreate([
-        'name' => 'post articles',
-        'guard_name' => 'student'
-    ]);
-    $student->syncPermissions([$permissionUploadCourses, $permissionPostArticles]);
-
-    // Create instructor with the same password hash
-    $instructor = Instructor::create([
-        'first_name' => $student->first_name,
-        'last_name' => $student->last_name,
-        'user_name' => $student->user_name,
-        'email' => $student->email,
-        'password' => $student->password,
-    ]);
-
-    // Debug: Log password hashes
-    \Log::info('Student password hash: ' . $student->password);
-    \Log::info('Instructor password hash: ' . $instructor->password);
-
-    // Verify authentication
-    if (!Auth::guard('student')->attempt(['email' => $student->email, 'password' => $student->password])) {
-        \Log::error('Failed to authenticate student. Email: ' . $student->email);
-        return redirect()->back()->with('error', 'Invalid password for the student.');
-    }
-
-    if (!Auth::guard('instructor')->attempt(['email' => $instructor->email, 'password' => $instructor->password])) {
-        \Log::error('Failed to authenticate new instructor. Email: ' . $instructor->email);
-        return redirect()->back()->with('error', 'Failed to authenticate new instructor with copied password.');
-    }
-
-    return redirect()->route('admin.demands')->with('success', 'Demand approved and user role and permissions updated successfully.');
-}
 
 
 

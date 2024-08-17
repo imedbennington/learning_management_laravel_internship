@@ -32,7 +32,7 @@
 
 <body>
 
-<!--<p>Hello, {{ $student->first_name }}. Here you can apply to become a teacher.</p>-->
+    <!--<p>Hello, {{ $student->first_name }}. Here you can apply to become a teacher.</p>-->
     <!-- start cssload-loader -->
     <div class="preloader">
         <div class="loader">
@@ -1240,79 +1240,98 @@
                             @endif
                             <form method="post" class="row" action="{{ route('requests.store') }}">
                                 @csrf
+                                <input type="hidden" name="student_id" value="{{ $student->id }}">
+
+                                <!-- First Name -->
                                 <div class="input-box col-lg-6">
-                                <input type="hidden" name="student_id" value="{{ $student->id}}">
                                     <label class="label-text">First Name</label>
                                     <div class="form-group">
                                         <input class="form-control form--control" type="text" name="first_name"
-                                            placeholder="e.g. Alex" value="{{ $student->first_name}}">
+                                            placeholder="e.g. Alex" value="{{ $student->first_name }}">
                                         <span class="la la-user input-icon"></span>
                                     </div>
+                                </div>
+
+                                <!-- User Name -->
+                                <div class="input-box col-lg-6">
                                     <label class="label-text">User Name</label>
                                     <div class="form-group">
                                         <input class="form-control form--control" type="text" name="user_name"
-                                            placeholder="e.g. Alex" value="{{ $student->user_name}}">
+                                            placeholder="e.g. Alex" value="{{ $student->user_name }}">
                                         <span class="la la-user input-icon"></span>
                                     </div>
-                                </div><!-- end input-box -->
+                                </div>
+
+                                <!-- Last Name -->
                                 <div class="input-box col-lg-6">
                                     <label class="label-text">Last Name</label>
                                     <div class="form-group">
                                         <input class="form-control form--control" type="text" name="last_name"
-                                            placeholder="e.g. Smith" value="{{ $student->last_name}}">
+                                            placeholder="e.g. Smith" value="{{ $student->last_name }}">
                                         <span class="la la-user input-icon"></span>
                                     </div>
-                                </div><!-- end input-box -->
+                                </div>
+
+                                <!-- Email Address -->
                                 <div class="input-box col-lg-6">
                                     <label class="label-text">Email Address</label>
                                     <div class="form-group">
                                         <input class="form-control form--control" type="email" name="email"
-                                        value="{{ $student->email}}">
+                                            value="{{ $student->email }}">
                                         <span class="la la-envelope input-icon"></span>
                                     </div>
                                 </div>
+
+                                <!-- Password -->
                                 <div class="input-box col-lg-6">
                                     <label class="label-text">Password</label>
                                     <div class="form-group">
                                         <input class="form-control form--control" type="password" name="password">
-                                        <span class="la la-envelope input-icon"></span>
+                                        <span class="la la-lock input-icon"></span>
                                     </div>
                                 </div>
+
+                                <!-- Confirm Password -->
                                 <div class="input-box col-lg-6">
                                     <label class="label-text">Confirm Password</label>
                                     <div class="form-group">
-                                        <input class="form-control form--control" type="password" name="password_confirmation">
-                                        <span class="la la-envelope input-icon"></span>
+                                        <input class="form-control form--control" type="password"
+                                            name="password_confirmation">
+                                        <span class="la la-lock input-icon"></span>
                                     </div>
-                                </div><!-- end input-box -->
-                                <div class="input-box col-lg-6">
+                                </div>
+
+                                <!-- Address -->
+                                <div class="input-box col-lg-12">
                                     <label class="label-text">Address</label>
                                     <div class="form-group">
                                         <input class="form-control form--control" type="text" name="address"
                                             placeholder="e.g. 12345 Little Baker St, Melbourne">
                                         <span class="la la-map-marker input-icon"></span>
                                     </div>
-                                </div><!-- end input-box -->
+                                </div>
+
+                                <!-- Phone Number -->
                                 <div class="input-box col-lg-12">
                                     <label class="label-text">Phone Number</label>
                                     <div class="form-group">
                                         <input id="phone" class="form-control form--control" type="text" name="phone">
                                     </div>
-                                </div><!-- end input-box -->
+                                </div>
+
+                                <!-- Birthday -->
                                 <div class="input-box col-lg-12">
                                     <label class="label-text">Birthday</label>
-                                    <div class="row">
-                                        <div class="mb-3">
-                                            <label class="form-label">Pick a Date</label>
-                                            <input type="text" name="date_of_birth" id="date_of_birth"
-                                                class="form-control datepicker" value="{{ old('date_of_birth') }}"
-                                                required />
-                                            @error('date_of_birth')
-                                                <div class="text-danger">{{ $message }}</div>
-                                            @enderror
-                                        </div><!-- end col-lg-4 -->
-                                    </div><!-- end row -->
-                                </div><!-- end input-box -->
+                                    <div class="form-group">
+                                        <input type="text" name="date_of_birth" id="date_of_birth"
+                                            class="form-control datepicker" value="{{ old('date_of_birth') }}" required>
+                                        @error('date_of_birth')
+                                            <div class="text-danger">{{ $message }}</div>
+                                        @enderror
+                                    </div>
+                                </div>
+
+                                <!-- City -->
                                 <div class="input-box col-lg-6">
                                     <label class="label-text">City</label>
                                     <div class="form-group">
@@ -1320,7 +1339,8 @@
                                             placeholder="City">
                                         <span class="la la-map input-icon"></span>
                                     </div>
-                                </div><!-- end input-box -->
+                                </div>
+                                <!-- end input-box -->
                                 <div class="input-box col-lg-6">
                                     <label for="country-select" class="label-text">Country</label>
                                     <div class="form-group">
